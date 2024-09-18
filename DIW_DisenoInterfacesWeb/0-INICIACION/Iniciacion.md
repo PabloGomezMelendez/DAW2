@@ -42,4 +42,4 @@ systeam.out.print("HOLA MUNDO");
 ~~~
 
 
-coenctado con git
+conectado con git
