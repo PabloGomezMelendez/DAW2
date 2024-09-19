@@ -1,0 +1,60 @@
+<!--
+Realiza los siguientes ejercicios en una página HTML5 llamada pruebas_emmet1.html usando abreviaturas emmet 
+(solo un comando por ejercicio; indica el comando utilizado entre comentarios):
+
+Una lista ordenada de 7 elementos.
+
+Una tabla de 6 filas y 8 columnas.
+
+Una lista no ordenada de 10 elementos que pertenecerán a la clase elemlist1, elemelist2,..., elemlist10
+
+Un enlace a Google con el texto "Pinche aquí" y a continuación (al mismo nivel) una etiqueta div que contenga dos 
+titulares de nivel 1 que pertenezcan a las clases titulares1 y titulares2 respectivamente.
+
+Un formulario que use el método post, con el atributo action="procesar.php" y  que contenga tres campos de texto, 
+un botón de envío y otro de reset. Todos los elementos deben tener sus etiquetas correspondientes (label).
+Crea una nueva página pruebas_emmet2.html para los siguientes ejercicios (solo un comando por ejercicio):
+
+
+Sintaxis emmet:
+
+elementos hijos: >
+hermanos (mismo nivel): +
+nivel superior: ^
+agrupar elementos: ( )
+multiplicación de elementos: *
+iteración de elementos: $
+clase: .
+id: #
+texto: { }
+atributos según etiquetas: [ ]
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Una lista ordenada de 7 elementos. -->
+    <!-- ol*7 -->
+
+    <!-- Una tabla de 6 filas y 8 columnas. -->
+    <!-- table>tr*6>td*8 -->
+
+    <!-- Una lista no ordenada de 10 elementos que pertenecerán a la clase elemlist1, elemelist2,..., elemlist10 -->
+    <!-- ul>li.element$*10 --> <!-- ul>li.element$*10>{$}*10 -->
+
+    <!-- Un enlace a Google con el texto "Pinche aquí" y a continuación (al mismo nivel) una etiqueta div que contenga dos titulares de nivel 1 que pertenezcan a las clases titulares1 y titulares2 respectivamente. -->
+    <!-- a[href="www.google.es"]{Pinche aquí}+div.titulares$*2 -->
+
+    <!-- Un formulario que use el método post, con el atributo action="procesar.php" y
+       que contenga tres campos de texto, un botón de envío y otro de reset. 
+       Todos los elementos deben tener sus etiquetas correspondientes (label).
+       Crea una nueva página pruebas_emmet2.html para los siguientes ejercicios (solo un comando por ejercicio): -->
+    <!-- from:post[action="procesar.php"]>(label[for="text$"]{Nombre$}+input:t[id="text$"]+br)*3+btn:s{enviar}+btn:r{reset} -->
+
+</body>
+</html>
