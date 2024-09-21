@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class EjercicioB {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 		sumaNumerosPrimos();
 
 	}
@@ -64,6 +64,7 @@ public class EjercicioB {
 
 		System.out.print("Introduce un número: ");
 		a = teclado.nextInt();
+		teclado.close();
 
 		return a;
 

@@ -3,7 +3,7 @@ package Funciones;
 public class EjercicioA {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 		System.out.println("PRUEBA 1: DOS NÚMEROS IGUALES");
 		listarNuemrosIntermedios(0, 0);
 		
