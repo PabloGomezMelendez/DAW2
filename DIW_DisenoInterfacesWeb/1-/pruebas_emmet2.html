@@ -23,15 +23,39 @@ y al mismo nivel una sección perteneciente a la clase social con tres imágenes
     <title>pruebas_emmet2</title>
 </head>
 <body>
-    <!-- 
+    <!--
     Una lista de 4 enlaces dentro de un div que pertenecerá a la clase cabecera, todo dentro de la etiqueta semántica <nav>, 
     teniendo en cuenta que <ul> pertenecerá a la clase navbar y los elementos <li> a navitems.
     -->
     nav>div.cabecera>ul.navbar>li.navitems*4>a[href="www.google.es"]{Pinche aquí}
-    
+
+    <!--
+    Dentro de la etiqueta semántica <main>, tres div que pertenezcan a la clase card y
+    dentro de cada div una imagen perteneciente a la clase imgcard y un titular de nivel 3. 
+    Las imágenes a cargar son imagen1.jpg, imagen2.jpg e imagen3.jpg, que están en la carpeta img. 
+    -->
+    main>div.card*3>img.imgcard[src="img/imagen$.jpg"]+h3{Título $}
 
 
 
+    <!--
+    Un lista de definición para 5 elementos dentro de un div que pertenezca a la clase seccion1, dentro de una sección HTML (<section>). 
+    -->
+    section>div.seccion1>dl>dt{Término $}+dd{Definición $}*5
+
+    <!--
+    Otra sección que pertenezca a la clase seccion2 conteniendo 6 imágenes pertenecientes a la clase gallery.
+    -->
+    section.seccion2>img.gallery[src="img/imagen$.jpg"]*6
+
+
+
+    <!--
+    Dentro del pie de página HTML (<footer>): una etiqueta semántica <address> conteniendo tres párrafos, 
+    al mismo nivel un <div> perteneciente a la clase pie, 
+    y al mismo nivel una sección perteneciente a la clase social con tres imágenes en su interior.
+    -->
+    footer>address>p*3{Dirección $}+div.pie+section.social>img[src="img/social$.jpg"]*3
 
 </body>
 </html>
