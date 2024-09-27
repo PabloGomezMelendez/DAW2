@@ -1,0 +1,32 @@
+<!-- ENUNCIADO EJERCIO 4
+Confeccionar un programa que permita cargar el nombre de un usuario y su mail por teclado. Mostrar posteriormente los datos en la página HTML.
+Modifica el programa para que también se pueda introducir los siguientes datos del usuario: DNI, 
+edad y fecha de nacimiento. Estos nuevos datos también se deberán volcar a la página web
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="00-style">
+</head>
+
+<body>
+    <script>
+        let nombre = prompt("Dime tu nombre");
+        let edad = Number(prompt("Dime tu edad"));
+        let sueldo = Number(prompt("Dime tu sueldo"));
+        let conforme = prompt("Dime si estas conforme ['si' si estas conforme]");
+        conforme.toLowerCase=="si"?true:false;
+
+        console.log("El nombre es "+nombre+" , la edad es "+edad+" ,el sueldo es "+sueldo+" , la confirmacion es de "+conforme)
+
+    </script>
+
+</body>
+
+</html>
