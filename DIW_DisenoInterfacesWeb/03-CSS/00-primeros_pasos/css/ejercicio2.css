@@ -1,0 +1,18 @@
+body{
+    background-color: #778899;
+}
+h1,h2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+p,i{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+    text-indent: 2%;
+    line-height: 200%;
+
+}
+span{
+    font-style: oblique;
+    text-decoration: underline;
+}
