@@ -1,0 +1,108 @@
+<!--@Autor @PabloGomezMelendez-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejercicio Tabla Multiplicar</h1>
+    <h2>Pulsa F12 para ver la consola de depuración</h2>
+    <script>
+        //1. Crea una variable que contenga tu nombre completo. Vuelca a consola el número de caracteres.
+        let nombre="Pablo Gómez Meléndez";
+        console.log(nombre.length);
+
+        //2. Crear una variable que contenga tu nombre.
+        // Crea un bucle que vuelque a consola cada uno de los caracteres que contiene (un carácter por línea) usando el método charAt.
+        let nombre2="Pablo Gómez Meléndez";
+        for(let i=0; i<nombre2.length; i++){
+            console.log(nombre2.charAt(i));
+        }
+
+        //3. Crear una variable que contenga tu nombre.
+        // Convierte toda la cadena a mayúsculas y vuélcala por consola.
+        // Haz lo mismo pero convirtiéndola a minúsculas.
+        let nombre3="Pablo Gómez Meléndez";
+        console.log(nombre3.toUpperCase());
+        console.log(nombre3.toLowerCase());
+
+        //4. Crea una variable contenga “En un lugar de la Mancha de cuyo nombre no quiero acordarme”.
+        // Examina la longitud de la cadena y muéstrala por consola.
+        // Usando el método indexOf busca la palabra ‘Mancha’ e indica en qué posición se encuentra.
+        // Usando de nuevo el método indexOf busca la palabra ‘Quijote’,
+        // indicando que valor ha devuelto el método. Usando lastOf busca la última posición en la que se encuentra la palabra ‘de’.
+        let cadena="En un lugar de la Mancha de cuyo nombre no quiero acordarme";
+        console.log(cadena.length);
+        console.log(cadena.indexOf('Mancha'));
+        console.log(cadena.indexOf('Quijote'));
+        console.log(cadena.lastIndexOf('de'));
+
+        //5. Crea una variable contenga “En un lugar de la Mancha de cuyo nombre no quiero acordarme”.
+        // Usando el método substring debes extraer la palabra ‘lugar’.
+        let cadena2="En un lugar de la Mancha de cuyo nombre no quiero acordarme";
+        console.log(cadena2.substring(6, 11));
+
+        //6. Crea una variable contenga “En un lugar de la Mancha de cuyo nombre no quiero acordarme”. 
+        // Usando el método includes debes comprobar si la frase contiene la palabra ‘cuyo’. 
+        // Busca también si contiene la palabra ‘lugar’ a partir de la posición 12. 
+        let cadena3="En un lugar de la Mancha de cuyo nombre no quiero acordarme";
+        console.log(cadena3.includes('cuyo'));
+        console.log(cadena3.includes('lugar', 12));
+
+        //7. Crea una variable contenga “En un lugar de la Mancha de cuyo nombre no quiero acordarme”.
+        // Usando el método endsWith debes comprobar si la frase termina con la palabra ‘acordarme’. 
+        // Comprueba también si termina con la palabra ‘hidalgo’.
+        let cadena4="En un lugar de la Mancha de cuyo nombre no quiero acordarme";
+        console.log(cadena4.endsWith('acordarme'));
+        console.log(cadena4.endsWith('hidalgo'));
+
+        //8.Crea una variable contenga “En un lugar de la Mancha de cuyo nombre no quiero acordarme”. 
+        // Usando el método replace sustituye la palabra ‘Mancha’ por ‘Andalucía’.
+        let cadena5="En un lugar de la Mancha de cuyo nombre no quiero acordarme";
+        console.log(cadena5.replace('Mancha', 'Andalucía'));
+
+        //9. Crea una variable que contenga “Cebollas;Patatas;Pimientos;Tomates”. 
+        // Usando el método split y como separador el punto y coma debes crear un array que contenga [‘Cebollas’, ’Patatas’, ’Pimientos’, ‘Tomates’]
+        let frase="Cebollas;Patatas;Pimientos;Tomates";
+        console.log(frase.split(";"));
+
+        //10. Crea una variable contenga “En un lugar de la Mancha de cuyo nombre no quiero acordarme”.
+        // Usando el método startsWith debes comprobar si la frase comienza por ‘En’. 
+        // Comprueba también si comienza por ‘lugar’.
+        let cadena6="En un lugar de la Mancha de cuyo nombre no quiero acordarme";
+        console.log(cadena6.startsWith('En'));
+        console.log(cadena6.startsWith('lugar'));
+
+        //11. Crea una variable contenga “En un lugar de la Mancha de cuyo nombre no quiero acordarme”. 
+        // Usando el método substr debes extraer la palabra ‘lugar’. 
+        // Extrae también de la frase la palabra ‘lugar’ pero usando el método substring.
+        let cadena7="En un lugar de la Mancha de cuyo nombre no quiero acordarme";
+        console.log(cadena7.substr(6, 5));
+        console.log(cadena7.substring(6, 11));
+
+        //12. Crea una variable con el texto “   Javier Soldado   “. 
+        // Usando el método trim debes obtener la palabra “Javier Soldado” (debes quitar todos espacios anteriores y posteriores).
+        let cadena8="   Javier Soldado   ";
+        console.log(cadena8.trim());
+
+        //13. Crea una variable con el contenido ‘JavaScript’. 
+        // Usando el método adecuado rellena al final de la variable con asteriscos de manera que la nueva palabra tenga 15 caracteres. 
+        // Posteriormente rellena al principio de la variable las almohadillas necesarias para que la palabra resultante tenga 20 caracteres.
+        let cadena9="JavaScript";
+        cadena9.padEnd(15, '*')
+        console.log(cadena9.padEnd(15, '*'));
+        cadena9.padStart(20, '#')
+        console.log(cadena9.padStart(20, '#'));
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
