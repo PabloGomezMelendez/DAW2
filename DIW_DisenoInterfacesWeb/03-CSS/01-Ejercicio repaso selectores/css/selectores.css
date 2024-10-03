@@ -1,0 +1,84 @@
+* {
+  color: darkred;
+}
+
+h1 {
+  color: darkblue;
+}
+
+h2,
+h3 {
+  color: darkslateblue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Georgia;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+main p {
+  font-size: 30px;
+  line-height: 1.5;
+}
+
+section p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+section > p {
+  font-size: 24px;
+}
+
+header h1,
+main h2 {
+  text-align: center;
+}
+
+main + section {
+  border-width: 2px;
+  border-style: dotted;
+  border-color: black;
+}
+
+main ~ * {
+  background-color: gray;
+}
+
+h2 + article {
+  width: 200px;
+  background-color: bisque;
+}
+
+img[alt] {
+  width: 200px;
+}
+
+img[alt^="mon"] {
+  border-radius: 50%;
+}
+
+img[src*="2"] {
+  width: 300px;
+}
+img[alt$="o"] {
+  border-width: 5px;
+  border-style: solid;
+  border-color: orangered;
+}
+
+img[alt*="mono"] {
+  outline: 10px solid blue;
+}
+
+a[href="contacto.html"]{
+    text-decoration: line-through;
+}
