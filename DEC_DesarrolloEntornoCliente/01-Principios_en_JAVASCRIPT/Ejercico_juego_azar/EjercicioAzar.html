@@ -12,25 +12,29 @@
     <script type="text/javascript">
         // Declaración de variables
         let cuenta = 50;
+
         function iniciar() {
             do {
                 alert("el usar cuenta con " + cuenta);
                 let valorAzar = getRandomInt(6); console.log(valorAzar);
                 let valorApuesta = pideUnaApuesta(cuenta); console.log(valorApuesta + " --- " + cuenta);
+                let valorUsuario;
                 if (!isEmpty(valorApuesta)) {
-                    let valorUsuario = pideUnNumero();
+                    valorUsuario = pideUnNumero();
                     console.log(valorUsuario);
                 }
-                isWin(valorAzar, valorUsuario,valorApuesta)
-            } while (cuenta >= 0 || cuenta <= 200);
+                isWin(valorAzar, valorUsuario, valorApuesta)
+
+            } while (cuanta <= 0 || cuenta >= 200);
         }
 
         function isWin(valorAzar, valorUsuario, valorApuesta) {
             if (valorUsuario == valorAzar) {
                 alert("Has ganado");
-                cuenta = 2*valorApuesta;
+                cuenta = 2 * valorApuesta;
             } else {
                 alert("Has perdido");
+                cuenta -= valorApuesta;
             }
         }
 
@@ -45,7 +49,6 @@
                         if (apuesta <= cuenta) {
                             isValida = true;
                             alert("Se aposto correctamente");
-                            cuenta -= apuesta;
                         } else {
                             console.log("la cuenta tiene " + cuenta + " y la apuesta es de " + apuesta);
                         }
@@ -73,7 +76,7 @@
         function getRandomInt(max) {
             return Math.floor(Math.random() * max) + 1;
         }
-        
+
         function isEmpty(val) {
             return (val === undefined || val == null || val.length <= 0) ? true : false;
         }

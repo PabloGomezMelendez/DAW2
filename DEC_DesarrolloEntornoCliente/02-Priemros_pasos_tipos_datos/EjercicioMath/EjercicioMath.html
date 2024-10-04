@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <h1>Ejercicios clase Math</h1>
+    <h2>Pulsa F12 para ver la consola de depuración</h2>
+
+    <script>
+        //1. Calcula el valor absoluto de los siguientes números: 3, -5, 8, -3.5, 12.2
+        console.log(`----------------- EJ1 ----------------------------`);
+        let ej1_array = [3, -5, 8, -3.5, 12.2];
+        let ej1_array_valores_absolutos = ej1_array.map((n) => Math.abs(n));
+        console.log(`Valores absolutos:${ej1_array_valores_absolutos.toString()}`);
+
+        //2. Muestra por la consola el valor de la constante PI definida en la clase Math. 
+        console.log(`----------------- EJ2 ----------------------------`);
+        console.log(`Constante PI:${Math.PI}`);
+
+        //3 Calcula el coseno de 30º. Haz el mismo cálculo usando la calculadora de Windows.
+        //  Compara ambos resultados y si no coinciden investiga el motivo y corrige tu código de JS. 
+        // Calcula el seno de 45º en JS y con la calculadora y comprueba que coincidan.
+        //  Calcula el coseno de /3 radianes y comprueba con la calculadora que es correcto.
+        console.log(`----------------- EJ3 ----------------------------`);
+        console.log(`Coseno de 30º: ${Math.cos(Math.PI / 6)}`); // Calculado con Math.PI / 6 para la calculadora en radiales
+        console.log(`Coseno de 30º calculado con calculadora: 0.8660254037844386`); // Calculado con calculadora
+
+        console.log(`Seno de 45º: ${Math.sin(Math.PI / 4)}`); // Calculado con Math.PI / 4
+        console.log('Seno de 45º calculado con calculadora: 0.70710678118654752440084436210485'); // Calculado con calculadora
+
+        console.log(`Coseno de /3 radianes: ${Math.cos(Math.PI / 6 * 3)}`); // Calculado con Math.PI / 6 * 3
+        console.log('Coseno de /3 radianes con calculadora: 0.70710678'); // Calculado con Math.PI /
+
+        //4 Calcula e3
+        console.log(`----------------- EJ4 ----------------------------`);
+        console.log("calculo de e: " + Math.E); //
+
+        //5 Calcula  log 12.5 ( logaritmo en base 10). Calcula ln 15.7 (logaritmo neperiano). Compara ambos resultados con la calculadora.
+        console.log(`----------------- EJ5 ----------------------------`);
+        console.log(`Logaritmo en base 10 de 12.5: ${Math.log10(12.5)}`); // Calculado con Math.log10
+        console.log(`Logaritmo en base 10 de 12.5 con calculadora: 1,0969100130'`); // Calculado con logaritmo en base 10 de 12.5 con calculadora
+
+        console.log(`Logaritmo neperiano de 15.7: ${Math.log(15.7)}`); // Calculado con Math.log
+        console.log(`Logaritmo en base en e de 15.7: 0,17889874934`); // Calculado con logaritmo en base en e de 15.7 con calculadora
+
+        //6 Calcula 128.12^1/2 comparando con la calculadora que el resultado es correcto.
+        console.log(`----------------- EJ6 ----------------------------`);
+        console.log(`Redondeo de 128.12: ${Math.sqrt(128.12)}`); // Calculado con Math.sqr la raiz cuadrada de 128.12
+        console.log(`Redondeo de 128.12 con calculadora: 11,313708`); // Calculado con calculadora
+
+        //7 Redondea los siguientes números al entero más cercano: 2.7, -2.7, 12.4, 12.5, -0.6, 0.6
+        console.log(`----------------- EJ7 ----------------------------`);
+        console.log(`Techo de 2.7: ${Math.round(2.7)}`); // Calculado con Math.round
+        console.log(`Techo de -2.7: ${Math.round(-2.7)}`); 
+        console.log(`Techo de 12.4: ${Math.round(12.4)}`); 
+        console.log(`Techo de 12.5: ${Math.round(12.5)}`); 
+        console.log(`Techo de -0.6: ${Math.round(-0.6)}`); 
+        console.log(`Techo de 0.6: ${Math.round(0.6)}`); 
+
+        //8 Calcula el techo (ceil) de los siguientes números: 2.7, -2.7, 12.4, 12.5, -0.6, 0.6
+        console.log(`----------------- EJ8 ----------------------------`);
+        console.log(`Techo de 2.7: ${Math.ceil(2.7)}`); 
+        console.log(`Techo de -2.7: ${Math.ceil(-2.7)}`); 
+        console.log(`Techo de 12.4: ${Math.ceil(12.4)}`); 
+        console.log(`Techo de 12.5: ${Math.ceil(12.5)}`); 
+        console.log(`Techo de -0.6: ${Math.ceil(-0.6)}`); 
+        console.log(`Techo de 0.6: ${Math.ceil(0.6)}`); 
+
+        //9 Calcula el suelo (floor) de los siguientes números: 2.7, -2.7, 12.4, 12.5, -0.6, 0.6
+        console.log(`----------------- EJ9 ----------------------------`);
+        console.log(`Piso de 2.7: ${Math.floor(2.7)}`); // Calculado con Math.floor
+        console.log(`Piso de -2.7: ${Math.floor(-2.7)}`); 
+        console.log(`Piso de 12.4: ${Math.floor(12.4)}`); 
+        console.log(`Piso de 12.5: ${Math.floor(12.5)}`); 
+        console.log(`Piso de -0.6: ${Math.floor(-0.6)}`); 
+        console.log(`Piso de 0.6: ${Math.floor(0.6)}`); 
+
+        //10 Calcula el menor de los valores de estos pares de números: (-8, 7), (12, 5), (-12, 5)
+        console.log(`----------------- EJ10 ----------------------------`);
+        console.log(`Menor de (-8, 7): ${Math.min(-8, 7)}`); 
+        console.log(`Menor de (12, 5): ${Math.min(12, 5)}`); 
+        console.log(`Menor de (-12, 5): ${Math.min(-12, 5)}`); 
+        
+        //11 Calcula el mayor de los valores de estos pares de números: (-8, 7), (12, 5), (-12, 5)
+        console.log(`----------------- EJ11 ----------------------------`);
+        console.log(`Mayor de (-8, 7): ${Math.max(-8, 7)}`); 
+        console.log(`Mayor de (12, 5): ${Math.max(12, 5)}`); 
+        console.log(`Mayor de (-12, 5): ${Math.max(-12, 5)}`); 
+
+        //12 Queremos simular el lanzamiento de un dado. Genera un número aleatorio entre 1 y 6.
+        console.log(`----------------- EJ12 ----------------------------`);
+        console.log(`Lanzamiento de un dado: ${Math.floor(Math.random() * 6) + 1}`); // Calculado con Math.random() * 6 + 1
+
+        //13 Genera un número aleatorio entre 26 y 79.
+        console.log(`----------------- EJ13 ----------------------------`);
+        console.log(`Número aleatorio entre 26 y 79: ${Math.floor(Math.random() * (79 - 26 + 1)) + 26}`); // Calculado con Math.random() * (79 - 26 + 1) + 26
+
+        //14 Redondea la constante Math.PI a dos decimales. Haz lo mismo pero redondeando a tres, cuatro y cinco decimales.
+        console.log(`----------------- EJ14 ----------------------------`);
+        console.log(`Redondeo de Math.PI a dos decimales: ${Math.round(Math.PI * 100) / 100}`); 
+        console.log(`Redondeo de Math.PI a tres decimales: ${Math.round(Math.PI * 1000) / 1000}`); 
+        console.log(`Redondeo de Math.PI a cuatro decimales: ${Math.round(Math.PI * 10000) / 10000}`); 
+        console.log(`Redondeo de Math.PI a cinco decimales: ${Math.round(Math.PI * 100000) / 1000
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
