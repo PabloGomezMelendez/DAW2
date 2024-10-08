@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+
+  <body>
+    <h1>Ejercicios clase dates</h1>
+    <h2>Pulsa F12 para ver la consola de depuración</h2>
+
+    <script>
+      // 1.Crea un objeto Date que contenga la fecha actual y guárdalo en una variable.
+      // Vuelca el contenido a la consola. Vuelca también a la consola el año, el mes (en formato numérico), el día(en formato numérico),
+      // el día de la semana (en formato numérico), la hora, los minutos y los segundos.
+      // Fíjate en el valor devuelto por el mes y deduce qué número asigna JavaScript al mes Enero.
+      let fechaActual = new Date();
+      console.log(fechaActual);
+      //Año
+      console.log(fechaActual.getFullYear());
+      // Mes formato numérico
+      console.log(fechaActual.getMonth() + 1); // Añado 1 al número devuelto por getMonth() para que coincida con el número de mes en el calendario
+      //dia de la semana
+      console.log(fechaActual.getDate());
+      console.log(fechaActual.getDay()); // Devuelve el número del día de la semana (0 a 6, con 0 representando domingo)
+      //Hora, minutos y segundos
+      console.log(fechaActual.getHours());
+      console.log(fechaActual.getMinutes());
+      console.log(fechaActual.getSeconds());
+
+      //2.Crea un objeto Date que contenga la fecha de tu nacimiento.
+      //Muestra dicha fecha por consola.
+      //Si el mes no aparece correctamente busca en la documentación qué número
+      //de mes asigna JavaScript a Enero y corrige el problema.
+      let fechaNacimiento = new Date(2000, 10 - 1, 12); //año , mes, dia
+      console.log(fechaNacimiento);
+
+      //3.Los objetos Date tienen un método llamado getMonth que devuelve el mes en formato numérico.
+      //Crea una función a la cual le pases como argumento ese número y devuelva un string con el mes (‘Enero’, ‘Febrero’, …, ‘Diciembre’).
+      //Si el número de mes es inválido devuelve ‘Mes inválido’.
+      function nombreMes(numeroMes) {
+        const meses = [
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio",
+          "Julio",
+          "Agosto",
+          "Septiembre",
+          "Octubre",
+          "Noviembre",
+          "Diciembre",
+        ];
+        if (numeroMes >= 0 && numeroMes <= 11) {
+          return meses[numeroMes];
+        } else {
+          return "Mes inválido";
+        }
+      }
+
+      //4.Los objetos Date tienen un método llamado getDay que devuelve el día de la semana  en formato numérico.
+      //Crea una función a la cual le pases como argumento ese número y devuelva un string con el día de la semana (‘Lunes’, ‘Martes’, …, ‘Domingo’)
+      function nombreDiaSemana(numeroDia) {
+        const diasSemana = [
+          "Domingo",
+          "Lunes",
+          "Martes",
+          "Miércoles",
+          "Jueves",
+          "Viernes",
+          "Sábado",
+        ];
+        if (numeroDia >= 0 && numeroDia <= 6) {
+          return diasSemana[numeroDia];
+        } else {
+          return "Día de la semana inválido";
+        }
+      }
+
+      //5.Muestra por la consola el número de milisegundos que han transcurrido desde el 1 de enero de 1970 hasta el momento actual.
+      //TODO: PREGUNTAR POR MILLISEGUNDOS
+      console.log(fechaActual.getMilliseconds()); // 0 es el 1/1/1970
+
+      //6.Usando la página web https://www.epochconverter.com/ averigua el número de
+      //milisegundos transcurridos desde el 1/1/1970 hasta la fecha de tu nacimiento.
+      //Crea un objeto Date usando como argumento los milisegundos averiguados anteriormente.
+      //Vuelca el contenido del objeto fecha a la consola y comprueba que esa fecha es correcta.
+      //TODO: PREGUNTAR POR MILLISEGUNDOS
+      let fecha = new Date(0, 0, 0, 0, 0, 0, 508);
+      console.log(fecha);
+
+      //7.Averigua qué diferencia horaria tenemos actualmente en España respecto a la UTC.
+      //Los objetos Date contienen un método llamado getTimezoneOffset que devuelven la diferencia entre la hora UTC y la local.
+      //Crea un objeto que contenga la hora actual y ejecuta el método anterior para ver el valor devuelto.
+      //Verifica que el valor devuelto por este método coincide con la diferencia horaria actual de España.
+      let diferenciaHoraria = fechaActual.getTimezoneOffset() / 60; //El método da minutos de diferencia
+      console.log(diferenciaHoraria); // Diferencia horaria en España
+
+      //8.Crea un objeto que contenga la fecha actual.
+      //Compara la diferencia devuelta por getUTCHours y getHours.
+      //¿A qué se debe esa diferencia?
+      console.log(fechaActual.getUTCHours());
+      console.log(fechaActual.getHours());
+
+      //9.Crea un objeto Date que contenga la fecha 28/2/2021. Obtén el día posterior a la fecha anterior
+      //y muéstralo por consola (para ello utiliza el código que tienes en la plataforma para calcular el siguiente día a una fecha).
+      //Crea un nuevo objeto que contenga la fecha 28/2/2020 y obtén el día posterior.
+      //(Observación: Para asegurarte que has obtenido las fechas correctas utiliza algún calendario)
+      //¿Por qué los resultados obtenidos han sido diferentes con ambas fechas?
+      let fecha2 = new Date(2021, 1, 28); // 28 de febrero de 2021 (año bisiesto)
+      fecha2.setDate(fecha2.getDate() + 1); //01 de marzo de 2020
+
+      let fecha3 = new Date(2020, 1, 28); // 28 de febrero de 2020 (año bisiesto)
+      fecha3.setDate(fecha3.getDate() + 1); //29 de febrero de 2020
+
+      //10. Intenta crear un objeto Date con la fecha 35 de enero de 2021.
+      //¿Se ha producido algún error? ¿Qué fecha almacena realmente el objeto anterior?
+      //¿Por qué los resultados obtenidos han sido diferentes con la fecha anterior?
+      let fecha4 = new Date(2021, 0, 35); // 35 de enero de 2021
+      console.log(fecha4); // 31 de diciembre de 2020
+      
+      //11.Crea una función a la que le puedas pasar dos fechas como entrada y devuelva el número de días transcurridos entre esas dos fechas. 
+    //   Para comprobar que el cálculo es correcto utiliza alguna web que devuelva el número de días transcurridos entre dos fechas.
+    function numeroDiasEntreFechas(fecha1, fecha2) {
+        let diferenciaEnMs = Math.abs(fecha2 - fecha1);
+        let diferenciaEnDias = diferenciaEnMs / 1000 / 60 / 60 / 24;
+        return Math.round(diferenciaEnDias);
+    }
+      //12.Crea un objeto Date con la fecha de tu cumpleaños dando como argumento la fecha en formato String.
+      let fechaCumpleaños = new Date("2000-10-12"); // 12 de octubre de 2000
+      console.log(fechaCumpleaños.getUTCHours());
+      console.log(fechaCumpleaños.getHours()); // Diferencia horaria en España
+
+      //13
+      //14
+    </script>
+  </body>
+</html>
