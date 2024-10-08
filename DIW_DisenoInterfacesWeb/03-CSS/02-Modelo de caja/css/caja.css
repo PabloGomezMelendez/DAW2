@@ -1,0 +1,22 @@
+.divespecial{
+    width: 200px;
+    border-style: solid;
+    border-radius: 1px;
+    border-color: red ;
+    background-color: #c5c5c5;
+}
+.pespecial{
+    width: 300px;
+    border-style: dotted;
+    border-radius: 1px;
+}
+.otroespecial{
+    flex;
+    width: 300px;
+    border-style: dotted;
+    border-color: #c5c5c5;
+}
+span{
+    border: solid 1px ;
+    margin-right: 180px;
+}
