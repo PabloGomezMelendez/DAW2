@@ -89,8 +89,9 @@
       //Crea un objeto Date usando como argumento los milisegundos averiguados anteriormente.
       //Vuelca el contenido del objeto fecha a la consola y comprueba que esa fecha es correcta.
       //TODO: PREGUNTAR POR MILLISEGUNDOS
-      let fecha = new Date(0, 0, 0, 0, 0, 0, 508);
+      let fecha = new Date(971363761000); //
       console.log(fecha);
+      console.log(fechaNacimiento.getMilliseconds());
 
       //7.Averigua qué diferencia horaria tenemos actualmente en España respecto a la UTC.
       //Los objetos Date contienen un método llamado getTimezoneOffset que devuelven la diferencia entre la hora UTC y la local.
@@ -121,14 +122,14 @@
       //¿Por qué los resultados obtenidos han sido diferentes con la fecha anterior?
       let fecha4 = new Date(2021, 0, 35); // 35 de enero de 2021
       console.log(fecha4); // 31 de diciembre de 2020
-      
-      //11.Crea una función a la que le puedas pasar dos fechas como entrada y devuelva el número de días transcurridos entre esas dos fechas. 
-    //   Para comprobar que el cálculo es correcto utiliza alguna web que devuelva el número de días transcurridos entre dos fechas.
-    function numeroDiasEntreFechas(fecha1, fecha2) {
+
+      //11.Crea una función a la que le puedas pasar dos fechas como entrada y devuelva el número de días transcurridos entre esas dos fechas.
+      //   Para comprobar que el cálculo es correcto utiliza alguna web que devuelva el número de días transcurridos entre dos fechas.
+      function numeroDiasEntreFechas(fecha1, fecha2) {
         let diferenciaEnMs = Math.abs(fecha2 - fecha1);
         let diferenciaEnDias = diferenciaEnMs / 1000 / 60 / 60 / 24;
         return Math.round(diferenciaEnDias);
-    }
+      }
       //12.Crea un objeto Date con la fecha de tu cumpleaños dando como argumento la fecha en formato String.
       let fechaCumpleaños = new Date("2000-10-12"); // 12 de octubre de 2000
       console.log(fechaCumpleaños.getUTCHours());
