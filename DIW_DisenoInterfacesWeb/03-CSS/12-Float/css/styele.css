@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+    width: 1000px;
+  border-radius: 1px !important;
+  border-style: solid !important;
+  border-radius: 10px !important;
+  padding: 20px;
+  margin: 0 auto !important;
+}
+
+img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+h1 {
+  text-align: center;
+}
+.container p {
+    clear: both;;
+  }
+
+.container img:first-child {
+  float: right;
+}
+.container img:last-child {
+  float: right;
+}
+.container img:nth-child(3) {
+  float: right;
+}

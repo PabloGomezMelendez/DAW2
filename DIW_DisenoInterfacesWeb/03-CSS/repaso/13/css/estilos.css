@@ -1,0 +1,58 @@
+#cabecera{
+    padding: 30px;
+    background-color: greenyellow;
+}
+#central{
+ font-weight: bold;
+}
+
+#lista1,#lista2,#lista3{
+    list-style-type: none;
+    padding-inline-start: 1px;
+}
+
+i{
+    list-style-type: none;
+    font-weight: normal;
+}
+
+#lista1{
+    font-weight: normal;
+}
+
+
+#lista2 a{
+    font-weight: bold;
+    border: 1px solid black;
+    background-color: gray;
+    display: inline-block;
+    width: 150px ;
+}
+#lista3 li{
+    font-weight: bold;
+    color: white;
+    border: 1px solid black;
+    background-color: gray;
+    display: inline-block;;
+    width: fit-content ;
+}
+#lista3 a{
+    color: rgb(255, 255, 255);
+    background-color: gray;
+}
+#lista3 a:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+
+#pie{
+    background-color: green;
+    text-align: center;
+}
+
+
+
+
+
+
+
