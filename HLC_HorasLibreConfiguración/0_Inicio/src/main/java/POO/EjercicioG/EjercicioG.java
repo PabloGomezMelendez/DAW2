@@ -155,6 +155,7 @@ public class EjercicioG {
 				System.out.println("\nHas salido del programa.");
 				break;
 			default:
+				System.out.println("\nEsa opcion no existe.");
 				break;
 			}
 		} while (!salir);

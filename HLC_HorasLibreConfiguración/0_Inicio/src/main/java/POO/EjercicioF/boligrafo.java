@@ -2,14 +2,15 @@ package POO.EjercicioF;
 
 import java.util.Objects;
 
-public class boligrafo implements Comparable<boligrafo>{
+public class boligrafo implements Comparable<boligrafo> {
 	// Atributos
 	private String marca;
 	private String modelo;
 	private double precio;
-	
+
 	/**
 	 * Constructor por defecto.
+	 * 
 	 * @param marca
 	 * @param modelo
 	 * @param precio
@@ -21,7 +22,7 @@ public class boligrafo implements Comparable<boligrafo>{
 		this.precio = precio;
 	}
 
-	//Getters and setters
+	// Getters and setters
 	public String getMarca() {
 		return marca;
 	}
@@ -45,14 +46,14 @@ public class boligrafo implements Comparable<boligrafo>{
 	public void setPrecio(int precio) {
 		this.precio = precio;
 	}
-	
-	//Metodo toString
+
+	// Metodo toString
 	@Override
 	public String toString() {
 		return "Boligrafo: " + marca + " " + modelo + " " + precio + ".";
 	}
 
-	//Metodo hashCode
+	// Metodo hashCode
 	@Override
 	public int hashCode() {
 		return Objects.hash(marca, modelo, precio);
@@ -78,6 +79,7 @@ public class boligrafo implements Comparable<boligrafo>{
 
 	/**
 	 * Compara los bolis pasados por parametros
+	 * 
 	 * @param b1
 	 * @param b2
 	 */

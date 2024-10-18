@@ -3,6 +3,7 @@ package Menus;
 import java.util.Scanner;
 
 public class Menu {
+	private TextosMenu textoMenu=new TextosMenu();
 	private Scanner teclado; 
 	public int menuInicio() {
 		teclado= new Scanner(System.in);
