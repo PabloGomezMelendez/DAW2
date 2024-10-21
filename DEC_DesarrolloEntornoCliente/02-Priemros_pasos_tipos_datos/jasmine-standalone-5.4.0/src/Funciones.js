@@ -7,6 +7,7 @@
  * @returns true si es par y false si no lo es
  */
 function comprobarEsPar(num) {
+    if(num != parseInt(this.num))throw new Error("El número a comprobar debe ser un número entero");
     return num % 2 === 0;
 }
 
@@ -192,101 +193,3 @@ function digitoHexa2Dec(digitoHex) {
     }
 }
 
-
-//! DESARROLLO DE TESTING
-function test(params) {
-    test_ejer1();
-    test_ejer2();
-    test_ejer3();
-    test_ejer4();
-    test_ejer5();
-    test_ejer6();
-}
-
-function test_ejer1() {
-    console.log("EJERCICIO 1");
-    console.log(comprobarEsPar(2)); //Debería devolver true
-    console.log(comprobarEsPar(3)); //Debería devolver false
-
-    console.log(comprobarEsPar(2.2));
-}
-
-function test_ejer2() {
-    console.log("EJERCICIO 2");
-    test_ejer2_fail(); //Debería devolver "VALOR INCORRECTO"
-
-    test_ejer2_pass(); //Debería devolver "CALIFICACIONES"
-
-    function test_ejer2_pass() {
-        console.log(verCalificacion(0)); //Debería devolver "INSUFICIENTE"
-        console.log(verCalificacion(4)); //Debería devolver "INSUFICIENTE"
-        console.log(verCalificacion(5)); //Debería devolver "SUFICIENTE"
-        console.log(verCalificacion(6)); //Debería devolver "BIEN"
-        console.log(verCalificacion(7)); //Debería devolver "NOTABLE"
-        console.log(verCalificacion(8)); //Debería devolver "NOTABLE"
-        console.log(verCalificacion(9)); //Debería devolver "SOBRESALIENTE"
-        console.log(verCalificacion(10));//Debería devolver "SOBRESALIENTE"
-    }
-
-    function test_ejer2_fail() {
-        console.log(verCalificacion(-1)); //Debería devolver "VALOR INCORRECTO"
-        console.log(verCalificacion(11)); //Debería devolver "VALOR INCORRECTO"
-        console.log(verCalificacion(10.00001)); //Debería devolver "VALOR INCORRECTO"
-        console.log(verCalificacion(4.5)); //Debería devolver "VALOR INCORRECTO"
-    }
-}
-
-function test_ejer3() {
-    console.log("EJERCICIO 3");
-    test_ejer3_fail();
-    test_ejer3_pass();
-
-    function test_ejer3_pass() {
-        for (let i = 0; i <10; i=i+0.1) {
-            console.log(verCalificacionDecimal(i));
-        }
-    }
-
-    function test_ejer3_fail() {
-        console.log(verCalificacion(-0.001)); //Debería devolver "VALOR INCORRECTO"
-        console.log(verCalificacion(11)); //Debería devolver "VALOR INCORRECTO"
-        console.log(verCalificacion(10.00001)); //Debería devolver "VALOR INCORRECTO"
-
-    }
-}
-
-function test_ejer4(){
-    console.log("EJERCICIO 4");
-    console.log(parametrosCircunferencia(5).perimetro); //Debería devolver 31.41592653589793
-    console.log(parametrosCircunferencia(5).area); //Debería devolver 78.53981633974483
-
-    console.log(parametrosCircunferencia(-5)); //Debería devolver "ERROR"
-    console.log(parametrosCircunferencia(0)); //Debería devolver "ERROR"
-    console.log(parametrosCircunferencia(5.5)); //Debería devolver "ERROR"
-}
-
-function test_ejer5() {
-    console.log("EJERCICIO 6");
-    console.log(esBisiesto(2020)); //Debería devolver true
-    console.log(esBisiesto(2019)); //Debería devolver false
-
-    console.log(esBisiesto(-2020)); //Debería devolver "ERROR"
-    console.log(esBisiesto(2020.5)); //Debería devolver "ERROR"
-}
-
-function test_ejer6() {
-    console.log("EJERCICIO 6");
-    console.log(hexa2decimal("FA8")); //Coincidir
-    console.log(parseInt("FA8",16)); //
-
-
-    console.log(hexa2decimal("A")); //Debería devolver 10
-    console.log(hexa2decimal("B")); //Debería devolver 11
-    console.log(hexa2decimal("C")); //Debería devolver 12
-    console.log(hexa2decimal("D")); //Debería devolver 13
-    console.log(hexa2decimal("E")); //Debería devolver 14
-    console.log(hexa2decimal("F")); //Debería devolver 15
-
-    console.log(hexa2decimal("G")); //Debería devolver "ERROR"
-    console.log(hexa2decimal("-18")); //Debería devolver "ERROR"
-}
