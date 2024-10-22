@@ -58,7 +58,7 @@ function verCalificacion(nota) {
  */
 function verCalificacionDecimal(nota) {
     switch (true) {
-        case nota < 5:
+        case nota >= 0  && nota < 5:
             return "INSUFICIENTE";
             break;
 
@@ -231,7 +231,7 @@ function test_ejer3() {
     test_ejer3_pass();
 
     function test_ejer3_pass() {
-        for (let i = 0; i <10; i=i+0.1) {
+        for (let i = 0; i < 10; i = i + 0.1) {
             console.log(verCalificacionDecimal(i));
         }
     }
@@ -244,7 +244,7 @@ function test_ejer3() {
     }
 }
 
-function test_ejer4(){
+function test_ejer4() {
     console.log(parametrosCircunferencia(5).perimetro); //Debería devolver 31.41592653589793
     console.log(parametrosCircunferencia(5).area); //Debería devolver 78.53981633974483
 
