@@ -1,0 +1,16 @@
+body {
+    background-image: linear-gradient(to bottom, #9cecfb, #65c7f7, #0052d4);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center ;
+}
+
+.columns{
+    column-width: 10rem !important;
+
+}
+.threecolumns{
+    column-count: 3;
+    column-gap: 2em;
+    column-rule: thin dotted yellow ;
+}

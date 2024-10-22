@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.caja {
+    width: 95%;
+    background-color: darkgray;
+    margin: 20px auto;
+    padding: 20px;
+    overflow-y: auto;
+
+}
+.verde {
+    background-color: green !important;
+    height: 150px;
+    margin-bottom: 20px;
+}
+.amarillo {
+    background-color: yellow !important;
+    width: 25%;
+    height: 620px;
+    float: left;
+}
+
+
+.rojo {
+    background-color: red !important;
+    height: 300px;
+    width: 20%;
+    float: left;
+    margin-left: 5%;
+}
+
+.azul {
+    background-color: blue !important;
+    height: 300px;
+    width: 70%;
+    float: left;
+    margin-left: 5%;
+    margin-top: 10px;
+}

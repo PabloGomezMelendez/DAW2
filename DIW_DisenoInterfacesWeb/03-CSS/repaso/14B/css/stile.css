@@ -1,0 +1,16 @@
+main{
+    background-image: url("../img/html5.png"),url("../img/css3.png"),url("../img/js.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left center, center center,  right center;
+}
+.manifesto{
+    padding:4rem;
+    margin: 2rem ;
+    font-style: italic;
+    background-color: rgba(20,20,20,0.8);
+}
+h2{
+    align-items: center;
+    color: white;
+}

@@ -27,8 +27,8 @@ h1 {
   float: right;
 }
 .container img:last-child {
-  float: right;
+  float: left;
 }
 .container img:nth-child(3) {
-  float: right;
+  float: left !important;
 }
