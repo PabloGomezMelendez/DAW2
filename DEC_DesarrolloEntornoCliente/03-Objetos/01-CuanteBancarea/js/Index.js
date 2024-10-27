@@ -2,6 +2,7 @@
 
 import { Cuenta } from "./Cuenta6.js";
 
+//Ejercicio 1
 const cuenta1= new Cuenta("Javier", 3000);
 const cuenta2= new Cuenta("Rocio", 5000);
 
