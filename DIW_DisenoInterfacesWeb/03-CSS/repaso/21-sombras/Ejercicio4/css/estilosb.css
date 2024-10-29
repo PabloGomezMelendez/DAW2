@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 20px;
+    background-repeat: no-repeat;
+}
+
+.circulo {
+clip-path: circle(100px at 100px 100px);
+width: 250px;
+height: 250px;
+background-image: linear-gradient(to right, red, orange, yellow, green, blue, purple, violet);
+
+}

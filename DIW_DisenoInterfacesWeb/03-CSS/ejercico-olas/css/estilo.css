@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    height: 2000PX;
+}
+body{
+    background-color:  #174222;;
+}
+h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 100px;
+    color: #FBAA1E;
+}
+
+.section_1 {
+    background-image: url('../img/lotus_f1.jpg');
+    background-size: cover;
+    background-position: center center;
+
+    position: relative;
+
+
+    padding-top: 10px;
+    /* Separamos el nav del section para que se vea el anclaje bien */
+    height: 100vh;
+    /* Esto para que no se desborde */
+    width: 100vw;
+    scroll-margin-top: 60px;
+    /* Con esto ajustas el anclaje para que se vea correctamente. */
+}
+
+.ola {
+    height: 150px;
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    bottom: -2px;
+}
+
+.ola svg {
+    height: 100%;
+    width: 100%;
+}

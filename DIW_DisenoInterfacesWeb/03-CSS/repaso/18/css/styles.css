@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    ;
+}
+
+body {
+    font-family: "Arima", system-ui;
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: 38px;
+    text-align: center;
+    text-shadow: 3px 3px 5px #a7a7a7, 5px 5px 5px #a7a7a7;
+}
+
+.card {
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 50px auto;
+    padding: 20px 0;
+    width: 350px;
+    box-shadow: 10px 10px 15px #525252;
+}
+
+.card_txt {
+    text-align: center;
+}
+
+.card_img {
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+}
+
+.card_btn {
+    background-image:  linear-gradient(to right, #659999, #f4791f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    border-radius: 5px;
+    color: white;
+    display: block;
+    width: 150px;
+    margin: 20px auto;
+    padding: 15px 0;
+    text-decoration: none;
+    text-align: center;
+}
+
+.card_btn:hover {
+    text-decoration: none;
+}

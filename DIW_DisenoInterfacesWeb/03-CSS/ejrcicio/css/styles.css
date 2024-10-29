@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.nav {
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    background-color: #2f4f4f;
+    text-align: right;
+}
+
+.nav_a {
+    display: inline-block;
+    padding: 20px;
+    text-align: center;
+    width: 150px;
+}
+
+.nav_a a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.menu-element:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.section_1 {
+    background-image: url('../img/monaco.jpg');
+    /* background-color: red; */
+    height: 100vh;
+    width: 100vw;
+ 
+}
+
+.section_2 {
+    /* background-image: url('../img/ferrari_f1.jpg'); */
+    width: 100%;
+
+}
+
+.section_3 {
+    /* background-image: url('../img/lotus_f1.jpg'); */
+    background: linear-gradient(to right, #59c173, #a17fe0, #5d26c1);
+    height: 99vh;
+    width: 100%;
+
+}

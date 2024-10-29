@@ -1,0 +1,59 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 20px;
+    background-repeat: no-repeat;
+}
+
+.sombras_multiples {
+    width: 70px;
+    height: 70px;
+    box-shadow: 3px 3px 0px 0px #f02da9,
+        8px 8px 0px 0px #f050a9c8,
+        11px 11px 0px 0px #f064a996,
+        15px 15px 0px 0px #f082a95c,
+        18px 18px 0px 0px #f0aaa95c;
+    font-size: 22px;
+    color: #f02da9;
+    font-family: sans-serif;
+    margin-bottom: 50px;
+}
+
+
+.colores {
+    margin-left: 20px;
+    width: 80px;
+    height: 80px;
+    box-shadow:
+        0px 0px 0px 3px #555bff,
+        0px 0px 0px 6px #1fc11b,
+        0px 0px 0px 9px #ffd913,
+        0px 0px 0px 12px #ff9c55,
+        0px 0px 0px 15px #ff5555;
+    margin-bottom: 70px;
+}
+
+
+.cuadrocolor {
+    width: 80px;
+    height: 80px;
+    box-shadow: 
+    0px 0px 0px 2px blue inset ,
+    10px -10px 0px -3px rgb(255, 255, 255),
+    0px 0px 0px 2px blue inset ,
+    10px -10px 0px -3px rgb(255, 255, 255),
+    0px 0px 0px 2px blue inset ,
+    10px -10px 0px -3px rgb(255, 255, 255),
+    0px 0px 0px 2px blue inset ,
+    10px -10px 0px -3px rgb(255, 255, 255),
+    0px 0px 0px 2px blue inset ,
+    10px -10px 0px -3px rgb(255, 255, 255),
+    0px 0px 0px 2px blue inset ,
+    10px -10px 0px -3px rgb(139, 4, 4),
+    
+}

@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 20px;
+    background-repeat: no-repeat;
+}
+
+.coloresgradientes {
+font-family: Arial, Helvetica, sans-serif;
+margin-top: 40px;
+color: #838A8D;
+padding: 40px;
+background-image: linear-gradient(to right, red, orange, yellow, green, blue, purple, violet);
+width: 100%;
+}
