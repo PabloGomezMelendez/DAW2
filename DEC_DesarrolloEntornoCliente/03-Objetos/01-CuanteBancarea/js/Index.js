@@ -1,6 +1,6 @@
 // @Autor @PabloGomezMelendez
 
-import { Cuenta } from "./Cuenta6.js";
+import { Cuenta } from "./Cuenta.js";
 
 //Ejercicio 1
 const cuenta1= new Cuenta("Javier", 3000);
