@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 Area Piramide</title>
+</head>
+
+<body>
+    <script>
+        //Area Piramide
+
+        //Creamos la funcion que realizara el redondeo de los decimales a 5 decimales.
+        function redondeo(num,decimales){
+            return Math.round(num*Math.pow(10,decimales)) / Math.pow(10,decimales);
+        }
+
+        //Creamos la funcion para calcular el area de la piramide y llamamos a la funcion que redondea los decimales
+        function areaPiramide(lado,altura){
+            return redondeo(lado*(lado+Math.sqrt(4*Math.pow(altura,2)+Math.pow(lado,2))),5);
+        }
+
+        //Mostramos por pantalla el area calculada
+        console.log("El area de la piramide es: "+ areaPiramide(6.8,9));
+
+    </script>
+</body>
+
+</html>
