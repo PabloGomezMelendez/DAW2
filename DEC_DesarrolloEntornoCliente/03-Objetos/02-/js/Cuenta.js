@@ -1,5 +1,5 @@
 // @Autor @PabloGomezMelende
- class Cuenta {
+export default class Cuenta {
     //Constructor
     constructor(titular, saldo) {
         this._titular = titular;
@@ -50,12 +50,6 @@
     }
 
 }
-
-//Ejercicio 1
-const cuenta1= new Cuenta("Javier", 3000);
-const cuenta2= new Cuenta("Rocio", 5000);
-
-cuenta1.transferir(cuenta2,500);
-
-console.log(cuenta1.toString());
-console.log(cuenta2.toString());
+export function saludar(){
+    console.log('Hola, soy una cuenta bancaria');
+}
