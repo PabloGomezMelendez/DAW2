@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-style: italic;
+}
+
+.container {
+    margin: 0px auto;
+    width: 90%;
+}
+
+.container>* {
+    height: 300px;
+    float: left;
+}
+
+/* Deskop*/
+
+.red {
+    background-color: red;
+    
+    width: 20%;
+}
+
+.blue {
+    background-color: blue;
+    width: 50%;
+}
+
+.yellow {
+    background-color: yellow;
+    width: 30%;
+
+}
+
+/* Media pantalla */
+@media screen and (max-width: 991px) {
+
+    .red,
+    .blue {
+        width: 50%;
+    }
+
+    .yellow {
+        background-color: yellow;
+        width: 100%;
+
+    }
+}
+
+/* Pantalla pequeña */
+@media screen and (max-width: 575px) {
+
+    .red,
+    .blue,
+    .yellow {
+        width: 100%;
+    }
+}
