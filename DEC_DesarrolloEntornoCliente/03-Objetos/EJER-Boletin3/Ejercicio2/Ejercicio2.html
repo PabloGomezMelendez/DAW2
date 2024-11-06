@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejercicio 2 Filtrar Numeros</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        //Filtar numeros primos
+      //Filtar numeros primos
 
-        //Creamos la funcion donde realizamos el filtro de los numeros indicados
-        function filtrarPrimosMayoresOnce(arryNum) {
-           return arryNum.filter(item => esPrimo(item) && item>11).sort(); 
+      //Creamos la funcion donde realizamos el filtro de los numeros indicados
+      function filtrarPrimosMayoresOnce(arryNum) {
+        //TODO Eliminar la funion .Sort ya que es para String, se debe usar el compare en este caso 
+          return arryNum.filter( esPrimoYMayorDe11(item) /*(item) =>esPrimo(item) && item > 11*/).sort();
+      }
+      function esPrimoYMayorDe11(item) {
+        return item>11 && esPrimo(item);
+      }
+      //Creamos la funcion que comprueba dichos numeros para saber si son primos
+      function esPrimo(num) {
+        for (let i = 2; i < num; i++) {
+          if (num % i == 0) {
+            return false;
+          }
         }
-
-        //Creamos la funcion que comprueba dichos numeros para saber si son primos
-        function esPrimo(num) {
-            for (let i = 2; i < num; i++) {
-                if (num%i==0) {
-                    return false;
-                }
-            }
-            return true;
-        }
-        //Mostramos por pantalla los numeros que son primos
-       console.log("Los numeros filtrados son: " + filtrarPrimosMayoresOnce([6,11,18,43,8,5,45,53,9,7,24,23]));
-
+        return true;
+      }
+      //Mostramos por pantalla los numeros que son primos y mayor que 11
+      console.log(
+        "Los numeros filtrados son: " +
+          filtrarPrimosMayoresOnce([6, 11, 18, 43, 8, 5, 45, 53, 9, 7, 24, 23])
+      );
     </script>
-</body>
+  </body>
 </html>
