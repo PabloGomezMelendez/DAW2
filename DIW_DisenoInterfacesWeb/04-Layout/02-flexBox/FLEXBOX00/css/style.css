@@ -1,0 +1,106 @@
+/* Variables de css*/
+:root{
+    --heiht-nav: 100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:Poppins (300, 400, 500, 700);
+    background-color: #f2f2f2;
+}
+
+/* container 90%*/
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* header */
+.header{
+background-color: #133d63;
+color: #fff;
+height: var(--heiht-nav);
+}
+.header__div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.header__nav{
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+
+}
+.nav__link{
+    color: #fff;
+    text-decoration: none;
+}
+
+/* main */
+
+.hero{
+    height: calc(100vh --var(--heiht-nav));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.figure__picture, .hero__section{
+    flex:1;
+}
+
+.figure_img{
+    width: 100%;
+    max-width: 450px;
+    display: block;
+}
+
+.hero__section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.section__h2{
+    font-size: 2.5rem;
+}
+.section__p{
+    font-size: 1rem;
+}
+.section__btn{
+    background-color: #f9a826;
+    border-radius: 6px;
+    color: #fff;
+    margin-top: 1.5rem;
+    padding: 15px 30px;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px){
+    :root{
+        --heiht-nav: 150px;
+    }
+    .header__div{
+        flex-direction: row;
+    }
+
+    .hero{
+        padding: 40px 0;
+        flex-direction: row;
+    }
+    .figure__picture{
+        order: 1;
+    }
+    .hero
+    section{
+        font-size: 1.rem;
+    }
+}
