@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Actividad 4.24</title>
+</head>
+
+<body>
+    <textarea id="textInput" placeholder="Introduce texto"></textarea><br>
+    <button onclick="insertText()">Insertar</button>
+    <button onclick="deleteText()">Borrar</button>
+    <button onclick="copyText()">Copiar</button>
+    <button onclick="replaceText()">Reemplazar</button>
+    <button onclick="swapElements()">Intercambiar primer y último elemento</button>
+
+    <script>
+        function insertText() {
+            const textInput = document.getElementById("textInput");
+            document.body.insertAdjacentHTML("beforeend", `<p>${textInput.value}</p>`);
+        }
+
+        function deleteText() {
+            const paragraphs = document.querySelectorAll("p");
+            if (paragraphs.length > 0) {
+                paragraphs[paragraphs.length - 1].remove();
+            }
+        }
+
+        function copyText() {
+            const paragraphs = document.querySelectorAll("p");
+            if (paragraphs.length > 0) {
+                const copiedText = paragraphs[paragraphs.length - 1].textContent;
+                document.body.insertAdjacentHTML("beforeend", `<p>${copiedText}</p>`);
+            }
+        }
+
+        function replaceText() {
+            const textInput = document.getElementById("textInput");
+            const paragraphs = document.querySelectorAll("p");
+            if (paragraphs.length > 0) {
+                paragraphs[paragraphs.length - 1].textContent = textInput.value;
+            }
+        }
+
+        function swapElements() {
+            const table = document.querySelector("table");
+            const rows = table.getElementsByTagName("tr");
+
+            const firstRow = rows[0];
+            const lastRow = rows[rows.length - 1];
+
+            const firstHTML = firstRow.innerHTML;
+            firstRow.innerHTML = lastRow.innerHTML;
+            lastRow.innerHTML = firstHTML;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Actividad 4.10</title>
+</head>
+<body>
+  <div id="paragraphContainer"></div>
+  <button onclick="addParagraph()">Añadir párrafo</button>
+
+  <script>
+    let paragraphCount = 0;
+
+    function addParagraph() {
+      paragraphCount++;
+      const newParagraph = document.createElement("p");
+      newParagraph.textContent = `Párrafo ${paragraphCount}`;
+      document.getElementById("paragraphContainer").appendChild(newParagraph);
+    }
+  </script>
+</body>
+</html>

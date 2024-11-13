@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 4.27</title>
+  </head>
+<html>
+
+<body>
+
+    <h2 class="example">A heading with class="example"</h2>
+    <p class="example">A paragraph with class="example".</p>
+
+    <p>Click the button to add a background color to the first p element in the document with class="example".</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+        function myFunction() {
+            const firstParagraph = document.querySelector("p.example");
+            if (firstParagraph) {
+                firstParagraph.style.backgroundColor = "yellow";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

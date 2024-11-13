@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Actividad 4.23</title>
+</head>
+<body>
+  <textarea id="textInput" placeholder="Introduce texto"></textarea><br>
+  <button onclick="insertText()">Insertar</button>
+  <button onclick="deleteText()">Borrar</button>
+  <button onclick="copyText()">Copiar</button>
+  <button onclick="replaceText()">Reemplazar</button>
+
+  <script>
+    function insertText() {
+      const textInput = document.getElementById("textInput");
+      document.body.insertAdjacentHTML("beforeend", `<p>${textInput.value}</p>`);
+    }
+
+    function deleteText() {
+      const paragraphs = document.querySelectorAll("p");
+      if (paragraphs.length > 0) {
+        paragraphs[paragraphs.length - 1].remove();
+      }
+    }
+
+    function copyText() {
+      const paragraphs = document.querySelectorAll("p");
+      if (paragraphs.length > 0) {
+        const copiedText = paragraphs[paragraphs.length - 1].textContent;
+        document.body.insertAdjacentHTML("beforeend", `<p>${copiedText}</p>`);
+      }
+    }
+
+    function replaceText() {
+      const textInput = document.getElementById("textInput");
+      const paragraphs = document.querySelectorAll("p");
+      if (paragraphs.length > 0) {
+        paragraphs[paragraphs.length - 1].textContent = textInput.value;
+      }
+    }
+  </script>
+</body>
+</html>

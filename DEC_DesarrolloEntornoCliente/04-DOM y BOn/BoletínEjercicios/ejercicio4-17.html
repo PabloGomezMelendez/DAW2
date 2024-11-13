@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Actividad 4.17</title>
+</head>
+
+<body>
+
+<h1>Modificación de color de texto</h1>
+    <p style="color: green;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores recusandae quam
+        aliquam iste mollitia eveniet, amet expedita tenetur facere nam sint atque numquam debitis, qui quidem quas
+        sapiente possimus corporis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore delectus
+        doloremque consequuntur illum facilis vitae accusamus magnam autem perferendis, ratione fugiat vel doloribus
+        similique nostrum, quibusdam expedita qui harum nihil. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Neque iure voluptas assumenda? Quae iure, excepturi animi necessitatibus similique, minima veniam nihil aperiam
+        sed quas explicabo neque, repellendus commodi eaque perspiciatis! Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Iusto cumque, eveniet corrupti dicta quos omnis velit labore, incidunt asperiores laudantium
+        eligendi fuga vero? Dignissimos, voluptas. Voluptates consequatur adipisci ab impedit. Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Quibusdam quasi cupiditate neque id expedita, quod nemo laboriosam nihil
+        repellat dolores assumenda sunt cumque alias cum, praesentium qui architecto, a eligendi.</p>
+    <select id="colorSelect">
+        <option value="red">Rojo</option>
+        <option value="green">Verde</option>
+        <option value="blue">Azul</option>
+    </select>
+    <script>
+        document.getElementById("colorSelect").addEventListener("change", function () {
+            const selectedColor = this.value;
+            document.querySelector("p").style.color = selectedColor;
+        });
+    </script>
+</body>
+
+</html>

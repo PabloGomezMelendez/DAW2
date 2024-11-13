@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Actividad 4.21</title>
+</head>
+
+<body>
+    <script>
+        function addParagraph() {
+            const color = document.getElementById("txtColor").value;
+            const paragraphs = document.querySelectorAll("p");
+
+            paragraphs.forEach((paragraph, index) => {
+                paragraph.textContent = `${index + 1}. Párrafo`;
+                paragraph.style.color = color;
+            });
+        }
+    </script>
+
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <label>Color del párrafo</label>
+    <input type="text" id="txtColor" value="blue" /><br />
+    <input type="button" onclick="addParagraph();" value="Añadir párrafos" />
+</body>
+
+</html>

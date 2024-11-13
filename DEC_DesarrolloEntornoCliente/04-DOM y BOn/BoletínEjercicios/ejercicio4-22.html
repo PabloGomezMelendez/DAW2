@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Actividad 4.22</title>
+</head>
+
+<body>
+    <div id="container"></div>
+    <input type="text" id="elementInput" placeholder="Texto del elemento" />
+    <button onclick="addElementHTML()">Añadir con insertAdjacentHTML</button>
+    <button onclick="addElementCreate()">Añadir con createElement</button>
+
+
+
+    <script>
+        function addElementHTML() {
+            const elementText = document.getElementById("elementInput").value;
+            document.getElementById("container").insertAdjacentHTML("beforeend", `<p>${elementText}</p>`);
+        }
+
+        function addElementCreate() {
+            const elementText = document.getElementById("elementInput").value;
+            const newParagraph = document.createElement("p");
+            newParagraph.textContent = elementText;
+            document.getElementById("container").appendChild(newParagraph);
+        }
+    </script>
+</body>
+
+</html>

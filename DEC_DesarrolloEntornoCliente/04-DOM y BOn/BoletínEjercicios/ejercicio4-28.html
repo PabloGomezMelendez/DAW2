@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 4.28</title>
+</head>
+
+<body>
+    <div>
+        <h3>H3 element</h3>
+        <p>I am a p element, my parent is a div element.</p>
+    </div>
+
+    <div>
+        <h3>H3 element</h3>
+        <p>I am a p element, my parent is also a div element.</p>
+    </div>
+
+    <p>Click the button to change the background color of every p element where the parent is a div element.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p><strong>Note:</strong> The querySelectorAll() method is not supported in Internet Explorer 8 and earlier
+        versions.</p>
+
+    <script>
+        function myFunction() {
+            const divParagraphs = document.querySelectorAll("div > p");
+            divParagraphs.forEach(paragraph => {
+                paragraph.style.backgroundColor = "yellow";
+            });
+        }
+    </script>
+</body>
+
+</html>
