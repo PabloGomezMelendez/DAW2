@@ -1,0 +1,32 @@
+<!-- @author @PabloGomezMelendez -->
+<!-- Confeccionar una página que contenga una lista de tipo (ul) y no defina marcas de tipo (li) inicialmente.
+ Luego al presionar un botón agregar dos marcas de tipo (li) con sus respectivos textos.
+ Luego de presionar una vez el botón no permitir agregar más elementos (li). -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <ul id="ul">
+
+    </ul>
+    <button onclick="agregarElementos()">Agregar elementos</button>
+    <script>
+        let agregar = true;
+        function agregarElementos(){
+            if(agregar){
+                let li1 = document.createElement("li");
+                li1.textContent = "Elemento 1";
+                let li2 = document.createElement("li");
+                li2.textContent = "Elemento 2";
+                document.getElementById("ul").appendChild(li1);
+                document.getElementById("ul").appendChild(li2);
+                agregar = false;
+            }
+        }
+    </script>
+ </body>
+ </html>

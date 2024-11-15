@@ -1,0 +1,29 @@
+<!-- @author @PabloGomezMelendez -->
+
+<!-- Permitir cambiar el tamaño de la fuente de un párrafo. 
+ Para esto crear tres botones (fuente pequeña (10), fuente mediana(13) y fuente grande(20)) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="HolaMundo">Hola mundo</p>
+    <button onclick="cambiarFuente(10)">Fuente Pequeña</button>
+    <button onclick="cambiarFuente(50)">Fuente Media</button>
+    <button onclick="cambiarFuente(100)">Fuente Grande</button>
+
+    <script>
+        // Botón para cambiar la fuente a 10
+        function cambiarFuente(size) {
+            document.getElementById("HolaMundo").style.fontSize = (size) + "px";
+        }
+    </script>
+</body>
+
+</html>

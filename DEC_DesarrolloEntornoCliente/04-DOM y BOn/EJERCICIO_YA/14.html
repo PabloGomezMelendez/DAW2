@@ -1,0 +1,31 @@
+<!-- @author @PabloGomezMelendez -->
+<!-- Se debe crear una página que contenga un div con 5 párrafos.
+Al presionar un botón insertar un nuevo párrafo al principio del div que contiene los 5 párrafos. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="insertarParrafo()">Insertar Párrafo</button>
+    <div id="div">
+        <p id="p_1">TEXTO DE PARRAFOS POR DEFECTO 1</p>
+        <p id="p_2">TEXTO DE PARRAFOS POR DEFECTO 2</p>
+        <p id="p_3">TEXTO DE PARRAFOS POR DEFECTO 3</p>
+        <p id="p_4">TEXTO DE PARRAFOS POR DEFECTO 4</p>
+        <p id="p_5">TEXTO DE PARRAFOS POR DEFECTO 5</p>
+    </div>
+    <script>
+        let contador = 1
+        function insertarParrafo() {
+            var parrafo = document.createElement("p");
+            parrafo.textContent = "Nueva frase "+contador;
+            var div = document.getElementById("div");
+            div.insertBefore(parrafo, div.firstChild);
+            contador++;
+        }
+    </script>
+</body>
+</html>

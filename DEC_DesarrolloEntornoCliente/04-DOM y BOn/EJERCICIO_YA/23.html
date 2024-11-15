@@ -1,0 +1,39 @@
+<!-- @author @PabloGomezMelendez -->
+<!-- Definir una lista con tres nombres de paises.
+  Luego en tiempo de ejecución permitir cambiar el estilo de la lista. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="listapaises">
+        <li>Brasil</li>
+        <li>Uruguay</li>
+        <li>Argentina</li>
+    </ul>
+    <select onChange="cambiarEstiloLista()" id="estilolista">
+        <option value="none">none</option>
+        <option value="disc">disc</option>
+        <option value="circle">circle</option>
+        <option value="square">square</option>
+        <option value="decimal" selected="selected">decimal</option>
+        <option value="decimal-leading-zero">decimal-leading-zero</option>
+        <option value="lower-roman">lower-roman</option>
+        <option value="upper-roman">upper-roman</option>
+        <option value="lower-alpha">lower-alpha</option>
+        <option value="upper-alpha">upper-alpha</option>
+    </select>
+    <script>
+        function cambiarEstiloLista() {
+            let pun = document.getElementById('listapaises')
+            let punselect = document.getElementById('estilolista')
+            pun.style.listStyleType = punselect.value
+        }</script>
+</body>
+
+</html>

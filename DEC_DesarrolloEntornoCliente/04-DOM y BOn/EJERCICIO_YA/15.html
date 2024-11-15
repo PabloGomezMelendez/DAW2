@@ -1,0 +1,33 @@
+<!-- @author @PabloGomezMelendez -->
+<!-- Disponer un div con tres párrafos. 
+ Ingresar en un control de tipo text un valor entero entre 0 y 2. 
+ Luego borrar el párrafo que coincida con el valor ingresado (el valor ingresado representa la posición del nodo elemento a borrar). -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div">
+        <p id="p1">texto 1</p>
+        <p id="p2">texto 2</p>
+        <p id="p3">texto 3</p>
+    </div>
+    <button onclick="borrarParrafo()">Borrar párrafo</button>
+    <script>
+        function borrarParrafo() {
+            let numero = parseInt(Math.random() * 3);
+            console.log(numero); // Para probar el número aleatorio en consola
+            let parrafo = document.getElementsByTagName("p");
+            parrafo[numero].remove();
+        }
+    </script>
+
+</body>
+
+</html>

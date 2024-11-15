@@ -1,0 +1,28 @@
+<!-- @author @PabloGomezMelendez -->
+<!-- Definir un div con tres párrafos.
+  Luego al presionar un botón mover el div a otro div ubicado debajo del botón. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div_1">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab obcaecati perferendis consectetur rem culpa eos, deleniti a incidunt harum magni autem in praesentium voluptatum saepe nihil recusandae facere accusamus alias.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab obcaecati perferendis consectetur rem culpa eos, deleniti a incidunt harum magni autem in praesentium voluptatum saepe nihil recusandae facere accusamus alias.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab obcaecati perferendis consectetur rem culpa eos, deleniti a incidunt harum magni autem in praesentium voluptatum saepe nihil recusandae facere accusamus alias.</p>
+    </div>
+    <button type="button" onclick="mover()">boton mover</button>
+    <div id="div_2"></div>
+    <script>
+        function mover() {
+            var div_1 = document.getElementById("div_1");
+            var div_2 = document.getElementById("div_2");
+            div_2.appendChild(div_1);
+        }
+    </script>
+</body>
+</html>

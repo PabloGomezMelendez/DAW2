@@ -1,0 +1,30 @@
+<!-- @author @PabloGomezMelendez -->
+<!-- Se cuenta con un vector con los siguiente valores:
+
+const dias=['lunes','martes','miércoles','jueves','viernes','sábado','domingo']
+Crear una lista ordenada cuando se presiona un botón.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="Generar lista" id="boton1" onclick="generarLista()">
+    <ol id="lista"></ol>
+    <script>
+        function generarLista() {
+            const dias = ['lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo']
+            let cadena = ""
+            for (let dia of dias)
+                cadena += `<li>${dia}</li>`
+            document.getElementById("lista").innerHTML = cadena
+        }
+    </script>
+</body>
+
+</html>

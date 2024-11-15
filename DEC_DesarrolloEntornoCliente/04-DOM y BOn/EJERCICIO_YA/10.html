@@ -1,0 +1,37 @@
+<!-- @author @PabloGomezMelendez -->
+<!-- Confeccionar una página que muestre dos div que contengan 3 párrafos cada uno.
+  Cuando se presione un botón ocultar todos los párrafos del segundo div. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div1">
+        <p id="parrafo1">"estos parrafos detro de un div"</p>
+        <p id="parrafo2">"estos parrafos detro de un div"</p>
+        <p id="parrafo3">"estos parrafos detro de un div"</p>
+    </div>
+    <div id="div2" style="background-color: antiquewhite;">
+        <p id="parrafo1">"estos parrafos detro de un div"</p>
+        <p id="parrafo2">"estos parrafos detro de un div"</p>
+        <p id="parrafo3">"estos parrafos detro de un div"</p>
+    </div>
+    <button onclick="ocultarParrafos()">Ocultar Parrafos</button>
+    <script>
+        function ocultarParrafos() {
+            const div2 = document.getElementById("div2");
+            const parrafos = div2.getElementsByTagName("p");
+            for (let i = 0; i < parrafos.length; i++) {
+                parrafos[i].style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!-- @author @PabloGomezMelendez -->
+<!-- Confeccionar una página que fije el color rojo a todos los párrafos. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Hola mundo</p>
+    <p>Este es otro párrafo</p>
+    <script>
+        // Se seleccionan todos los párrafos en la página
+        var paragraphs = document.getElementsByTagName('p');
+        // Se recorre el arreglo de párrafos
+        for (var i = 0; i < paragraphs.length; i++) {
+            // Se fija el color rojo a cada párrafo
+            paragraphs[i].style.color = 'red';
+        }
+    </script>
+</body>
+
+</html>
