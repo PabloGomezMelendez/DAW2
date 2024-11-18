@@ -24,26 +24,36 @@ public class GeneralBanco {
 	public static void mainAccion(Banco banco) {
 		Scanner teclado = new Scanner(System.in);
 		Sesion sesion = new Sesion();
-		boolean isStart=true;
+		boolean isStart = Boolean.TRUE;
+		boolean isAccion = Boolean.TRUE;
 		int accion;
 		checkLogin(banco, teclado, sesion);
-		
+
 		System.out.println(Contantes.SEPARADOR);
-		
-			System.out.println(Contantes.MENU_INICIO);
-			System.out.println(Contantes.SEPARADOR);
-			
+		System.out.println(Contantes.MENU_INICIO);
+		System.out.println(Contantes.SEPARADOR);
+		do {
+
 			if (sesion.isAdmin()) {
 				for (int i = 0; i < Contantes.MENU_INICIO_ACCIONES_ADMIN.length; i++) {
-					System.out.println((i+1)+"-"+Contantes.MENU_INICIO_ACCIONES_ADMIN[i]);
+					System.out.println(i  + "-" + Contantes.MENU_INICIO_ACCIONES_ADMIN[i]);
 				}
 				System.out.println(Contantes.SELECIONA_ACCION);
-				accion=teclado.nextInt();
+				accion = teclado.nextInt();
+			} else {
+				for (int i = 0; i < Contantes.MENU_INICIO_ACCIONES_USER.length; i++) {
+					System.out.println(i + "-" + Contantes.MENU_INICIO_ACCIONES_USER[i]);
+				}
+				System.out.println(Contantes.SELECIONA_ACCION);
+				accion = teclado.nextInt();
 			}
-			
-			
-		
-		
+			if (accion != 0) {
+				System.out.println("Entra en asunto");
+			} else {
+				isAccion = Boolean.FALSE;
+			}
+		} while (isAccion == Boolean.TRUE);
+		System.out.println("Fin");
 
 	}
 
@@ -74,7 +84,7 @@ public class GeneralBanco {
 			}
 			if (!sesion.isLogin()) {
 				System.out.println(Contantes.LOGIN_ERROR);
-			}else {
+			} else {
 				sesion.setUsarName(auxUsuario);
 			}
 		} while (!sesion.isLogin());
