@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.header {
+    min-height: 100vh;
+    background-image: url("../img/kfc.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__block,
+.header_content {
+    flex: 0 1 calc(33.3% -3rem);
+}
+
+.header_content {
+    color: #FBF0E1;
+    text-align: center;
+}
+.header_content h1{
+    color: #A6192E;
+    text-transform: uppercase;
+}
+
+.header__block{
+    background-color: #A6192E;
+    width: 50rem;
+    height: 50px;
+}
+.header__block span{
+    font-size:3rem;
+    display: block;
+}
+
+.header__block--up {
+    align-self: flex-start;
+    margin-top:1rem;
+}
+
+.header__block--down {
+    align-self: flex-end;
+    margin-top:1rem;
+}
+
+.header__date {}
+
+.header__address {}
