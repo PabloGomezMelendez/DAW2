@@ -24,7 +24,7 @@ public class GeneralBanco {
 	public static void mainAccion(Banco banco) {
 		Scanner teclado = new Scanner(System.in);
 		Sesion sesion = new Sesion();
-		boolean isStart = Boolean.TRUE;
+
 		boolean isAccion = Boolean.TRUE;
 		int accion;
 		checkLogin(banco, teclado, sesion);
@@ -36,7 +36,7 @@ public class GeneralBanco {
 
 			if (sesion.isAdmin()) {
 				for (int i = 0; i < Contantes.MENU_INICIO_ACCIONES_ADMIN.length; i++) {
-					System.out.println(i  + "-" + Contantes.MENU_INICIO_ACCIONES_ADMIN[i]);
+					System.out.println(i + "-" + Contantes.MENU_INICIO_ACCIONES_ADMIN[i]);
 				}
 				System.out.println(Contantes.SELECIONA_ACCION);
 				accion = teclado.nextInt();
@@ -48,11 +48,42 @@ public class GeneralBanco {
 				accion = teclado.nextInt();
 			}
 			if (accion != 0) {
-				System.out.println("Entra en asunto");
+
+				if (sesion.isAdmin() && (0 <= accion && accion <= Contantes.MENU_INICIO_ACCIONES_ADMIN.length)) {
+
+				}
+				if (sesion.isUser() && (0 <= accion && accion <= Contantes.MENU_INICIO_ACCIONES_USER.length)) {
+					switch (accion) {
+					case 1:
+						System.out.println("Cuanto desas ingresar: ");
+						double ingreso = teclado.nextDouble();
+						if (ingreso!=0) {
+							
+							sesion.getUsuario().getCuantas().ingresarDineroEnCuenta(ingreso);
+							System.out.println("Se ingreso dinero "+ingreso+" en la cuenta con exito. Saldo actual: "+sesion.getUsuario().getCuantas().getSaldoCuenta());
+						}else {
+							System.out.println("No se ingreso dinero");
+						}
+						break;
+					case 2:
+
+						break;
+					case 3:
+
+						break;
+					
+					default:
+						System.out.println("Se produjo un error");
+						break;
+					}
+
+				}
+
 			} else {
 				isAccion = Boolean.FALSE;
 			}
 		} while (isAccion == Boolean.TRUE);
+
 		System.out.println("Fin");
 
 	}
@@ -77,8 +108,10 @@ public class GeneralBanco {
 				for (Usuario user : banco.getUsuarios()) {
 					if (user.getNombre().equals(auxUsuario) && user.getContrasena() == auxPassword) {
 						System.out.println(Contantes.LOGIN_EXITOSO_USER + auxUsuario);
+						
 						sesion.setLogin(Boolean.TRUE);
 						sesion.setUser(Boolean.TRUE);
+						sesion.setUsuario(user);
 					}
 				}
 			}

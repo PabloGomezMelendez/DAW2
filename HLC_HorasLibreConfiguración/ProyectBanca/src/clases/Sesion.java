@@ -5,12 +5,21 @@ public class Sesion {
 	private boolean login = false;
 	private boolean admin = false;
 	private boolean user = true;
+	private Usuario usuario;
 	
-	private String usarName;
 	public Sesion() {
 		super();
-	}
+	}	
 	
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+
+	private String usarName;
 	public String getUsarName() {
 		return usarName;
 	}

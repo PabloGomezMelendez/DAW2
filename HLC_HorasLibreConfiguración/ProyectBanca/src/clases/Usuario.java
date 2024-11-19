@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Usuario extends Personas {
 	//atributos
-	ArrayList<Cuenta> cuantas= new ArrayList<Cuenta>();
+	Cuenta cuantas= new Cuenta();
 	ArrayList<Movimientos> moviminetos=new ArrayList<Movimientos>();
 	
 
@@ -13,9 +13,31 @@ public class Usuario extends Personas {
 		
 	}
 	
-	public void abrirCuenta() {
-		
+	
+
+	public Cuenta getCuantas() {
+		return cuantas;
 	}
+
+
+
+	public void setCuantas(Cuenta cuantas) {
+		this.cuantas = cuantas;
+	}
+
+
+
+	public ArrayList<Movimientos> getMoviminetos() {
+		return moviminetos;
+	}
+
+
+
+	public void setMoviminetos(ArrayList<Movimientos> moviminetos) {
+		this.moviminetos = moviminetos;
+	}
+
+
 
 	@Override
 	public String toString() {
