@@ -55,8 +55,15 @@ public class GeneralBanco {
 				if (sesion.isUser() && (0 <= accion && accion <= Contantes.MENU_INICIO_ACCIONES_USER.length)) {
 					switch (accion) {
 					case 1:
+						double ingreso=0;
 						System.out.println("Cuanto desas ingresar: ");
-						double ingreso = teclado.nextDouble();
+						try {
+							
+							 ingreso = (Double)teclado.nextDouble();
+						} catch (Exception e) {
+							System.err.println("Se produjo un fallo en la banca");
+							isAccion = Boolean.FALSE;
+						}
 						if (ingreso!=0) {
 							
 							sesion.getUsuario().getCuantas().ingresarDineroEnCuenta(ingreso);
