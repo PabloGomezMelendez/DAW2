@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .resaltado{
+            background-color: yellow;
+        }
+        div{
+            width: 600px; height: 100px;
+            border-radius: 5px;
+            border-color:burlywood; background-color: beige;
+            font-size: 35px;
+            display: flex; justify-content: center; align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplo eventos onfocus y onblur</h1>
+    <p>Haz que el cuadro de texto "Nombre" gane o pierda el foco</p>
+    <br>
+    <label for="txtNombre">Nombre:</label><input type="text" id="txtNombre">
+    <label for="txtNombre">Apellidos:</label><input type="text" id="txtApellidos">
+    <br><br>
+    <div id="contenido"></div>
+    <script>
+        function iniciar(){
+            document.querySelector("#txtNombre").addEventListener('focus',ganarFoco);
+            document.querySelector("#txtNombre").addEventListener('blur',perderFoco);
+        }
+
+        function ganarFoco(){
+            console.log("ganar foco");
+            document.querySelector("#txtNombre").classList.add("resaltado");
+            document.querySelector("#contenido").innerHTML="Foco ganado!";
+        }
+
+        function perderFoco(){
+            console.log("perder foco");
+            document.querySelector("#txtNombre").classList.remove("resaltado");
+            document.querySelector("#contenido").innerHTML="Foco perdido!";
+        }
+        addEventListener('load',iniciar);
+    </script>
+</body>
+</html>

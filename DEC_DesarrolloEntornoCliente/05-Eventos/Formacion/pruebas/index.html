@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #bce7e4;
+            width: 100vw;
+            height: 100vh;
+        }
+        a{
+            text-decoration: none;
+            background-color: aqua;
+            color: aliceblue;
+
+            padding: 10px;
+            text-align: center;
+
+            width: 500px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <a href="">ENLACE</a>
+    
+</body>
+<script>
+    // //se captura el evento onclick del body para lanzar una alert
+    // document.body.onclick = function(){
+    //     alert("Hola mundo");
+    //     }
+    // //se establece un evento para el enlace para lanzar una alert
+    // document.querySelector("a").addEventListener("click", function(){
+    //     alert("Hola mundo");
+    // });
+
+    function iniciar(){
+            const body= document.querySelector("body");
+            body.addEventListener('click', decirHola, true);
+            const enlace= document.querySelector("a");
+            enlace.addEventListener('click', decirHolaMundo, true);
+        }
+        // Manejador de eventos de onclik en el body
+        function decirHolaMundo(){
+            alert("Hola Mundo");
+            }
+        // Manejador de eventos de onclik en el enlace
+        function decirHola(){
+            alert("Hola!");
+        }
+
+        addEventListener('load',iniciar);
+</script>
+</html>

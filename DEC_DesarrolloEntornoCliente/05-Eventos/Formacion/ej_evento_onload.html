@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">Documentation</p>
+    <script>
+        const parafo1 = document.querySelector("#p1");
+        alert(parafo1.innerHTML);
+
+        const parafo2 = document.querySelector("#p2");
+        alert(parafo2.innerHTML);
+
+        // Manejador de eventos del evento onload
+        function iniciar(){
+            alert("Página web cargada!");
+        }
+        // Añadimos el manejador de eventos iniciar() para que se ejecute cuando se cargue la página
+        addEventListener('load', iniciar);
+    </script>
+    <p id="p2">Documentation</p>
+
+</body>
+</html>

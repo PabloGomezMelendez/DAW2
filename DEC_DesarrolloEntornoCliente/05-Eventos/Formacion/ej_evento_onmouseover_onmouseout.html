@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 600px;
+            height: 100px;
+            border-radius: 5px;
+            border: 2px solid burlywood;
+            display: flex; justify-content: center; align-items: center;
+            font-size: 35px;
+        }
+        .resaltado {
+            background-color: beige;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejemplo de onmouseover y onmouseout</h1>
+    <p>(Entra y sal con el ratón de la región del div)</p>
+    <br>
+    <div id="zona"></div>
+    <script>
+        // iniciar() se ejecuta al cargarse la página
+        function iniciar() {
+            const miDiv = document.querySelector("#zona");
+            miDiv.addEventListener('mouseover', entrarDiv);
+            miDiv.addEventListener('mouseout', salirDiv);
+        }
+
+        // Manejador de evento que se ejecuta cuando el ratón sobrevuela el div
+        function entrarDiv() {
+            document.querySelector("#zona").classList.add("resaltado");
+            document.querySelector("#zona").innerHTML="mouseover";
+        }
+
+        // Manejador de evento que se ejecuta cuando el ratón sale de la zona del div
+        function salirDiv() {
+            document.querySelector("#zona").classList.remove("resaltado");
+            document.querySelector("#zona").innerHTML="mouseout";
+        }
+
+        addEventListener('load', iniciar);
+    </script>
+</body>
+</html>

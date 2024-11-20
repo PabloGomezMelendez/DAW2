@@ -1,0 +1,68 @@
+<!-- @author @PabloGomezMelendez -->
+<!-- Modificar el segundo problema resuelto (las casillas de la tabla que cambian el color cuando ingresamos con el mouse) 
+para permitir llamar mediante hipervínculos a distintos programas que administran web-mail (gmail, hotmail y yahoo) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <td>
+                <a href="#">Outlook</a>
+            </td>
+            <td>
+                <a href="">Yahoo</a>
+            </td>
+            <td>
+                <a href="">GMail</a>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function pintar(evt, color) {
+            const col = evt.target;
+            col.style.backgroundColor = color;
+        }
+
+        function inicar() {
+            const columna = document.querySelectorAll("td");
+
+            columna[0].addEventListener('mouseover', () => {
+                pintar(event, '#ff0000');
+            });
+            columna[0].addEventListener('mouseout', () => {
+                pintar(event, '#ffffff');
+            });
+
+            columna[1].addEventListener('mouseover', () => {
+                pintar(event, '#00ff00');
+            });
+            columna[1].addEventListener('mouseout', () => {
+                pintar(event, '#ffffff');
+            });
+
+            columna[2].addEventListener('mouseover', () => {
+                pintar(event, '#0000ff');
+            });
+            columna[2].addEventListener('mouseout', () => {
+                pintar(event, '#ffffff');
+            });
+
+        }
+
+        addEventListener('load', inicar)
+    </script>
+</body>
+
+</html>
