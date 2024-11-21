@@ -1,0 +1,135 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%), 
+        url("../img/01.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.contact {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Título */
+.contact__legend {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Campos individuales
+.contact__field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+} */
+
+/* Contenedor de cada campo */
+.contact__field {
+    display: flex; /* Flexbox para alinear label e input */
+    align-items: center;
+    gap: 15px; /* Espacio entre label y campo */
+}
+
+.contact__field-group {
+    display: flex;
+    gap: 10px;
+}
+
+/* Label */
+.contact__label {
+    flex: 0 0 120px; /* Ancho fijo para el label */
+    font-size: 0.9rem;
+    color: #555;
+    text-align: left;
+}
+
+/* Input y textarea */
+.contact__input,
+.contact__textarea {
+    flex: 1; /* Ocupa el resto del espacio */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.contact__input:focus,
+.contact__textarea:focus {
+    border-color: #7a3333;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Textarea */
+.contact__textarea {
+    resize: none;
+    height: 100px;
+}
+/* Botón */
+.contact__btn {
+    background: linear-gradient(to left, #ffffff, #7a3333);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact__btn:hover {
+    background: linear-gradient(to right, #ffffff, #7a3333);
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .contact__field {
+        flex-direction: column; /* Cambiar a columnas */
+        align-items: flex-start; /* Alinear elementos al inicio */
+    }
+
+    .contact__label {
+        flex: none; /* Elimina el ancho fijo */
+        width: 100%; /* Label ocupa todo el ancho */
+        margin-bottom: 5px; /* Añade espacio entre el label y el input */
+        text-align: left;
+    }
+
+    .contact__input,
+    .contact__textarea {
+        width: 100%; /* Input y textarea ocupan todo el ancho */
+    }
+
+    .contact__btn {
+        width: 100%; /* Botón ocupa todo el ancho */
+    }
+}
