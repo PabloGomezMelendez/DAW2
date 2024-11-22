@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function inicio(){
+            // El evento hacer click sobre cualquiera de los botones 1,2 y 3 será gestionado por el mismo manejador de eventos
+            document.getElementById('boton1').addEventListener('click',manejador_eventos);
+            document.getElementById('boton2').addEventListener('click',manejador_eventos);
+            document.getElementById('ciudades').addEventListener('change',manejador_eventos);
+        }
+
+          function manejador_eventos(ev){
+            let control= ev.target;
+            let tipoevento = ev.type;
+            alert(`Evento desencadenado por control ${control.value} y es de tipo ${tipoevento}`);
+        }
+        addEventListener('load',inicio);
+    </script>
+    <h1>Asignar varios eventos a un único manejador de eventos</h1>
+    <input type="button" id="boton1" value="Botón 1">
+    <input type="button" id="boton2" value="Botón 2">
+    <select name="ciudades" id="ciudades">
+        <option value="Utrera">Utrera</option>
+        <option value="Los Palacios">Los Palacios</option>
+    </select>
+</body>
+</html>

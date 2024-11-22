@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function iniciar() {
+            alert("Ejecutado evento onLoad!");
+
+            const boton2 = document.getElementById('boton2');
+            //Añadir evento mediante addEventListener
+            boton2.addEventListener('click', clickBoton2);
+        }
+
+        // Manejador de eventos de onclick
+        function clickBoton2() {
+            alert('Evento añadido usando evento addEventListener sobre objeto boton2');
+        }
+
+        addEventListener('load', iniciar); // Usamos evento onLoad para asegurarnos de que el DOM esté cargado
+        // cuando se ejecute el código JavaScript
+    </script>
+
+    <input type="button" id="boton2" value="Boton2">
+
+    </div>
+</body>
+
+</html>
