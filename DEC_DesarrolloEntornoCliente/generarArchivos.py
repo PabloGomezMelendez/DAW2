@@ -22,10 +22,10 @@ def crear_ficheros_html(ruta, rango_inicio, rango_fin):
         archivo = os.path.join(ruta, f"{i}.html")
         try:
             with open(archivo, 'w') as f:
-                contenido = f"""<!DOCTYPE html>
-<!-- @author @PabloGomezMelendez -->
+                contenido = f"""<!-- @author @PabloGomezMelendez -->
+<!DOCTYPE html>
 
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

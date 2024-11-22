@@ -1,14 +1,37 @@
-<!DOCTYPE html>
 <!-- @author @PabloGomezMelendez -->
+<!-- Prueba 1 -->
+<!DOCTYPE html>
+<html>
 
-<html lang="en">
 <head>
+    <title>Ejemplo de JavaScript</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Archivo 71</title>
 </head>
+
 <body>
-    <h1>Este es el archivo 71</h1>
-    <p>Generado automáticamente.</p>
+
+    <form method="post" action="procesar.php" id="formulario1">
+        Ingrese clave:
+        <input type="password" id="clave1" name="clave1" size="20" required>
+        <br> Repita clave:
+        <input type="password" id="clave2" name="clave2" size="20" required>
+        <br>
+        <input type="submit" id="confirmar" name="confirmar" value="Confirmar">
+    </form>
+
+    <script>
+        document.getElementById("formulario1").addEventListener('submit', validar);
+
+        function validar(evt) {
+            let cla1 = document.getElementById("clave1").value;
+            let cla2 = document.getElementById("clave2").value;
+            if (cla1 != cla2) {
+                alert('Las claves ingresadas son distintas');
+                evt.preventDefault();
+            }
+        }
+    </script>
+
 </body>
+
 </html>

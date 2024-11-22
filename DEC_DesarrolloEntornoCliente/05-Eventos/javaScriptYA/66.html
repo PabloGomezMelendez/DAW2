@@ -1,14 +1,29 @@
-<!DOCTYPE html>
 <!-- @author @PabloGomezMelendez -->
+<!-- Prueba 66 -->
+<!DOCTYPE html>
+<html>
 
-<html lang="en">
 <head>
+    <title>Ejemplo de JavaScript</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Archivo 66</title>
 </head>
+
 <body>
-    <h1>Este es el archivo 66</h1>
-    <p>Generado automáticamente.</p>
+
+    <div style="width:200px;height:200px;background:#0000ff" id="recuadro1">
+    </div>
+    <p id="cantidad">0</p>
+
+    <script>
+        document.getElementById('recuadro1').addEventListener('mousemove', mover);
+
+        function mover() {
+            let x = parseInt(document.getElementById('cantidad').innerHTML);
+            x++;
+            document.getElementById('cantidad').innerHTML = x;
+        }
+    </script>
+
 </body>
+
 </html>

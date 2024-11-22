@@ -1,14 +1,32 @@
-<!DOCTYPE html>
 <!-- @author @PabloGomezMelendez -->
+<!DOCTYPE html>
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archivo 65</title>
 </head>
+
 <body>
-    <h1>Este es el archivo 65</h1>
-    <p>Generado automáticamente.</p>
+    <h1 id="titulo">Titulo principal</h1>
+
+    <script>
+        const TITULO = document.getElementById('titulo')
+        TITULO.addEventListener('mouseover', entrada);
+        TITULO.addEventListener('mouseout', salida);
+
+        function entrada() {
+            TITULO.style.color = '#ff0000';
+            TITULO.style.backgroundColor = '#ffff00';
+        }
+
+        function salida() {
+            TITULO.style.color = '#000000';
+            TITULO.style.backgroundColor = '#ffffff';
+        }
+    </script>
 </body>
+
 </html>

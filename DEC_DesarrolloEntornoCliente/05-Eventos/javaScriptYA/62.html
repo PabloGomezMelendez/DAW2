@@ -1,14 +1,73 @@
-<!DOCTYPE html>
 <!-- @author @PabloGomezMelendez -->
+ <!-- Pruebas 1 -->
+<!-- <!DOCTYPE html>
+<html>
 
-<html lang="en">
 <head>
+    <title>Ejemplo de JavaScript</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Archivo 62</title>
 </head>
+
 <body>
-    <h1>Este es el archivo 62</h1>
-    <p>Generado autom�ticamente.</p>
+
+    <form method="post" action="procesar.php" onsubmit="validar();" id="formulario1">
+        Ingrese nombre:
+        <input type="text" id="usuario" name="usuario" size="20">
+        <br> Ingrese clave:
+        <input type="password" id="clave" name="clave" size="20">
+        <br>
+        <input type="submit" id="confirmar" name="confirmar" value="Confirmar">
+    </form>
+
+    <script>
+        function validar() {
+            let usu = document.getElementById("usuario").value;
+            let cla = document.getElementById("clave").value;
+            if (usu.length == 0 || cla.length == 0) {
+                alert('El nombre de usuario o clave está vacío');
+                return false;
+            } else
+                return true;
+        }
+    </script>
+
 </body>
+</html -->
+
+<!-- Pruebas 2 y 3 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <form method="post" action="procesar.php" id="formulario1">
+        Ingrese nombre:
+        <input type="text" id="usuario" name="usuario" size="20">
+        <br> Ingrese clave:
+        <input type="password" id="clave" name="clave" size="20">
+        <br>
+        <input type="submit" id="confirmar" name="confirmar" value="Confirmar">
+    </form>
+
+    <script>
+        window.onload = function() {
+            document.getElementById("formulario1").onsubmit = function() {
+                let usu = document.getElementById("usuario").value;
+                let cla = document.getElementById("clave").value;
+                if (usu.length == 0 || cla.length == 0) {
+                    alert('El nombre de usuario o clave está vacío');
+                    return false;
+                } else
+                    return true;
+            }
+        }
+    </script>
+
+</body>
+
 </html>

@@ -1,14 +1,67 @@
-<!DOCTYPE html>
 <!-- @author @PabloGomezMelendez -->
+<!-- Implementar un tablero de TaTeTi. 
+  Asociar el evento click de los 9 botones a una única función. 
+  Alternar entre las "X" y "O". Mostrar un mensaje cuando gana un jugador. -->
+<!DOCTYPE html>
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archivo 70</title>
 </head>
+
 <body>
-    <h1>Este es el archivo 70</h1>
-    <p>Generado autom�ticamente.</p>
+
+    <div id="tablero">
+        <input type="button" id="boton1" class="boton" value=" ">
+        <input type="button" id="boton2" class="boton" value=" ">
+        <input type="button" id="boton3" class="boton" value=" "><br />
+        <input type="button" id="boton4" class="boton" value=" ">
+        <input type="button" id="boton5" class="boton" value=" ">
+        <input type="button" id="boton6" class="boton" value=" "><br />
+        <input type="button" id="boton7" class="boton" value=" ">
+        <input type="button" id="boton8" class="boton" value=" ">
+        <input type="button" id="boton9" class="boton" value=" ">
+    </div>
+
+
+    <script>
+        let jugador = 'X';
+
+        // Asignar los eventos a los botones
+        for (let i = 1; i <= 9; i++) {
+            document.getElementById('boton' + i).addEventListener('click', presion);
+        }
+
+        function presion(evt) {
+            if (evt.target.value === " ") {
+                evt.target.value = jugador;
+                jugador = (jugador === 'X') ? 'O' : 'X'; // Cambiar jugador
+                verificarGanador();
+            }
+        }
+
+        function verificarGanador() {
+            const combinacionesGanadoras = [
+                [1, 2, 3], [4, 5, 6], [7, 8, 9], // Filas
+                [1, 4, 7], [2, 5, 8], [3, 6, 9], // Columnas
+                [1, 5, 9], [3, 5, 7]             // Diagonales
+            ];
+
+            // Verificar las combinaciones para 'X' y 'O'
+            for (let jugadorActual of ['X', 'O']) {
+                for (let combinacion of combinacionesGanadoras) {
+                    if (combinacion.every(index => document.getElementById('boton' + index).value === jugadorActual)) {
+                        alert('Gano la ' + jugadorActual);
+                        return; // Terminar la función si se encuentra un ganador
+                    }
+                }
+            }
+        }
+
+    </script>
 </body>
+
 </html>

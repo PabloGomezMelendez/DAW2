@@ -1,6 +1,7 @@
-<!DOCTYPE html>
 <!-- @author @PabloGomezMelendez -->
-
+<!-- Elaborar un programa que muestre un div de color rojo.
+  Cuando se presione cambiar el color a amarillo y luego de soltar el botÃ³n del mouse volver a pintar de rojo. -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +9,21 @@
     <title>Archivo 64</title>
 </head>
 <body>
-    <h1>Este es el archivo 64</h1>
-    <p>Generado automáticamente.</p>
+    <div style="width:200px;height:200px;background:#ff0000" id="recuadro1">
+    </div>
+
+    <script>
+        const recuadro1 = document.getElementById('recuadro1');
+        recuadro1.addEventListener('mousedown', presion1);
+        recuadro1.addEventListener('mouseup', presion2);
+
+        function presion1() {
+            recuadro1.style.backgroundColor = '#ffff00';
+        }
+
+        function presion2() {
+            recuadro1.style.backgroundColor = '#ff0000';
+        }
+    </script>
 </body>
 </html>

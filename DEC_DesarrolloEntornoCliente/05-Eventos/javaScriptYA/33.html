@@ -1,3 +1,5 @@
+<!-- @author @PabloGomezMelendez -->
+ <!-- Confeccionar una página que muestre un mensaje con la función alert inmediatamente después que se cargue. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +8,14 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Bienvenidos</h1>
+
+    <script>
+        
+        function inicar() {
+            alert('La página está cargada');
+        }
+        addEventListener('load', inicar)
+    </script>
 </body>
 </html>
