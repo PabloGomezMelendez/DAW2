@@ -1,0 +1,88 @@
+<!-- @author @PabloGomezMelendez -->
+<!-- PRUEBA 1 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        let oracion = 'La noche está muy oscura y estrellada.';
+        if (oracion.search(/estrella/) != -1)
+            alert('el string estrella está contenido en la variable oracion');
+    </script>
+
+</body>
+
+</html>
+
+<!-- PRUEBA 2 -->
+ <!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        let oracion = 'uno dos tres uno dos tres uno dos tres';
+        let cadena = oracion.replace(/uno/g, '1');
+        alert(cadena); //1 dos tres 1 dos tres 1 dos tres
+    </script>
+
+</body>
+
+</html> -->
+
+<!-- PRUEBA 3 -->
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        let cadena = '(2,3)-(4,4)-(9,3)';
+        let vec = cadena.split(/-/);
+        for (let x = 0; x < vec.length; x++) {
+            document.write(vec[x] + '<br>');
+        }
+    </script>
+
+</body>
+
+</html> -->
+
+<!-- PRUEBA 4 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        let cadena = 'juan 10 luis 43 pedro 21 carlos 33';
+        let vec = cadena.match(/\d+/g);
+        for (let x = 0; x < vec.length; x++) {
+            document.write(vec[x] + '<br>');
+        }
+    </script>
+
+</body>
+
+</html>

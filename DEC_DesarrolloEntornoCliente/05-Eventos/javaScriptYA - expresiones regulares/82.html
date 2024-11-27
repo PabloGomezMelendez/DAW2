@@ -1,0 +1,18 @@
+<!-- @author @PabloGomezMelendez -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        let cadena = prompt('Ingrese 4 números de 3 dígitos separados por coma');
+        let patron = /^\d{3}\,\d{3}\,\d{3}\,\d{3}$/;
+        if (patron.test(cadena))
+            document.write('correcto');
+        else
+            document.write('incorrecto');
+    </script>
+</body>
+</html>

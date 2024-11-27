@@ -1,0 +1,20 @@
+<!-- @author @PabloGomezMelendez -->
+<!DOCTYPE html>
+<html lang="es">
+head>
+<title>Ejemplo de JavaScript</title>
+<meta charset="UTF-8">
+</head>
+
+<body>
+    <script>
+        let dato = prompt('Ingrese nombre del día de la semana y su número:');
+        let patron = /[lunes|martes|miercoles|jueves|viernes|sabado|domingo]\s\d{1,2}$/;
+        if (patron.test(dato))
+            document.write('correcto');
+        else
+            document.write('formato incorrecto');
+    </script>
+</body>
+
+</html>
