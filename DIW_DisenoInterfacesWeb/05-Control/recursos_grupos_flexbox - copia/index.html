@@ -1,0 +1,111 @@
+<!-- @PabloGomezMelendez -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Examen CSS</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img class="logo__img" src="img/logo.png" alt="logo de la empresa">
+        </div>
+        <nav class="nav">
+            <a class="nav__link--crear" href="#">Crear grupo</a>
+            <a class="nav__link" href="#">Iniciar Sesión</a>
+            <a class="nav__link" href="#">Registrarse</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1 class="hero__titulo">ENCUENTRA O CREA UN GRUPO PARA COMPARTIR LO QUE MÁS TE GUSTA</h1>
+        <a class="hero__btn" href="#">Obtener una cuenta</a>
+    </section>
+    <section class="formulario">
+        <div class="formulario__cabecera">
+
+            <h2 class="cabecera__titulo">BUSCA UN GRUPO EN TU CIUDAD</h2>
+        </div>
+        <form action="#" method="post" class="formulario__form">
+            <select class="form__input" name="tema" id="tema" ></select>
+            <input class="form__input" type="text" name="nombre" id="nombre" placeholder="Nombre Evento">
+            <input class="form__input" type="text" name="ciudad" id="ciudad" placeholder="Ciudad o Pais">
+            <input class="form__input--btn" type="submit" value="Buscar" name="buscar">
+        </form>
+    </section>
+    <main class="main">
+        <article class="main__cabecera">
+            <h2 class="cabecera__titulo">
+                Próximos Eventos
+            </h2>
+        </article>
+        <article class="card">
+            <img class="card__img" src="img/imagen1.jpg" alt="Imagen de proximo evento 1">
+            <p class="card__text">Jueves 28 de noviembre de 2024</p>
+            <h3 class="card__titulo">Hackathon Intercentros</h3>
+            <div class="card__organizado">
+                <img class="organizado__foto" src="img/perfil1.jpg" alt="imagen organizador">
+                <div class="organizado__info">
+                    <h4 class="info__titulo">Organizado por:</h4>
+                    <p class="info__text">Ayuntamiento</p>
+                </div>
+            </div>
+        </article>
+        <article class="card">
+            <img class="card__img" src="img/imagen2.jpg" alt="Imagen de proximo evento 2">
+            <p class="card__text">Jueves 5 de diciembre de 2024</p>
+            <h3 class="card__titulo">Programación web</h3>
+            <div class="card__organizado">
+                <img class="organizado__foto" src="img/perfil2.jpg" alt="imagen organizador">
+                <div class="organizado__info">
+                    <h4 class="info__titulo">Organizado por:</h4>
+                    <p class="info__text">IES Ruiz Gijón</p>
+                </div>
+            </div>
+        </article>
+        <article class="card">
+            <img class="card__img" src="img/imagen3.jpg" alt="Imagen de proximo evento 3">
+            <p class="card__text">Martes 10 de diciembre de 2024</p>
+            <h3 class="card__titulo">Pizza paso a paso</h3>
+            <div class="card__organizado">
+                <img class="organizado__foto" src="img/perfil3.jpg" alt="imagen organizador">
+                <div class="organizado__info">
+                    <h4 class="info__titulo">Organizado por:</h4>
+                    <p class="info__text">Massimo Santoro</p>
+                </div>
+            </div>
+        </article>
+    </main>
+    <section class="categorias">
+        <article class="categorias__cabecera">
+            <h2 class="cabecera__titulo"></h2>
+        </article>
+        <article class="categorias__accion--rosa">
+            <h3 class="accion__titulo">Crea un Grupo</h3>
+            <p class="accion__descrip">
+                Comparte lo que te gusta o tu pasión con los demás, crea tu propio grupo y enventos; hoy mismo, gratis
+            </p>
+        </article>
+        <article class="categorias__accion--turquesa">
+            <h3 class="accion__titulo">Crea un Grupo</h3>
+            <p class="accion__descrip">
+                Conoce personas con tus mismos gustos y pasiones, unete a un grupo ya existente y asiste a próximos eventos
+            </p>
+        </article>
+    </section>
+    <footer class="pie">
+        <nav class="nav">
+            <a class="nav__link--crear" href="#">Crear grupo</a>
+            <a class="nav__link" href="#">Iniciar Sesión</a>
+            <a class="nav__link" href="#">Registrarse</a>
+        </nav>
+        <div class="pie__credito">
+            <p class="credito_text">Todos los derechos reservados. Meeti</p>
+        </div>
+    </footer>
+</body>
+
+</html>

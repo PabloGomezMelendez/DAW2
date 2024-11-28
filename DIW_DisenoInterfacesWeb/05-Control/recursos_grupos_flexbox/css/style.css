@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'headings';
+    src: url(‘../fonts/Staatliches.ttf’) format(‘ttf’);
+}
+
+@font-face {
+    font-family: 'principal';
+    src: url(‘../fonts/Raleway.ttf’) format(‘ttf’);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+h1 {
+    font-size: 4.4rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* CSS Movil */
+/** CSS Cabecera */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__logo {}
+
+.logo__img {}
+
+
+/** CSS  Menu */
+/*! [cabecera y pie]  */
+/*TODO: Separara los enclaces de forma equitava,(FLEX:1 INVESTIGAR) */
+/* en el formulario funciona INVESTIGAR */
+.nav {
+    /* font-style: "principal"; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+.nav__link {
+    color: #484349;
+}
+
+.nav__link--crear {
+    color: #b8336a;
+}
+
+/*! media queries CABECERA*/
+@media screen and (min-width: 768px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav {
+        /* font-style: "principal"; */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 1;
+    }
+    .nav__link--crear {
+        padding-right: 10px;
+    }
+}
+
+/** CSS hero */
+/*TODO: Centar el texto del titulo correctamente en del hero */
+/*TODO: Media queries  */
+.hero {
+    /* imagen de fondo */
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    /* tamaño de hero */
+    height: 100vh;
+    width: 100%;
+
+    /* Posicion de elemento */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.hero__titulo {
+    color: #ffffff;
+}
+
+.hero__btn {
+    padding: 10px 30px 10px 30px;
+    color: #ffffff;
+    background-color: #ff8015;
+}
+/*! media queries HERO*/
+@media screen and (min-width: 768px) {
+ 
+}
+
+/** CSS formulario  */
+/*TODO: centrar el titulo  */
+/*TODO: Media queries  */
+.formulario {
+    /* color fondo */
+    background-color: #f2f2f2;
+
+    /* tamaño de hero */
+    height: 75vh;
+    width: 100%;
+
+    /* Posicion de elemento */
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: stretch;
+}
+.formulario__cabecera{
+    /* Posicion de elemento */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    /* color */
+    color:#484349;
+
+}
+.formulario__form{
+    
+    /* Posicion de elemento */
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+
+}
+.form__input{
+    height: 7vh;
+    width: 85%;
+
+}
+.form__input--btn{
+    background-color: #b8336a;
+    color: #ffffff;
+
+    height: 7vh;
+    width: 85%;
+}
+/*! media queries FORMULARIOS*/
+@media screen and (min-width: 768px) {
+ 
+}
+
+/** CSS Main   */
+/*TODO: Hacer el CSS corespondiente a eventos proximos y las card correspondientes  */
+/*TODO: Media queries  */
+
+/** CSS Categoría */
+.categorias{
+    
+}
+.categorias__cabecera{
+
+}
+.categorias__accion--rosa{
+    background-color: #b8336a;
+    color: #ffffff;
+    width: 100%;
+}
+.categorias__accion--turquesa{
+    background-color: #068d9d;
+    color: #ffffff;
+    width: 100%;
+}
