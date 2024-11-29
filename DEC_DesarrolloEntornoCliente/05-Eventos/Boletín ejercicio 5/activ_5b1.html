@@ -2,11 +2,106 @@
 <!DOCTYPE html>
 
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archivo 1</title>
 </head>
+
 <body>
+    <h1>Formulario de Registro de Pacientes</h1>
+
+    <form action="http://localhost//DWES/procesa.php" method="POST" novalidate>
+        <!-- Nombre -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" maxlength="30" required>
+        <br>
+
+        <!-- Sexo -->
+        <label>Sexo:</label>
+        <input type="radio" id="hombre" name="sexo" value="Hombre" required>
+        <label for="hombre">Hombre</label>
+        <input type="radio" id="mujer" name="sexo" value="Mujer" required>
+        <label for="mujer">Mujer</label>
+        <br>
+
+        <!-- Altura -->
+        <label for="altura">Altura (cm):</label>
+        <input type="number" id="altura" name="altura" min="50" max="210" required>
+        <br>
+
+        <!-- Fecha de nacimiento -->
+        <label for="fechaNacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+        <br>
+
+        <!-- Semana Preferente -->
+        <label for="semanaPreferente">Semana Preferente:</label>
+        <input type="week" id="semanaPreferente" name="semanaPreferente">
+        <br>
+
+        <!-- Fumador -->
+        <label for="fumador">¿Es fumador?</label>
+        <input type="checkbox" id="fumador" name="fumador">
+        <br>
+
+        <!-- Lista de cigarrillos -->
+        <label for="cigarrillos">Número de cigarrillos:</label>
+        <select id="cigarrillos" name="cigarrillos">
+            <option value="">Seleccionar</option>
+            <option value="1-5">1-5</option>
+            <option value="6-10">6-10</option>
+            <option value="Más de 10">Más de 10</option>
+        </select>
+        <br>
+
+        <!-- Observaciones -->
+        <label for="observaciones">Observaciones:</label>
+        <textarea id="observaciones" name="observaciones"></textarea>
+        <br>
+
+        <!-- Botones -->
+        <button type="submit">Enviar</button>
+        <button type="reset">Borrar</button>
+    </form>
+    <script>
+        const fechaNacimiento = document.getElementById('fechaNacimiento');
+
+        function inicio() {
+            // Asociar el evento `change` a la función clásica
+            fechaNacimiento.addEventListener('change', validarMayorDeEdad);
+        }
+
+        // Validar si el usuario es mayor de edad
+        function validarMayorDeEdad() {
+            const fechaSeleccionada = new Date(fechaNacimiento.value);
+            const fechaActual = new Date();
+            const diferenciaAnios = fechaActual.getFullYear() - fechaSeleccionada.getFullYear();
+
+            //Deglose de la fecha Actual
+            const mesActual = fechaActual.getMonth();
+            const diaActual = fechaActual.getDate();
+
+            const mesNacimiento = fechaSeleccionada.getMonth();
+            const diaNacimiento = fechaSeleccionada.getDate();
+
+            // Comprobar si el usuario ya cumplió años este año
+            const yaCumplioAnios = (mesActual > mesNacimiento) || (mesActual === mesNacimiento && diaActual >= diaNacimiento);
+
+            if ((diferenciaAnios > 18) || ((diferenciaAnios === 18) && yaCumplioAnios)) {
+                // Usuario es mayor de edad
+                return true;
+            } else {
+                // Usuario no es mayor de edad
+                alert('El paciente debe ser mayor de edad.');
+                fechaNacimiento.value = '';
+                return false;
+            }
+        }
+
+        document.addEventListener('Load', inicio());
+    </script>
 </body>
+
 </html>

@@ -1,0 +1,7 @@
+#div1, #div2 {
+    width: 95%;
+    height: 100px;
+    margin:  10px 10px 10px 10px ;
+    border: 2px solid black;
+    display: inline-block;
+  }

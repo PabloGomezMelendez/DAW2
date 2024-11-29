@@ -2,11 +2,33 @@
 <!DOCTYPE html>
 
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archivo 2</title>
 </head>
+
 <body>
+    <h1>Evento</h1>
+
+    <!-- Campo de texto -->
+     <label for="">Nombre</label>
+    <input type="text" id="cuadroTexto" placeholder="Escribe tu nombre...">
+
+    <!-- Párrafo -->
+    <p id="mensaje">Hola</p>
+
+    <script>
+        // Elementos
+        const cuadroTexto = document.getElementById('cuadroTexto');
+        const mensaje = document.getElementById('mensaje');
+
+        cuadroTexto.addEventListener('input', function (event) {
+            // Actualizar el contenido del párrafo
+            mensaje.textContent = `Hola ${event.target.value}`;
+        });
+    </script>
 </body>
+
 </html>

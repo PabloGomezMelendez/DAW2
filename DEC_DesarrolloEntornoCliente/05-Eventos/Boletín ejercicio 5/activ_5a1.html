@@ -1,12 +1,52 @@
 <!-- @author @PabloGomezMelendez -->
 <!DOCTYPE html>
+<html lang="en">
 
-<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Archivo 1</title>
+    <title>Ejercicio1</title>
+    <link rel="stylesheet" href="css/acti_5a1.css">
 </head>
+
 <body>
+    <h1>Manejador de eventos compilado ( ver consola depuración)</h1>
+
+    <!-- Formulario -->
+    <form>
+        <button id="boton1" type="button">Botón 1</button>
+        <button id="boton2" type="button">Botón 2</button>
+    </form>
+
+    <!-- Divs -->
+    <h2>Div1</h2>
+    <div id="div1"></div>
+    <h2>Div2</h2>
+    <div id="div2"></div>
+
+    <script>
+        //Elementos
+        const boton1 = document.getElementById('boton1');
+        const boton2 = document.getElementById('boton2');
+        const div1 = document.getElementById('div1');
+        const div2 = document.getElementById('div2');
+
+
+        function manejadorEventos(event) {
+            console.log('Objeto del evento:', event);     // Muestra el objeto del evento
+            console.log('Tipo de evento:', event.type);   // Muestra el tipo de evento
+        }
+
+        function inicar() {
+            // Asignar el manejador a los eventos
+            boton1.addEventListener('click', manejadorEventos);
+            boton2.addEventListener('click', manejadorEventos);
+            div1.addEventListener('mouseenter', manejadorEventos);
+            div2.addEventListener('mouseenter', manejadorEventos);
+        }
+
+        addEventListener('load', inicar)
+    </script>
 </body>
+
 </html>

@@ -2,11 +2,43 @@
 <!DOCTYPE html>
 
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archivo 3</title>
 </head>
+
 <body>
+    <h1>Selecciona una Localidad</h1>
+
+    <label for="localidades">Localidades:</label>
+    <select id="localidades">
+        <option value="">-- Selecciona una localidad --</option>
+        <option value="Utrera">Utrera</option>
+        <option value="Los Palacios">Los Palacios</option>
+        <option value="Dos Hermanas">Dos Hermanas</option>
+    </select>
+
+    <p id="seleccion">Localidad seleccionada: <span id="localidadSeleccionada"></span></p>
+
+    <script>
+        // Elementos
+        const desplegable = document.getElementById('localidades');
+        const localidadSeleccionada = document.getElementById('localidadSeleccionada');
+
+        // Evento cambio de selección
+        desplegable.addEventListener('change', function (event) {
+            //valor seleccionado
+            const seleccion = event.target.value;
+            if (seleccion === undefined) {
+                localidadSeleccionada.textContent = '';
+            } else {
+                localidadSeleccionada.textContent = seleccion;
+            }
+        });
+
+    </script>
 </body>
+
 </html>
