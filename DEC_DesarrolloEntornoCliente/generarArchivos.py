@@ -19,7 +19,7 @@ def crear_ficheros_html(ruta, rango_inicio, rango_fin):
 
     # Crear ficheros en el rango especificado
     for i in range(rango_inicio, rango_fin + 1):
-        archivo = os.path.join(ruta, f"{i}_detalle.html")
+        archivo = os.path.join(ruta, f"activ_5c{i}.html")#Nombre del archivo
         try:
             with open(archivo, 'w') as f:
                 contenido = f"""<!-- @author @PabloGomezMelendez -->
@@ -32,8 +32,6 @@ def crear_ficheros_html(ruta, rango_inicio, rango_fin):
     <title>Archivo {i}</title>
 </head>
 <body>
-    <h1>Este es el archivo {i}</h1>
-    <p>Generado automáticamente.</p>
 </body>
 </html>"""
                 f.write(contenido)
@@ -44,9 +42,9 @@ def crear_ficheros_html(ruta, rango_inicio, rango_fin):
             print(f"Error al crear el archivo {archivo}: {e}")
 
 # Parámetros de entrada
-ruta_destino = r"D:\DEV\DAW2\DEC_DesarrolloEntornoCliente\05-Eventos\javaScriptYA - expresiones regulares"  # Ruta absoluta
-rango_inicio = 77
-rango_fin = 88
+ruta_destino = r"D:\DEV\DAW2\DEC_DesarrolloEntornoCliente\000-generado"
+rango_inicio = 1
+rango_fin = 10
 
 # Llamar a la función
 crear_ficheros_html(ruta_destino, rango_inicio, rango_fin)
