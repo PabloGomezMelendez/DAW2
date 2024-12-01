@@ -2,11 +2,24 @@
 <!DOCTYPE html>
 
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/Funciones_expresiones_regulares.js"></script>
     <title>Archivo 5</title>
 </head>
+
 <body>
+    <h1>Pruebas para Actividad 5c5</h1>
+    <script>
+        console.log("Testeo de validaNumeroDecimal:");
+        console.log(validaNumeroDecimal("123")); // true
+        console.log(validaNumeroDecimal("-25,09")); // true
+        console.log(validaNumeroDecimal("+0,23")); // true
+        console.log(validaNumeroDecimal("12.3")); // false
+        console.log(validaNumeroDecimal("abc")); // false
+    </script>
 </body>
+
 </html>

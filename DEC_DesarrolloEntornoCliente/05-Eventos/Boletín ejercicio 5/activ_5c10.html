@@ -5,8 +5,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/Funciones_expresiones_regulares.js"></script>
     <title>Archivo 10</title>
 </head>
 <body>
+    <h1>Pruebas para Actividad 5c10</h1>
+    <script>
+        console.log("Testeo de extraeExpresionesMatematicas:");
+        const texto = "La ecuación de una recta es {y=a*x + b}, la de un círculo {x^2+y^2 = r} y la de la parábola {y = x^2}";
+        console.log(extraeExpresionesMatematicas(texto)); 
+        // [{y=a*x + b}, {x^2+y^2 = r}, {y = x^2}]
+    </script>
 </body>
 </html>

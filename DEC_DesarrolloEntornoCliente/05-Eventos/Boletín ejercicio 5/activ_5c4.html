@@ -5,8 +5,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/Funciones_expresiones_regulares.js"></script>
     <title>Archivo 4</title>
 </head>
 <body>
+    <h1>Pruebas para Actividad 5c4</h1>
+    <script>
+        console.log("Testeo de validaNumeroEntero:");
+        console.log(validaNumeroEntero("123")); // true
+        console.log(validaNumeroEntero("-456")); // true
+        console.log(validaNumeroEntero("+789")); // true
+        console.log(validaNumeroEntero("12.3")); // false
+        console.log(validaNumeroEntero("abc")); // false
+    </script>
 </body>
 </html>
