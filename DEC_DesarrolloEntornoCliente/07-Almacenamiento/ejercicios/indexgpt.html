@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito usando localStorage</title>
+    <style>
+        table {
+            width: 50%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Carrito usando localStorage</h1>
+    <p>Añade nuevos artículos al carrito</p>
+    <p>Cierra la ventana y vuelve a abrirla para comprobar el resultado.</p>
+    
+    <label for="articulo">Artículo:</label>
+    <input type="text" id="articulo" />
+    
+    <label for="cantidad">Cantidad:</label>
+    <input type="number" id="cantidad" step="0.1" />
+    
+    <button id="add">Añadir</button>
+    <button id="clear">Vaciar carrito</button>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Artículo</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody id="cart-table"></tbody>
+    </table>
+
+    <script>
+        // Array global para almacenar los artículos del carrito
+        let carrito = [];
+
+        // Cargar los datos desde localStorage al iniciar
+        function cargarCarrito() {
+            const datosGuardados = localStorage.getItem("carrito");
+            carrito = datosGuardados ? JSON.parse(datosGuardados) : [];
+            renderizarCarrito();
+        }
+
+        // Renderizar la tabla a partir del array de artículos
+        function renderizarCarrito() {
+            const tabla = document.getElementById("cart-table");
+            tabla.innerHTML = ""; // Limpiar la tabla antes de renderizar
+
+            carrito.forEach((item, index) => {
+                const fila = document.createElement("tr");
+                fila.innerHTML = `
+                    <td>${item.articulo}</td>
+                    <td>${item.cantidad}</td>
+                `;
+                tabla.appendChild(fila);
+            });
+        }
+
+        // Añadir un nuevo artículo al carrito
+        function agregarArticulo() {
+            const articulo = document.getElementById("articulo").value.trim();
+            const cantidad = parseFloat(document.getElementById("cantidad").value);
+
+            if (articulo && !isNaN(cantidad) && cantidad > 0) {
+                carrito.push({ articulo, cantidad });
+                localStorage.setItem("carrito", JSON.stringify(carrito));
+                renderizarCarrito();
+            } else {
+                alert("Por favor, introduce un artículo válido y una cantidad mayor que cero.");
+            }
+        }
+
+        // Vaciar todo el carrito
+        function vaciarCarrito() {
+            carrito = [];
+            localStorage.removeItem("carrito");
+            renderizarCarrito();
+        }
+
+        // Eventos de los botones
+        document.getElementById("add").addEventListener("click", agregarArticulo);
+        document.getElementById("clear").addEventListener("click", vaciarCarrito);
+
+        // Cargar los datos al iniciar la página
+        cargarCarrito();
+    </script>
+</body>
+</html>
