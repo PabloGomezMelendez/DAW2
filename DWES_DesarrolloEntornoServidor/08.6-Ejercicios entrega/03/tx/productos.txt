@@ -1,0 +1,22 @@
+{
+    "papa": {
+        "precio": 15,
+        "detalle": "papa",
+        "imagen": "producto3"
+    },
+    "pepe": {
+        "precio": 10,
+        "detalle": "papa",
+        "imagen": "producto2"
+    },
+    "suma": {
+        "precio": 78,
+        "detalle": "edes",
+        "imagen": "producto2"
+    },
+    "ls": {
+        "precio": 445,
+        "detalle": "edes",
+        "imagen": "producto3"
+    }
+}

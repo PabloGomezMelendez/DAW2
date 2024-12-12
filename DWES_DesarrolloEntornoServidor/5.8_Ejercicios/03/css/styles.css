@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 50px auto;
+    width: 500px;
+    height: 500px;
+}
+
+td {
+    width: 50px;
+    height: 50px;
+    background-image: url('../img/deadpool.jpeg'); /* Imagen de fondo para toda la tabla */
+    background-size: 500px 500px; /* Tamaño total de la imagen */
+    border: 1px solid #000;
+    transition: opacity 0.3s ease-in-out; /* Transición suave para mostrar/ocultar celdas */
+}
+
+.oculto {
+    opacity: 0; /* Ocultar celda */
+    background-color: black; /* Fondo negro mientras está oculta */
+}
+
+.visible {
+    opacity: 1; /* Mostrar celda */
+}

@@ -1,0 +1,23 @@
+img{
+    width: 50px !important;
+    height: 50px;
+}
+h1 {
+    font-style: italic;
+}
+
+.titulo{
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: inline;
+    float: inline-start;
+}
+
+.comidas{
+    width: 500px;
+    background-color: beige !important;
+    float: left !important;
+}
+.pedidos{
+    float: right;
+}

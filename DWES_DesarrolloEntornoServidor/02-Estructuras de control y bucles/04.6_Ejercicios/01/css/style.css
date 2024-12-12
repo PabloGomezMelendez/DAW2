@@ -1,0 +1,22 @@
+img{
+    width: 200px;
+}
+h1, table, form{
+    border: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#correcto{
+    width: 500px;
+    height: 300px;
+}
+
+#volver{
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;
+    background-color: lightcoral;
+    color: white;
+    border-radius: 5px;
+}

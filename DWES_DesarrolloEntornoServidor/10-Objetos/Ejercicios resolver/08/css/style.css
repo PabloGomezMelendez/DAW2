@@ -1,0 +1,16 @@
+table {
+    border-collapse: collapse;
+    width: 60%;
+    margin: auto;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+.formulario {
+    text-align: center;
+    margin-top: 20px;
+}
