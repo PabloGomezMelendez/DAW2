@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id ="crewMember1" class="com.example.demo.Crew">
+		<constructor-arg name="name" value="Lisa" />
+		<constructor-arg name="position" value="Driver" />
+	</bean>
+
+	<bean id ="crewMember2" class="com.example.demo.Crew">
+		<constructor-arg name="name" value="Lucas" />
+		<constructor-arg name="position" value="Assistant" />
+	</bean>
+
+	<bean id ="crewMember3" class="com.example.demo.Crew">
+		<constructor-arg name="name" value="Moe" />
+		<constructor-arg name="position" value="Waiter" />
+	</bean>
+	
+	<bean id ="passenger1" class="com.example.demo.Passenger">
+		<constructor-arg name="name" value="Pacho" />
+		<constructor-arg name="seat" value="1" />
+	</bean>
+
+	<bean id ="passenger2" class="com.example.demo.Passenger">
+		<constructor-arg name="name" value="Gilberto" />
+		<constructor-arg name="seat" value="1" />
+	</bean>
+		
+	<bean id ="passenger3" class="com.example.demo.Passenger">
+		<constructor-arg name="name" value="LimÃ³n" />
+		<constructor-arg name="seat" value="3" />
+	</bean>
+	
+	<bean id ="passenger4" class="com.example.demo.Passenger">
+		<constructor-arg name="name" value="P. Escobar" />
+		<constructor-arg name="seat" value="4" />
+	</bean>
+	
+	<bean id ="passenger5" class="com.example.demo.Passenger">
+		<constructor-arg name="name" value="Berna" />
+		<constructor-arg name="seat" value="5" />
+	</bean>
+	
+	<bean id ="passenger6" class="com.example.demo.Passenger">
+		<constructor-arg name="name" value="Javier PeÃ±a" />
+		<constructor-arg name="seat" value="6" />
+	</bean>
+			
+	<bean id="superTrain" class="com.example.demo.Train">
+		<property name="model" value="Talgo 747" />
+		<property name="trainType" value="NUCLEAR" />
+		<property name="seats" value="100" />
+		 <property name="crew">
+            <list>
+                <ref bean="crewMember1" />
+                <ref bean="crewMember2" />
+                <ref bean="crewMember3" />
+            </list>
+        </property>
+	</bean>
+	
+	<bean id="trainTrip" class="com.example.demo.Trip">
+		<constructor-arg name="name" value="East Coast Route" />
+		<constructor-arg name="origin" value="Miami" />
+		<constructor-arg name="destination" value="New York" />
+		<property name="train" ref="superTrain" />
+		<property name="passengers">
+            <set>
+                <ref bean="passenger1" />
+                <ref bean="passenger2" />
+                <ref bean="passenger3" />
+                <ref bean="passenger4" />
+                <ref bean="passenger5" />
+                <ref bean="passenger6" />
+            </set>
+        </property>
+	</bean>
+</beans>

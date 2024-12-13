@@ -1,0 +1,3 @@
+nombre=Viaje ruta este
+origen=Miami
+destino=Nueva York

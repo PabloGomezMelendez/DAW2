@@ -1,0 +1,2 @@
+velocidad=61.500 km/h
+precio=250000
