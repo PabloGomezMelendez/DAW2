@@ -12,7 +12,7 @@
     <h1>Carrito usando localStorage</h1>
     <p>Añade nuevos artículos al carrito</p>
     <p>Cierra la ventana y vuelve a abrirla para comprobar el resultado.</p>
-    <form action="">
+    <form >
         <label for="articulo">Artículo:</label>
         <input type="text" id="articulo" />
 
@@ -33,30 +33,22 @@
         <tbody id="tablaCarrito"></tbody>
     </table>
 
+    
     <script>
-        // DOM element
-        const TABLA_CARRITO = document.getElementById('tablaCarrito');
-        const BTN_ADD = document.getElementById('add');
-        const BTN_VACIAR = document.getElementById('vaciar');
-
         // Array global para almacenar los artículos del carrito
-        let carrito=[];
+        let carrito = [];
 
-
-
-        // Funciones
-        // Carga el carrito desde localStorage
-        function cargar_carrito() {
-            // carrito = localStorage.carrito?localStorage.carrito:[];
-            if (localStorage.carrito) {
-                carrito = JSON.parse(localStorage.carrito)
-            } else {
-                carrito = [];
-            }
+        // Cargar los datos desde localStorage al iniciar
+        function cargarCarrito() {
+            // Intentar obtener la clave "carrito" directamente
+            const datosGuardados = localStorage.carrito;
+            carrito = datosGuardados ? JSON.parse(datosGuardados) : [];
+            renderizarCarrito();
         }
-        // Pinta el contenido del carrito en la tabla
+
+        // Renderizar la tabla a partir del array de artículos
         function renderizarCarrito() {
-            const tabla = document.getElementById("cart-table");
+            const tabla = document.getElementById("tablaCarrito");
             tabla.innerHTML = ""; // Limpiar la tabla antes de renderizar
 
             carrito.forEach((item, index) => {
@@ -68,8 +60,9 @@
                 tabla.appendChild(fila);
             });
         }
-        // Añade la elemento al carrito
-        function add_carrito() {
+
+        // Añadir un nuevo artículo al carrito
+        function agregarArticulo() {
             const articulo = document.getElementById("articulo").value.trim();
             const cantidad = parseFloat(document.getElementById("cantidad").value);
 
@@ -80,26 +73,21 @@
             } else {
                 alert("Por favor, introduce un artículo válido y una cantidad mayor que cero.");
             }
-            ARTICULO.value = '';
-            CANTIDAD.value = '';
         }
+
         // Vaciar todo el carrito
-        function vaciar_carrito() {
+        function vaciarCarrito() {
             carrito = [];
-            localStorage.carrito = carrito;
+            delete localStorage.carrito; // Eliminar la clave directamente del objeto localStorage
             renderizarCarrito();
         }
 
-
-
         // Eventos de los botones
-        BTN_ADD.addEventListener("click", add_carrito);
-        BTN_VACIAR.addEventListener("click", vaciar_carrito);
+        document.getElementById("add").addEventListener("click", agregarArticulo);
+        document.getElementById("clear").addEventListener("click", vaciarCarrito);
 
-        //cargar el carrito al cargar la web
-        document.addEventListener("load", cargar_carrito);
-
-
+        // Cargar los datos al iniciar la página
+        cargarCarrito();
     </script>
 
 </body>

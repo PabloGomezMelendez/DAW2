@@ -1,21 +1,10 @@
+<!-- @PabloGomezMelendez -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito usando localStorage</title>
-    <style>
-        table {
-            width: 50%;
-            margin-top: 20px;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: left;
-        }
-    </style>
 </head>
 <body>
     <h1>Carrito usando localStorage</h1>
@@ -85,7 +74,7 @@
         // Vaciar todo el carrito
         function vaciarCarrito() {
             carrito = [];
-            delete localStorage.carrito; // Eliminar la clave directamente del objeto localStorage
+            localStorage.carrito=carrito; // Eliminar la clave directamente del objeto localStorage
             renderizarCarrito();
         }
 
@@ -98,3 +87,5 @@
     </script>
 </body>
 </html>
+<!-- @PabloGomezMelendez -->
+
