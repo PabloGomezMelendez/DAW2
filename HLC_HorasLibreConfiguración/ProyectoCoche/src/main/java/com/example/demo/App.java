@@ -8,9 +8,9 @@ public class App {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        Viaje viajeCoche = context.getBean(Viaje.class);
+        Viaje viajeBarco = context.getBean(Viaje.class);
 
-        System.out.println("El viaje en coche se ha iniciado\n" + viajeCoche);
+        System.out.println("El viaje en barco se ha iniciado\n" + viajeBarco);
 
         context.close();
     }

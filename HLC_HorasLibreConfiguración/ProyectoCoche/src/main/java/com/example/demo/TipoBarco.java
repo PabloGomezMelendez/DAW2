@@ -1,6 +1,6 @@
 package com.example.demo;
 
-public enum TipoCoche {
+public enum TipoBarco {
     ELECTRIC, DIESEL, SOLAR, 
-    VAPOR, NUCLEAR 
+    VAPOR, NUCLEAR, VELA
 }

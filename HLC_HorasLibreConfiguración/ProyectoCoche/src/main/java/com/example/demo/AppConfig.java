@@ -15,17 +15,17 @@ import org.springframework.context.annotation.PropertySource;
 public class AppConfig {
 
     @Bean
-    public Tripulacion crewMember1() {
+    public Tripulacion tripulacion1() {
         return new Tripulacion("Lisa", "Driver");
     }
 
     @Bean
-    public Tripulacion crewMember2() {
+    public Tripulacion tripulacion2() {
         return new Tripulacion("Lucas", "Assistant");
     }
 
     @Bean
-    public Tripulacion crewMember3() {
+    public Tripulacion tripulacion3() {
         return new Tripulacion("Moe", "Waiter");
     }
 
@@ -60,15 +60,15 @@ public class AppConfig {
     }
 
     @Bean
-    public Coche superCoche() {
-        Coche coche = new Coche("Talgo 747", TipoCoche.NUCLEAR, 100);
-        coche.setTripulacion(List.of(crewMember1(), crewMember2(), crewMember3()));
-        return coche;
+    public Barco superBarco() {
+        Barco barco = new Barco("Talgo 747", TipoBarco.NUCLEAR, 100);
+        barco.setTripulacion(List.of(tripulacion1(), tripulacion2(), tripulacion3()));
+        return barco;
     }
 
     @Bean
-    public Viaje viajeCoche() {
-        Viaje viaje = new Viaje(superCoche(), Set.of(pasajero1(), pasajero2(), pasajero3(), pasajero4(), pasajero5(), pasajero6()));
+    public Viaje viajeBarco() {
+        Viaje viaje = new Viaje(superBarco(), Set.of(pasajero1(), pasajero2(), pasajero3(), pasajero4(), pasajero5(), pasajero6()));
         return viaje;
     }
 }

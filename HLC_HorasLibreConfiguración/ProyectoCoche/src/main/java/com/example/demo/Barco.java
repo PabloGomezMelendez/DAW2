@@ -3,17 +3,17 @@ package com.example.demo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Coche {
+public class Barco {
 	private String modelo;
-	private TipoCoche tipoCoche;
+	private TipoBarco tipoBarco;
 	private Integer asientos;
 	private List<Tripulacion> tripulacion = new ArrayList<Tripulacion>();
 	
-	public Coche () {}
+	public Barco () {}
 	
-	public Coche(String modelo, TipoCoche tipoCoche, Integer asientos) {
+	public Barco(String modelo, TipoBarco tipoBarco, Integer asientos) {
 		this.modelo = modelo;
-		this.tipoCoche = tipoCoche;
+		this.tipoBarco = tipoBarco;
 		this.asientos = asientos;
 	}
 
@@ -25,12 +25,12 @@ public class Coche {
 		this.modelo = modelo;
 	}
 
-	public TipoCoche getTipoCoche() {
-		return tipoCoche;
+	public TipoBarco getTipoBarco() {
+		return tipoBarco;
 	}
 
-	public void setTipoCoche(TipoCoche tipoCoche) {
-		this.tipoCoche = tipoCoche;
+	public void setTipoBarco(TipoBarco tipoBarco) {
+		this.tipoBarco = tipoBarco;
 	}
 
 	public Integer getAsientos() {
@@ -51,7 +51,7 @@ public class Coche {
 
 	@Override
 	public String toString() {
-		return "Coche [modelo=" + modelo + ", Tipo Coche=" + tipoCoche + ", Asientos=" + asientos + ", Tripulacion=" + tripulacion + "]";
+		return "Barco [modelo=" + modelo + ", Tipo Barco=" + tipoBarco + ", Asientos=" + asientos + ", Tripulacion=" + tripulacion + "]";
 	}
 
 	

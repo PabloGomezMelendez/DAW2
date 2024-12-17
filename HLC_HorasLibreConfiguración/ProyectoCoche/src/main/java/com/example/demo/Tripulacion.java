@@ -9,25 +9,25 @@ public class Tripulacion {
 		this.posicion = posicion;
 	}
 
-	public String getName() {
+	public String getNombre() {
 		return nombre;
 	}
 
-	public void setName(String name) {
-		this.nombre = name;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
-	public String getPosition() {
+	public String getPosicion() {
 		return posicion;
 	}
 
-	public void setPosition(String position) {
-		this.posicion = position;
+	public void setPosicion(String posicion) {
+		this.posicion = posicion;
 	}
 
 	@Override
 	public String toString() {
-		return "Crew [name=" + nombre + ", position=" + posicion + "]";
+		return "Tripulación [nombre=" + nombre + ", posicion=" + posicion + "]";
 	}
 	
 	

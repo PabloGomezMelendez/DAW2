@@ -32,7 +32,7 @@ public class Pasajero {
 
 	@Override
 	public String toString() {
-		return "Passengers [name=" + name + ", seat=" + seat + "]";
+		return "Pasajero [nombre=" + name + ", Asiento=" + seat + "]";
 	}
 	
 	

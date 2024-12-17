@@ -13,7 +13,7 @@ public class Viaje {
 	@Value("${destino}")
 	private String destino;
 	
-	private Coche coche;
+	private Barco barco;
 
 	private Set<Pasajero> pasajeros = new HashSet<Pasajero>();
 	
@@ -23,8 +23,8 @@ public class Viaje {
 //		this.destino = destination;
 //	}
 
-	public Viaje(Coche superCoche, Set<Pasajero> of) {
-		this.setCoche(superCoche);
+	public Viaje(Barco superBarco, Set<Pasajero> of) {
+		this.setCoche(superBarco);
 		this.setPasajeros(of);
 	}
 
@@ -40,12 +40,12 @@ public class Viaje {
 		return destino;
 	}
 
-	public Coche getCoche() {
-		return coche;
+	public Barco getBarco() {
+		return barco;
 	}
 
-	public void setCoche(Coche coche) {
-		this.coche = coche;
+	public void setCoche(Barco barco) {
+		this.barco = barco;
 	}
 
 
@@ -60,7 +60,7 @@ public class Viaje {
 
 	@Override
 	public String toString() {
-		return "Viaje [nombre=" + nombre + ", origen=" + origen + ", destino=" + destino + ", coche=" + coche
+		return "Viaje [nombre=" + nombre + ", origen=" + origen + ", destino=" + destino + ", barco=" + barco
 				+ ", pasajeros=" + pasajeros + "]";
 	}
 
