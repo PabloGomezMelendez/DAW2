@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distancia entre dos ciudades</title>
+</head>
+
+<body>
+    <h1>Calculadora de distancia entre dos ciudades</h1>
+    <p>
+        <strong>Ciudad 1:</strong> Madrid, España (Lat: 40.4165, Lon: -3.70256) <br>
+        <strong>Ciudad 2:</strong> Nueva York, EE. UU. (Lat: 40.7128, Lon: -74.0060)
+    </p>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcularDistancia(lat1, lon1, lat2, lon2) {
+            const R = 3963.0; // Radio de la Tierra en millas terrestres
+            const MILLAS_KM =1.60934;//Millas a KM
+
+            // Convertir latitudes y longitudes a radianes
+            const radLat1 = lat1 * Math.PI / 180;
+            const radLon1 = lon1 * Math.PI / 180;
+            const radLat2 = lat2 * Math.PI / 180;
+            const radLon2 = lon2 * Math.PI / 180;
+
+            // Fórmula para calcular la distancia
+            const distancia = R * Math.acos(
+                Math.sin(radLat1) * Math.sin(radLat2) +
+                Math.cos(radLat1) * Math.cos(radLat2) * Math.cos(radLon2 - radLon1)
+            );
+            const distanciaKM=MILLAS_KM * distancia;
+
+            // Redondear a un decimal
+            return distanciaKM.toFixed(1);
+        }
+
+        // Coordenadas de las dos ciudades
+        const lat1 = 40.4165;   // Latitud de Madrid
+        const lon1 = -3.70256;  // Longitud de Madrid
+        const lat2 = 40.7128;   // Latitud de Nueva York
+        const lon2 = -74.0060;  // Longitud de Nueva York
+
+        // Llamar a la función y mostrar el resultado
+        const distancia = calcularDistancia(lat1, lon1, lat2, lon2);
+        document.getElementById("resultado").innerText = `La distancia entre Madrid y Nueva York es de ${distancia} kilómetros.`;
+    </script>
+</body>
+
+</html>
