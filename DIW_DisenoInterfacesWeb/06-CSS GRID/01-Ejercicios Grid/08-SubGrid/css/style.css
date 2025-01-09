@@ -1,0 +1,59 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    font: sans-serif;
+}
+
+.grid {
+    border: 2px solid black;
+    margin: 100px auto;
+
+    width: 80%;
+    max-width: 1000px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+/** Se añaden 4 filas */
+    grid-auto-rows: repeat(4,max-content);
+
+}
+
+.card {
+    background-color: #f0f0f0;
+
+    grid-row: 1/5;
+
+    display: grid;
+/*! Anidados de forma normal */
+    /* grid-auto-rows: max-content; */
+
+
+    /* * Con SubGrid */
+    grid-template-rows: subgrid;
+}
+
+.card__figure {
+    width: 100%;
+    height: 200px;
+
+}
+
+.card__img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.card__btn{
+    background-color: orchid;
+    border-radius: 5px;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-align: center;
+
+}
