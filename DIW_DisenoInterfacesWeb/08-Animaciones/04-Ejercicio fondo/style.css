@@ -4,20 +4,25 @@
     box-sizing: border-box;
 
     font: sans-serif;
+
 }
 p{
     text-align: center;
 }
+html{
+    background-color: black;
+}
+
 .container {
     outline: 2px solid black ;
+    background-color: red;
+    overflow: hidden;
     height: 700px;
     width: 800px;
     margin: 50px auto;
+
 }
-.img{
-    width: 100px;
-    height: 100px;
-}
+
 
 .element {
     font-family: sans-serif;
@@ -33,22 +38,12 @@ p{
     transition-duration: 3s;
     /* transition-delay: 10s; */
     transition-timing-function: 5;
+    transform: translateY(-175px);
 }
 
 .container:hover .element {
-    font-size: 3rem;
-    transform: translateX(700px) rotate(360deg) ;
-
+    transform: translateY(0px) ;
 }
-.ease-in{
-    transition-timing-function: ease-in;
-}
-.ease-out{
-    transition-timing-function: ease-out;
-}
-.ease-in-out{
-    transition-timing-function: ease-in-out;
-}
-.linear{
-    transition-timing-function: linear;
+.ease{
+    transition-timing-function: ease;
 }
