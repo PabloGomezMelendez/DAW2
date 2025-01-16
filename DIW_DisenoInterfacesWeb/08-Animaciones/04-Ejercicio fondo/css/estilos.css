@@ -29,7 +29,8 @@
     height: 1000px;
     width: 800px;
 
-    transition-property: all
+    transition-property: all;
+    transition-duration:3s;
 }
 
 .picture:hover .picture__container {
