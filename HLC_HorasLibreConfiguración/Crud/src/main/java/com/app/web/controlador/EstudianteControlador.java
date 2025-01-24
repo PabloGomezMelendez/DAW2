@@ -17,7 +17,7 @@ public class EstudianteControlador {
 	@GetMapping({"/estudiantes","/"})
 	public String listarEstudiantes(Model modelo) {
 		modelo.addAttribute("estudiantes",servicio.listarTodosLosEstuduantes());
-		return "estudiantes";
+		return "estudiantes";//nos retorna el archivo estudiantes
 	}
 	
 }
