@@ -20,10 +20,11 @@ public class CrudApplication implements CommandLineRunner{
 	
 	@Override
 	public void run(String... args) throws Exception {
-		Estudiante estudiante1= new Estudiante("Pablo","Gómez","pabloGomez@gamail.com");
-		repositorio.save(estudiante1);
-		Estudiante estudiante2= new Estudiante("Luis","Fernandex","luisFernandez@gamail.com");
-		repositorio.save(estudiante2);
+//		//Solo para añadir los datos y crear las tablas desde eclipse con JPA
+//		Estudiante estudiante1= new Estudiante("Pablo","Gómez","pabloGomez@gamail.com");
+//		repositorio.save(estudiante1);
+//		Estudiante estudiante2= new Estudiante("Luis","Fernandex","luisFernandez@gamail.com");
+//		repositorio.save(estudiante2);
 		
 	}
 
