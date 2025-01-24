@@ -21,31 +21,31 @@ function tiempoVencido() {
 }
 
 function procesarDatos() {
-	if(conexion1.readyState==4){
-		    if (conexion1.status == 200) {
-        let resultados = document.getElementById("resultados");
-        try {
-			let salida = '';
-            // Con JSON.parse se convierte el texto JSON en un objeto JavaScript
-            let datos = JSON.parse(conexion1.responseText); // Los datos JSON se recuperan al igual que el texto plano
-      
-            for (let f = 0; f < datos.length; f++) {
-                salida += 'Codigo:' + datos[f].codigo + "<br>";
-                salida += 'Descripcion:' + datos[f].descripcion + "<br>";
-                salida += 'Precio:' + datos[f].precio + "<br><br>";
-            }
-            resultados.innerHTML = salida;
-        } catch (ex) {
-            document.getElementById("resultados").innerHTML = "Error al cargar parsear el JSON: " + ex.message;
-        }
+    if (conexion1.readyState == 4) {
+        if (conexion1.status == 200) {
+            let resultados = document.getElementById("resultados");
+            try {
+                let salida = '';
+                // Con JSON.parse se convierte el texto JSON en un objeto JavaScript
+                let datos = JSON.parse(conexion1.responseText); // Los datos JSON se recuperan al igual que el texto plano
 
+                for (let f = 0; f < datos.length; f++) {
+                    salida += 'Codigo:' + datos[f].codigo + "<br>";
+                    salida += 'Descripcion:' + datos[f].descripcion + "<br>";
+                    salida += 'Precio:' + datos[f].precio + "<br><br>";
+                }
+                resultados.innerHTML = salida;
+            } catch (ex) {
+                document.getElementById("resultados").innerHTML = "Error al cargar parsear el JSON: " + ex.message;
+            }
+
+        } else {
+            // Se ha recibido un código status distinto de 200
+            document.getElementById("resultados").innerHTML = "Error al cargar los datos";
+        }
     } else {
-        // Se ha recibido un código status distinto de 200
-        document.getElementById("resultados").innerHTML = "Error al cargar los datos";
+        document.getElementById("resultados").innerHTML = "Cargando...";
     }
-	} else {
-		document.getElementById("resultados").innerHTML = "Cargando...";
-	}
-	
+
 
 }

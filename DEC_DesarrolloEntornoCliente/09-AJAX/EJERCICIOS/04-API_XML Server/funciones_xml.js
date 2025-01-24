@@ -9,7 +9,7 @@ let conexion1;
 function presionBoton(e) {
     conexion1 = new XMLHttpRequest();
     conexion1.open('GET', 'cargar_perifericos_xml.php', true);
-    conexion1.timeout = 3000; // Tiempo máximo de espera del API 3sg
+    conexion1.timeout = 10000; // Tiempo máximo de espera del API 3sg
     conexion1.addEventListener('readystatechange', procesarDatos); // Añadimos el callback
     conexion1.addEventListener('timeout', tiempoVencido); // El evento ontimeout se dispara cuando se ha superado el tiempo de espera
     conexion1.send();
@@ -36,10 +36,12 @@ function procesarDatos() {
                     let codigo = perifericos[f].getElementsByTagName("codigo")[0].textContent;
                     let descripcion = perifericos[f].getElementsByTagName("descripcion")[0].textContent;
                     let precio = perifericos[f].getElementsByTagName("precio")[0].textContent;
+                    let descuento = perifericos[f].getElementsByTagName("descuento")[0].textContent;
 
                     salida += 'Codigo: ' + codigo + "<br>";
                     salida += 'Descripcion: ' + descripcion + "<br>";
-                    salida += 'Precio: ' + precio + "<br><br>";
+                    salida += 'Precio: ' + precio + "<br>";
+                    salida += 'Descuento: ' + descuento + "<br><br>";
                 }
                 resultados.innerHTML = salida;
             } catch (ex) {

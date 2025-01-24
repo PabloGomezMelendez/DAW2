@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-01-2025 a las 17:23:06
--- Versión del servidor: 10.4.22-MariaDB
--- Versión de PHP: 8.0.13
+-- Tiempo de generación: 17-01-2025 a las 20:28:45
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,8 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `soldadoj_general`
 --
--- CREATE DATABASE IF NOT EXISTS `soldadoj_general` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
--- USE `soldadoj_general`;
+CREATE DATABASE IF NOT EXISTS `soldadoj_general` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `soldadoj_general`;
 
 -- --------------------------------------------------------
 
@@ -32,17 +32,18 @@ SET time_zone = "+00:00";
 CREATE TABLE `perifericos` (
   `codigo` int(11) DEFAULT NULL,
   `descripcion` varchar(30) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
-  `precio` float DEFAULT NULL
+  `precio` float DEFAULT NULL,
+  `descuento` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `perifericos`
 --
 
-INSERT INTO `perifericos` (`codigo`, `descripcion`, `precio`) VALUES
-(1, 'ratón optico', 4.35),
-(2, 'monitor 22 pulgadas', 142.53),
-(3, 'ordenador i3 8GB RAM', 142.53);
+INSERT INTO `perifericos` (`codigo`, `descripcion`, `precio`, `descuento`) VALUES
+(1, 'ratón optico', 4.35, 0),
+(2, 'monitor 22 pulgadas', 142.53, 0),
+(3, 'ordenador i3 8GB RAM', 142.53, 0);
 
 --
 -- Índices para tablas volcadas
