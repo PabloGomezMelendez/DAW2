@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css" />
+    <title>Document</title>
+    <style>
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            background-color: bisque;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Segun DPR de la pantalla-->
+        <!--<img 
+         srcset="img/turtle-500.jpg 1x,
+                 img/turtle-1000.jpg 2x,
+                 img/turtle-1500.jpg 3x"
+        
+         src="img/turtle-500.jpg" alt="tortuga">-->
+
+        <img srcset="img/turtle-1500.jpg 1500w,
+                 img/turtle-1000.jpg 1000w,
+                 img/turtle-500.jpg 500w" sizes="(max-width: 500px) 300px 40vw,
+                (max-width: 800px) 50vw,
+                80vw" src="img/turtle-500.jpg" alt="tortuga">
+
+
+    </div>
+</body>
+
+</html>
