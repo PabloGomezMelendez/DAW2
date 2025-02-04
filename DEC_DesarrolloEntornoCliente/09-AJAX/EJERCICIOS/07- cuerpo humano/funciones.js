@@ -1,7 +1,7 @@
 addEventListener('load', inicializarEventos, false);
 
 function inicializarEventos() {
-    var vec = document.getElementsByTagName('div');
+    var vec = document.getElementsByTagName('area');
     for (f = 0; f < vec.length; f++) {
         vec[f].addEventListener('mouseover', mostrarToolTip, false);
         vec[f].addEventListener('mouseout', ocultarToolTip, false);
@@ -22,7 +22,7 @@ function mostrarToolTip(e) {
     d.style.top = (e.clientY + document.body.scrollTop + 15) + 'px';
     var ref;
     ref = e.target;
-    recuperarServidorTooltip(ref.getAttribute('id'));
+    recuperarServidorTooltip(ref.getAttribute('title'));
 }
 
 function actualizarToolTip(e) {
