@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Componentes</title>
+
+    <!-- Boostrap 5.3 en LOCAL -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Boostrap icons en LOCAL -->
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+    <div class="container-xl">
+        <div class="row text-center mt-3">
+            <div class="col">
+                <h1>componentes boostrap</h1>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col">
+                <button type="button" value="Abrir modal" class="btn btn-outline-danger" data-bs-toggle="modal"
+                    data-bs-target="#modal1"> Abrir modal</button>
+            </div>
+        </div>
+    </div>
+    <!-- Modal que aparece al hacer click en el botón (el codigo puede estar ene cualquier sitio, NO FORMA PARTE DEL LAYOUT)-->
+    <div id="modal1" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <!-- cabecera -->
+                <div class="modal-header">
+                    <h2 class="modal-title">Modal de ejemplo</h2>
+                    <button type="button" class="btn-close" title="Cerrar" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- cuerpo -->
+                <div class="modal-body">
+                    <h2>Contenido</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid corrupti distinctio eveniet, cum
+                        suscipit nesciunt?</p>
+                </div>
+                <!-- footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<!-- Boostrap 5.3 JS en LOCAL -->
+<script src="js/bootstrap.bundle.js"></script>
+
+</html>
