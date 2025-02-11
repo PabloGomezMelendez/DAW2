@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Playfair';
+    src: url('../fonts/PlayfairDisplay-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Regular.ttf') format('woff2');
+
+}
+/** Variable */
+:root {
+    --bs-blue: #037bc0;
+    --bs-green: #8cbc00;
+    --green-hover:#769c02;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Raleway';
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair'
+}
+/* Modificamos el css de bootstrap */
+.text-primay {
+    color: var(--bs-blue)!important;
+}
+
+/** Tamaño textos */
+h1 {
+    font-size: 3.6rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+
+/** Estilos para el contenedor principal */
+@media screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 3.6rem;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+    }
+
+    h3 {
+        font-size: 2.4rem;
+    }
+}
