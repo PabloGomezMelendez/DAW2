@@ -1,0 +1,130 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    margin: 0;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Tabla */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+/* Encabezados de la tabla */
+th {
+    background-color: #4CAF50;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    font-size: 1em;
+}
+
+/* Celdas de la tabla */
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+    word-wrap: break-word;
+}
+
+/* Campos del formulario */
+input[type="text"],
+textarea,
+input[type="datetime-local"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/* Botones */
+#btn_insert {
+    font-size: 1em;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+#btn_insert:hover {
+    background-color: #45a049;
+}
+
+/* Enlace para cancelar */
+a {
+    text-decoration: none;
+    font-size: 1em;
+    color: #f44336;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #d32f2f;
+}
+
+/* Formularios */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    td, th {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        padding: 15px 0;
+    }
+
+    input[type="text"],
+    textarea,
+    input[type="date"] {
+        font-size: 0.9em;
+    }
+
+    #btn_insert {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
+
+    a {
+        font-size: 0.9em;
+    }
+}

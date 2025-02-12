@@ -1,0 +1,40 @@
+h1 ,h2{
+    text-align: center;
+    }
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+form {
+    text-align: center;
+    display: inline;
+}
+
+button {
+    margin: 2px;
+}
+#btn_delete{
+    background-color: #ff0000;
+    color: white;
+}
+#btn_update{
+    background-color: #e49e06;
+    color: white;
+}
+#btn_add{
+    background-color: #008000;
+    color: white;
+}

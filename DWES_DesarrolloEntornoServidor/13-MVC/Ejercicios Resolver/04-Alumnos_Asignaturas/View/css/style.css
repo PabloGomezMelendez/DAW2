@@ -1,0 +1,98 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
+}
+
+h1 {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 2.5em;
+}
+
+/* Tabla */
+table {
+    margin: 20px auto;
+    width: 90%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Botones */
+form input[type="submit"] {
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btn_insert {
+    background-color: #28a745;
+    color: white;
+    margin-bottom: 10px;
+}
+
+#btn_insert:hover {
+    background-color: #218838;
+}
+
+#btn_update {
+    background-color: #ffc107;
+    color: white;
+}
+
+#btn_update:hover {
+    background-color: #e0a800;
+}
+
+#btn_delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+#btn_delete:hover {
+    background-color: #c82333;
+}
+
+/* Adaptabilidad */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        font-size: 0.9em;
+    }
+}
