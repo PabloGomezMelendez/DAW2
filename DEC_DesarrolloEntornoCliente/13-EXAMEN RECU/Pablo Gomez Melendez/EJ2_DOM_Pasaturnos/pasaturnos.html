@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .forma {
+            width: 6rem;
+            height: 11rem;
+            border-radius: 1rem;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            margin: 10px;
+            display: inline-flex;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pasaturnos</h1>
+    <label for="input-texto">Texto:</label><input type="text" name="input-texto" id="input-texto" value=""><br>
+    <label for="input-texto">Valor inicial:</label><input type="number" name="input-valor-inicial" id="input-valor-inicial" value="0"><br>
+    <label for="input-color-fondo">Color fondo:</label><input type="color" name="input-color-fondo" id="input-color-fondo" value="#E68333"><br>
+    <label for="input-color-texto">Color texto:</label><input type="color" name="input-color-texto" id="input-color-texto" value="#000000"><br>
+    <input type="button" id="crear-pasaturnos" value="Crear">
+    <br><br>
+    <div id="pasaturnos">
+        <!-- Estructura de ejemplo de un pasaturno-->
+      <!--   <div id="pasaturnos0" class="forma" style="color:white; background-color: blueviolet;">
+            <table>
+                <tr><td colspan="3">Carnicería</td></tr>
+                <tr><td id="contador" colspan="3" style="font-size: 6rem; align-self: center;">0</td></tr>
+                <tr><td> <input type="button" value="-"></td><td> <input type="button" value="+"></td><td> </td></tr>
+                <tr><td colspan="3"><input type="button" value="Eliminar"></td></tr>  
+            </table>
+          </div> -->
+    </div>
+    <script src="pasaturnos.js"></script>
+</body>
+</html>

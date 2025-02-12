@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="container border">
+        <div class="row">
+            <header id="hearder" class="col-12 bg-warning text-white p-4">
+                <h1>ITV Mecanic Ruiz</h1>
+            </header>
+
+            <nav id="menu" class="col-12 bg-secondary text-white">
+                <ul class="row w-50">
+                    <li class="col">Inicio</li>
+                    <li class="col">Página 1</li>
+                    <li class="col">Página 2</li>
+                    <li class="col">Página 3</li>
+                    <li class="col">Contacto</li>
+                </ul>
+            </nav>
+
+            <div id="content" class="col-12 mb-4">
+                <div class="row">
+                    <section class="container border col-9 mt-4 mb-4">
+                        <h1>Cita ITV</h1>
+                        <hr>
+                        <form name="miformulario" method="POST" action="procesar.php">
+                            <div class="row mb-4">
+                                <div class="col-md-3">
+                                    <label for="inputNombre" class="form-label">Nombre(*)</label>
+                                    <input type="text" class="form-control" id="inputNombre">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="inputApellido1" class="form-label">Apellido1(*)</label>
+                                    <input type="text" class="form-control" id="inputApellido1">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="inputApellido2" class="form-label">Apellido2(*)</label>
+                                    <input type="text" class="form-control" id="inputApellido2">
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label" for="inputFechaNacimiento">Fecha nacimiento(*):</label>
+                                    <input class="form-control" type="date" id="inputFechaNacimiento">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row mb-4">
+                                <div class="col-md-3">
+                                    <label class="form-label" for="inputFechaCita">Fecha cita(*):</label>
+                                    <input class="form-control" type="date" id="inputFechaCita">
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label" for="inputHoraCita">Hora cita(*):</label>
+                                    <input class="form-control" type="time" id="inputHoraCita">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="inputTipoVehiculo">Tipo vehículo(*):</label>
+                                    <select class="form-control form-select" id="inputTipoVehiculo">
+                                        <option value="0">Seleccionar</option>
+                                        <option value="1">Motocicleta</option>
+                                        <option value="2">Coche</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr>
+                            <fieldset class="row mb-4" disabled>
+                                <legend class="col-md-12">Datos de la motocicleta</legend>
+                                <div class="col-md-3">
+                                    <label for="inputMotocicletaMatricula" class="form-label">Matrícula(*)</label>
+                                    <input type="text" class="form-control" id="inputMotocicletaMatricula">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="inputMotocicletaCilindrada">Cilindrada(*):</label>
+                                    <select class="form-control form-select" id="inputMotocicletaCilindrada">
+                                        <option value="0">Seleccionar</option>
+                                        <option value="1">Hasta 125cc</option>
+                                        <option value="2">Más de 125cc</option>
+                                    </select>
+                                </div>
+                            </fieldset>
+                            <fieldset class="row mb-4" disabled>
+                                <legend class="col-md-12">Datos del coche</legend>
+                                <div class="col-md-3">
+                                    <label for="inputCocheMatricula" class="form-label">Matrícula(*)</label>
+                                    <input type="text" class="form-control" id="inputCocheMatricula">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="inputCocheTipo">Tipo(*):</label>
+                                    <select class="form-control form-select" id="inputCocheTipo">
+                                        <option value="0">Seleccionar</option>
+                                        <option value="1">Gasolina</option>
+                                        <option value="2">Diesel</option>
+                                        <option value="3">Eléctrico</option>
+                                    </select>
+                                </div>
+                            </fieldset>
+                            <hr>
+                            <input type="submit" class="btn btn-primary" id="enviar" value="Enviar">
+                            <input type="reset" class="btn btn-warning" value="Borrar">
+                        </form>
+                    </section>
+
+                    <aside class="col-3 border mt-4 mb-4">
+                        <h2>Nuestros servicios</h2>
+                        <div class="lateral row bg-light align-items-center">
+                            <div class="col bg-primary col-4 align-self-start">Servicio 1</div>
+                            <div class="col bg-success col-4 align-self-center">Servicio 2</div>
+                            <div class="col bg-warning col-4 align-self-end">Servicio 3</div>
+                        </div>
+                    </aside>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+        <footer class="col-lg-12 bg-warning">
+            ITV Mecanic Ruiz Enero 2025&copy;
+        </footer>
+
+    </div>
+    </div>
+
+
+
+    <script src="cita_itv.js"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./js/jquery-3.3.1.slim.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/funciones.js"></script>
+
+
+</body>
+
+</html>
