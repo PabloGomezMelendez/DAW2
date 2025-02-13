@@ -10,17 +10,231 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <!-- Boostrap icons en LOCAL -->
     <link rel="stylesheet" href="css/bootstrap-icons.min.css">
-<!-- Estilo proio -->
+    <!-- Estilo proio -->
     <link rel="stylesheet" href="css/estilo_propio.css">
 
 </head>
 
 <body>
-
+    <!-- cabecera -->
     <header class="py-5">
         <h1 class="text-center fw-bolder">Tienda <span class="text-primary">Muebles</span></h1>
     </header>
 
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg border-top py-4">
+        <div class="container-fluid">
+            <a class="navbar-brand text-primary fs-2 fw-bold text-uppercase d-lg-none" href="#">Tienda muebles</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                <div class="navbar-nav container-lg justify-content-around text-center">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link" href="#">Nosotros</a>
+                    <a class="nav-link" href="#">Tienda</a>
+                    <a class="nav-link" href="#">Blog</a>
+                    <a class="nav-link" href="#">Galeria</a>
+                    <a class="nav-link" href="#">Contactos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- hero -->
+    <section class="hero"> </section>
+
+    <!-- Categorias -->
+    <section class="container-xl mt-5">
+        <h2 class=" text-center fw-bold my-5">Categoria de productos</h2>
+        <div class="row text-center">
+            <!-- Categoria 1 -->
+            <div class="col-md-4 mb-5 mb-md-0">
+                <figure class="overflow-hidden">
+                    <img src="img/categoria1.jpg" alt="Imagen de salon " class="img-fluid zoom">
+                </figure>
+                <a href="#" class="text-decoration-none text-dark fs-2 py-3">Salones</a>
+            </div>
+
+            <!-- Categoria 2 -->
+            <div class="col-md-4 mb-5 mb-md-0">
+                <figure class="overflow-hidden">
+                    <img src="img/categoria2.jpg" alt="Imagen de estudios " class="img-fluid zoom">
+                </figure>
+                <a href="#" class="text-decoration-none text-dark fs-2 py-3">Estudio</a>
+            </div>
+
+            <!-- Categoria 3 -->
+            <div class="col-md-4 mb-5 mb-md-0">
+                <figure class="overflow-hidden">
+                    <img src="img/categoria3.jpg" alt="Imagen de oficiana " class="img-fluid zoom">
+                </figure>
+                <a href="#" class="text-decoration-none text-dark fs-2 py-3">oficiana</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Nuestros productos -->
+    <main class="container-xl">
+        <h2 class=" text-center fw-bold my-5">Nuestro de producto</h2>
+
+        <!-- fila producto 1 -->
+        <!-- Producto 1 -->
+        <div class="row g-0">
+            <!-- colunna img -->
+            <div class="col-md-8">
+                <img src="img/producto1.jpg" alt="sillón object-fit-cover h-100" class="img-fluid">
+            </div>
+            <!-- colunna text y boton -->
+            <div class="col-md-4 bg-primary text-light text-center p-5 d-flex flex-column justify-content-center">
+                <h3 class=" fw-bold ">Producto 1</h3>
+                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nulla soluta non similique
+                    perferendis
+                    quo?</p>
+                <p class="fw-bold fs-1">Precio: 1000€</p>
+                <a href="#"
+                    class="text-decoration-none btn btn-success fs-3 fw-bold text-uppercase py-3 border-0 btn-hover ">Agregar
+                    al carrito</a>
+            </div>
+        </div>
+
+        <!-- fila producto 2 -->
+        <div class="row mt-5">
+            <!-- Producto 2 -->
+            <div class="col-md-6">
+                <div class="card rounded-0 mb-5">
+                    <img src="img/producto2.jpg" alt="sillón object-fit-cover h-100 rounded-0" class="card-img-top">
+                    <div class="card-body bg-primary text-light text-center p-5">
+                        <h3 class=" fw-bold ">Producto 2</h3>
+                        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nulla soluta non
+                            similique
+                            perferendis
+                            quo?</p>
+                        <p class="fw-bold fs-1">Precio: 1000€</p>
+                        <a href="#"
+                            class="text-decoration-none btn btn-success fs-3 fw-bold text-uppercase py-3 border-0 btn-hover ">Agregar
+                            al carrito</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 3 -->
+            <div class="col-md-6">
+                <div class="card rounded-0 mb-5">
+                    <img src="img/producto3.jpg" alt="sillón object-fit-cover h-100 rounded-0" class="card-img-top">
+                    <div class="card-body bg-primary text-light text-center p-5">
+                        <h3 class=" fw-bold ">Producto 3</h3>
+                        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nulla soluta non
+                            similique
+                            perferendis
+                            quo?</p>
+                        <p class="fw-bold fs-1">Precio: 1000€</p>
+                        <a href="#"
+                            class="text-decoration-none btn btn-success fs-3 fw-bold text-uppercase py-3 border-0 btn-hover ">Agregar
+                            al carrito</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- fila producto 3 -->
+        <div class="row mt-5">
+            <!-- Producto 4 -->
+            <div class="col-md">
+                <div class="card rounded-0 mb-5">
+                    <img src="img/producto4.jpg" alt="sillón object-fit-cover h-100 rounded-0" class="card-img-top">
+                    <div class="card-body bg-primary text-light text-center p-5">
+                        <h3 class=" fw-bold ">Producto 4</h3>
+                        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nulla soluta non
+                            similique
+                            perferendis
+                            quo?</p>
+                        <p class="fw-bold fs-1">Precio: 1000€</p>
+                        <a href="#"
+                            class="text-decoration-none btn btn-success fs-3 fw-bold text-uppercase py-3 border-0 btn-hover ">Agregar
+                            al carrito</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 5 -->
+            <div class="col-md">
+                <div class="card rounded-0 mb-5">
+                    <img src="img/producto5.jpg" alt="sillón object-fit-cover h-100 rounded-0" class="card-img-top">
+                    <div class="card-body bg-primary text-light text-center p-5">
+                        <h3 class=" fw-bold ">Producto 5</h3>
+                        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nulla soluta non
+                            similique
+                            perferendis
+                            quo?</p>
+                        <p class="fw-bold fs-1">Precio: 1000€</p>
+                        <a href="#"
+                            class="text-decoration-none btn btn-success fs-3 fw-bold text-uppercase py-3 border-0 btn-hover ">Agregar
+                            al carrito</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 6 -->
+            <div class="col-md">
+                <div class="card rounded-0 mb-5">
+                    <img src="img/producto6.jpg" alt="sillón object-fit-cover h-100 rounded-0" class="card-img-top">
+                    <div class="card-body bg-primary text-light text-center p-5">
+                        <h3 class=" fw-bold ">Producto 6</h3>
+                        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nulla soluta non
+                            similique
+                            perferendis
+                            quo?</p>
+                        <p class="fw-bold fs-1">Precio: 1000€</p>
+                        <a href="#"
+                            class="text-decoration-none btn btn-success fs-3 fw-bold text-uppercase py-3 border-0 btn-hover ">Agregar
+                            al carrito</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="container-xl border-top mt-5 pt-5 ">
+        <div class="row text-center">
+            <!-- columnas 1 del footer -->
+            <div class="col-md-4 mb-4">
+                <h3 class="fw-bold mb-4">Categorías</h3>
+                <nav class="d-flex flex-column">
+                    <a href="" class="text-decoration-none text-dark">Cosina</a>
+                    <a href="" class="text-decoration-none text-dark">Oficicna</a>
+                    <a href="" class="text-decoration-none text-dark">jardin</a>
+                    <a href="" class="text-decoration-none text-dark">dormitorios</a>
+                    <a href="" class="text-decoration-none text-dark">garje</a>
+                </nav>
+            </div>
+
+            <!-- columnas 2 del footer -->
+            <div class="col-md-4 mb-4 ">
+                <h3 class="fw-bold mb-4">Sobre nosotros</h3>
+                <nav class="d-flex flex-column">
+                    <a href="" class="text-decoration-none text-dark">Cosina</a>
+                    <a href="" class="text-decoration-none text-dark">Oficicna</a>
+                    <a href="" class="text-decoration-none text-dark">jardin</a>
+                    <a href="" class="text-decoration-none text-dark">dormitorios</a>
+                    <a href="" class="text-decoration-none text-dark">garje</a>
+                </nav>
+            </div>
+
+            <!-- columnas 3 del footer -->
+            <div class="col-md-4 mb-4">
+                <h3 class="fw-bold mb-4">Soporte</h3>
+                <nav class="d-flex flex-column">
+                    <a href="" class="text-decoration-none text-dark">Cosina</a>
+                    <a href="" class="text-decoration-none text-dark">Oficicna</a>
+                    <a href="" class="text-decoration-none text-dark">jardin</a>
+                    <a href="" class="text-decoration-none text-dark">dormitorios</a>
+                    <a href="" class="text-decoration-none text-dark">garje</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <p class=" text-center fs-2 mt-5"> &copy; Derechos de autor</p>
 
 </body>
 
