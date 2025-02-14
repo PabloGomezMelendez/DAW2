@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear nuevo</title>
+</head>
+<body>
+    <form action="/creando" method="post">
+        <label for="nombre">nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="asunto">asusnto</label>
+        <input type="text" id="asusnto" name="asunto" required>
+
+        <label for="comentario">comentario</label>
+        <textarea id="comentario" name="comentario" required></textarea>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+</html>

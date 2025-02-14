@@ -1,0 +1,30 @@
+services:
+  mysql:
+    image: mysql:8
+    container_name: mysql-container
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db_crud
+      MYSQL_USER: pablo
+      MYSQL_PASSWORD: pablo
+    ports:
+      - "3308:3308"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  springboot-app:
+    build: .
+    container_name: springboot-container
+    restart: always
+    depends_on:
+      - mysql
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3308/db_crud?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    ports:
+      - "8080:8080"
+
+volumes:
+  mysql_data:
