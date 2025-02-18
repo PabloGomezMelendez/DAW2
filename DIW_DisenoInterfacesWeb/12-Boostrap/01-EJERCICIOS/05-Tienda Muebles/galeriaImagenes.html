@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 - Tienda Muebles</title>
+
+    <!-- Boostrap 5.3 en LOCAL -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Boostrap icons en LOCAL -->
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+    <!-- Estilo proio -->
+    <link rel="stylesheet" href="css/estilo_propio.css">
+
+</head>
+
+<body>
+    <!-- cabecera -->
+    <header class="py-5">
+        <h1 class="text-center fw-bolder">Tienda <span class="text-primary">Muebles</span></h1>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg border-top py-4">
+        <div class="container-fluid">
+            <a class="navbar-brand text-primary fs-2 fw-bold text-uppercase d-lg-none" href="#">Tienda muebles</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                <div class="navbar-nav container-lg justify-content-around text-center">
+                    <a class="nav-link " href="#">Inicio</a>
+                    <a class="nav-link" href="#">Nosotros</a>
+                    <a class="nav-link" href="#">Tienda</a>
+                    <a class="nav-link" href="#">Blog</a>
+                    <a class="nav-link active" aria-current="page" href="#">Galeria</a>
+                    <a class="nav-link" href="#">Contactos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido -->
+    <main class="container py-5">
+        <h2 class=" text-center fw-bold my-5">Galería</h2>
+        <div class="row">
+            <figure class="col-md-6 col-xl-4">
+                <a href="#"id="modal-imagen" >
+                    <img src="img/galeria_01.jpg" alt="imagen 1"  class="img-fluid"
+                        data-bs-toggle="modal" data-bs-target="#modal-imagen" data-bs-imagen="galeria_01">
+                </a>
+
+            </figure>
+            <figure class="col-md-6 col-xl-4">
+                <img src="img/galeria_02.jpg" alt="imagen 2" id="modal-imagen" class="img-fluid" data-bs-toggle="modal"
+                    data-bs-target="galeria_02">
+            </figure>
+            <figure class="col-md-6 col-xl-4">
+                <img src="img/galeria_03.jpg" alt="imagen 3" id="modal-imagen" class="img-fluid"
+                    data-bs-target="galeria_03">
+            </figure>
+            <figure class="col-md-6 col-xl-4">
+                <img src="img/galeria_04.jpg" alt="imagen 4" id="modal-imagen" class="img-fluid"
+                    data-bs-target="galeria_04">
+            </figure>
+            <figure class="col-md-6 col-xl-4">
+                <img src="img/galeria_05.jpg" alt="imagen 5" id="modal-imagen" class="img-fluid"
+                    data-bs-target="galeria_05">
+            </figure>
+            <figure class="col-md-6 col-xl-4">
+                <img src="img/galeria_06.jpg" alt="imagen 6" id="modal-imagen" class="img-fluid"
+                    data-bs-target="galeria_06">
+            </figure>
+            <figure class="col-md-6 col-xl-4">
+                <img src="img/galeria_07.jpg" alt="imagen 7" id="modal-imagen" class="img-fluid"
+                    data-bs-target="galeria_07">
+            </figure>
+            <figure class="col-md-6 col-xl-4">
+                <img src="img/galeria_08.jpg" alt="imagen 8" id="modal-imagen" class="img-fluid"
+                    data-bs-target="galeria_08">
+            </figure>
+            <figure class="col-md-6 col-xl-4">
+                <img src="img/galeria_09.jpg" alt="imagen 9" id="modal-imagen" class="img-fluid"
+                    data-bs-target="galeria_09">
+            </figure>
+
+        </div>
+        <!-- MODAL DE IMAGEN -->
+        <div id="modal-imagen" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <!-- cuerpo -->
+                    <div class="modal-body">
+                        <img src="img/galeria_01.jpg" alt="imagen 1" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- footer -->
+    <footer class="container-xl border-top mt-5 pt-5 ">
+        <div class="row text-center">
+            <!-- columnas 1 del footer -->
+            <div class="col-md-4 mb-4">
+                <h3 class="fw-bold mb-4">Categorías</h3>
+                <nav class="d-flex flex-column">
+                    <a href="" class="text-decoration-none text-dark">Cosina</a>
+                    <a href="" class="text-decoration-none text-dark">Oficicna</a>
+                    <a href="" class="text-decoration-none text-dark">jardin</a>
+                    <a href="" class="text-decoration-none text-dark">dormitorios</a>
+                    <a href="" class="text-decoration-none text-dark">garje</a>
+                </nav>
+            </div>
+
+            <!-- columnas 2 del footer -->
+            <div class="col-md-4 mb-4 ">
+                <h3 class="fw-bold mb-4">Sobre nosotros</h3>
+                <nav class="d-flex flex-column">
+                    <a href="" class="text-decoration-none text-dark">Cosina</a>
+                    <a href="" class="text-decoration-none text-dark">Oficicna</a>
+                    <a href="" class="text-decoration-none text-dark">jardin</a>
+                    <a href="" class="text-decoration-none text-dark">dormitorios</a>
+                    <a href="" class="text-decoration-none text-dark">garje</a>
+                </nav>
+            </div>
+
+            <!-- columnas 3 del footer -->
+            <div class="col-md-4 mb-4">
+                <h3 class="fw-bold mb-4">Soporte</h3>
+                <nav class="d-flex flex-column">
+                    <a href="" class="text-decoration-none text-dark">Cosina</a>
+                    <a href="" class="text-decoration-none text-dark">Oficicna</a>
+                    <a href="" class="text-decoration-none text-dark">jardin</a>
+                    <a href="" class="text-decoration-none text-dark">dormitorios</a>
+                    <a href="" class="text-decoration-none text-dark">garje</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <p class=" text-center fs-2 mt-5"> &copy; Derechos de autor</p>
+
+</body>
+
+<!-- Boostrap 5.3 JS en LOCAL -->
+<script src="js/bootstrap.bundle.js"></script>
+<!-- añadimos el APP-modal.js -->
+<script src="js/app-modal.js"></script>
+
+</html>
