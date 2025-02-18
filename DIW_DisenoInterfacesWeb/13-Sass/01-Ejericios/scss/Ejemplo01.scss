@@ -1,0 +1,28 @@
+// variables SASS
+// Estos comentarios no aparecen cuando se compilen
+$color1: #caca00;
+$color2: #fe0fea;
+
+$font1: sans-serif;
+$font2: verdana;
+
+
+body{
+    font-family: $font1;
+}
+h1{
+    color: $color1;
+    font-family: $font1;
+
+}
+p{
+    color: $color1;
+}
+/* Comentario que aparece ne css*/
+main{
+    div{
+        p{
+            color: $color1;
+        }
+    }
+}

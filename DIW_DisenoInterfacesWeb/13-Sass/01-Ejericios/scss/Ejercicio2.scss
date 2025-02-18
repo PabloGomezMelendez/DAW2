@@ -1,0 +1,21 @@
+// @use 'variables-ej2' as v;
+
+
+@use 'variables-ej2' as v with ($h1_color: tomato,
+    $body_color: aqua);
+
+
+
+body {
+    // background-color: variables-ej2.$body_color;
+    // font-size: variables-ej2.$font_body_size;
+    background-color: v.$body_color;
+    font-size: v.$font_body_size;
+}
+
+h1 {
+    // color: variables-ej2.$h1_color;
+    // font-size: variables-ej2.$font_h1_size;
+    color: v.$h1_color;
+    font-size: v.$font_body_size;
+}

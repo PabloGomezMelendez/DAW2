@@ -1,0 +1,31 @@
+@use 'sass:math';
+
+$ancho: 1200px;
+$color1: red;
+$color2: green;
+$color3: blue;
+
+
+.mitad {
+    // width: calc($ancho / 2) ;
+    width: math.div($ancho , 2);
+    background-color: $color1;
+}
+
+.cuarto {
+    // width: calc($ancho / 4);
+    width: math.div($ancho , 4);
+
+    background-color: $color2;
+
+}
+
+.octavo {
+    // width: calc($ancho / 8);
+    width: math.div($ancho , 8);
+
+    background-color: $color3;
+
+}
+
+@debug math.pow(2,4);

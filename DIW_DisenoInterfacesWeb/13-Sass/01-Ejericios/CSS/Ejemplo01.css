@@ -1,0 +1,19 @@
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  color: #caca00;
+  font-family: sans-serif;
+}
+
+p {
+  color: #caca00;
+}
+
+/* Comentario que aparece ne css*/
+main div p {
+  color: #caca00;
+}
+
+/*# sourceMappingURL=Ejemplo01.css.map */
