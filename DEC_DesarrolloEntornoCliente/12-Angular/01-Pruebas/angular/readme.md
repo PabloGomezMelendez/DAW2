@@ -16,7 +16,7 @@ Esta guía proporciona información básica sobre cómo crear y gestionar proyec
 3. Ejecuta el siguiente comando:
 
     ```bash
-    ng new my-angular-app
+    ng new my-angular-app --no-standalone
     ```
 
 4. Sigue las indicaciones para configurar tu proyecto.
