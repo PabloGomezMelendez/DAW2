@@ -1,0 +1,17 @@
+$altura:600px;
+$ancho:1200px;
+$ff:#fff;
+$color1:darkblue;
+$color2:darkorange;
+
+.conatiner{
+    height: $altura;
+    background-color: $color1;
+    color: $ff;
+}
+.conatiner-con-altura{
+    @extend .conatiner;
+    width: $ancho;
+    background-color: $color2;
+    color: $ff;
+}

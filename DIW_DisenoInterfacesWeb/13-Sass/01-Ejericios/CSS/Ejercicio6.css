@@ -1,0 +1,13 @@
+.conatiner, .conatiner-con-altura {
+  height: 600px;
+  background-color: darkblue;
+  color: #fff;
+}
+
+.conatiner-con-altura {
+  width: 1200px;
+  background-color: darkorange;
+  color: #fff;
+}
+
+/*# sourceMappingURL=Ejercicio6.css.map */

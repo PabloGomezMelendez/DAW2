@@ -1,0 +1,18 @@
+header {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+header h2 {
+  background-color: aqua;
+}
+
+main {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/*# sourceMappingURL=Ejercicio9.css.map */

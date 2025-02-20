@@ -1,0 +1,31 @@
+header {
+    h1 {
+        color: rebeccapurple;
+    }
+}
+
+main {
+    h2 {
+        color: blue;
+    }
+}
+
+footer {
+    h4 {
+        color: darkred
+    }
+    ul{
+        color:mediumvioletred
+    }
+
+    a {
+        text-decoration: none;
+
+        &:hover {
+            color: blue;
+            background-color: aquamarine;
+
+        }
+    }
+
+}

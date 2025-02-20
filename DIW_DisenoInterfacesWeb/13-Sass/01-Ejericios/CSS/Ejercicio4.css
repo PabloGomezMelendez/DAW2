@@ -1,34 +1,14 @@
-.menu {
-  list-style: none;
-  padding: 0;
-}
-.menu li {
-  padding: 10px;
-  font-weight: bold;
-}
-.menu .item-1 {
-  font-size: 20px;
-}
-.menu .item-2 {
-  font-size: 18px;
-}
-.menu .item-3 {
-  font-size: 16px;
-}
-.menu .item-4 {
-  font-size: 14px;
-}
-.menu .item-1 {
+ul {
+  font-size: 2rem;
   color: red;
 }
-.menu .item-2 {
+ul ul {
+  font-size: 1.2rem;
   color: blue;
 }
-.menu .item-3 {
+ul ul ul {
+  font-size: 0.8rem;
   color: green;
-}
-.menu .item-4 {
-  color: orange;
 }
 
 /*# sourceMappingURL=Ejercicio4.css.map */

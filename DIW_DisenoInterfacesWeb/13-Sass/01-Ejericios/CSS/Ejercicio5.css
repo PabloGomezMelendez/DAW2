@@ -1,0 +1,23 @@
+header h1 {
+  color: rebeccapurple;
+}
+
+main h2 {
+  color: blue;
+}
+
+footer h4 {
+  color: darkred;
+}
+footer ul {
+  color: mediumvioletred;
+}
+footer a {
+  text-decoration: none;
+}
+footer a:hover {
+  color: blue;
+  background-color: aquamarine;
+}
+
+/*# sourceMappingURL=Ejercicio5.css.map */

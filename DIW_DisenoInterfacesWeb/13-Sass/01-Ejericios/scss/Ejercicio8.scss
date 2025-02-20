@@ -1,0 +1,9 @@
+@for $i from 0 through 9{
+    .color#{$i+0}{
+        background-color: #{"#"+$i}01548;
+        color:#fff;
+        
+        text-align: center;
+        height: 50px;
+    }
+}

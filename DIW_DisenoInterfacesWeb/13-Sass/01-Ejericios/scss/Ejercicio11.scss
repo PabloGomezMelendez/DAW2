@@ -1,0 +1,13 @@
+@use 'sass:math';
+
+$index: 1;
+$max: 5;
+
+@while $index <= $max {
+    .ancho-col-#{$index} {
+        width: calc(100% / (2 * $index));
+        // width: math.div(100%, 2 * $index);
+        background-color: cadetblue;
+    }
+    $index: $index + 1;
+}

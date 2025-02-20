@@ -1,34 +1,31 @@
+@use "sass:list";
 @use "sass:map";
 
 // Definir una lista de colores
-$colores: red, blue, green, orange;
+$colores: (
+    red,
+    blue,
+    green,
+    orange
+);
 
 // Definir un mapa de tamaños de fuente
 $tamanos: (
-    "item-1": 20px,
-    "item-2": 18px,
-    "item-3": 16px,
-    "item-4": 14px
+    "l": 2rem,
+    "m": 1.2rem,
+    "s": 0.8rem
 );
 
-.menu {
-    list-style: none;
-    padding: 0;
+ul {
+    font-size: map.get($tamanos, 'l');
+    color: list.nth($colores, 1);
 
-    li {
-        padding: 10px;
-        font-weight: bold;
-    }
-
-    @each $item, $size in $tamanos {
-        .#{$item} {
-            font-size: $size;
-        }
-    }
-
-    @for $i from 1 through length($colores) {
-        .item-#{$i} {
-            color: nth($colores, $i);
+    ul {
+        font-size: map.get($tamanos, 'm');
+        color: list.nth($colores, 2);
+        ul{
+            font-size: map.get($tamanos, 's');
+            color: list.nth($colores, 3);
         }
     }
 }

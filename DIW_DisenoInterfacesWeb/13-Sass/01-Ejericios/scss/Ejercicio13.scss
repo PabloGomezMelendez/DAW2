@@ -1,0 +1,19 @@
+@mixin crear-grid($filas, $columnas, $gap: 20px) {
+    display: grid;
+    grid-template-rows: repeat($filas, 1fr);
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $gap;
+}
+
+header {
+    @include crear-grid(2, 2); // 2 filas, 2 columnas, gap de 20px
+
+    h2 {
+        background-color: aqua;
+    }
+
+}
+
+main {
+    @include crear-grid(3, 3, 30px); //  3 filas, 3 columnas, gap de 30px
+}
