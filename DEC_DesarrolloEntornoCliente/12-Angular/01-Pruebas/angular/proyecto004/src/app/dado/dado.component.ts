@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-dado',
@@ -7,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './dado.component.css'
 })
 export class DadoComponent {
+
+  // Es necesario inportar el @Input
+  @Input() valor: number = 1;
 
 }
