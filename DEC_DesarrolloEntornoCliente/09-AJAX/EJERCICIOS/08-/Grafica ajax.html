@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            const resultados = [
+                {
+                    año: 2024, fallecidos: [
+                        { mes: "Enero", cantidad: 42 }, { mes: "Febrero", cantidad: 55 },
+                        { mes: "Marzo", cantidad: 33 }, { mes: "Abril", cantidad: 474 },
+                        { mes: "Mayo", cantidad: 427 }, { mes: "Junio", cantidad: 381 },
+                        { mes: "Julio", cantidad: 237 }, { mes: "Agosto", cantidad: 113 },
+                        { mes: "Septiembre", cantidad: 301 }, { mes: "Octubre", cantidad: 414 },
+                        { mes: "Noviembre", cantidad: 29 }, { mes: "Diciembre", cantidad: 21 }
+                    ]
+                },
+            ];
+
+            let dataArray = [["Mes", "Cantidad"]];
+
+            for (const resultado of resultados) {
+                for (const fallecido of resultado.fallecidos) {
+                    dataArray.push([fallecido.mes, fallecido.cantidad]); 
+                }
+            }
+
+            var data = google.visualization.arrayToDataTable(dataArray);
+
+            var options = {
+                title: "Fallecidos",
+                is3D: true,
+            };
+
+            var chart = new google.visualization.PieChart(
+                document.getElementById("piechart_3d")
+            );
+            chart.draw(data, options);
+        }
+    </script>
+    </script>
+</head>
+
+<body>
+    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+</body>
+
+</html>

@@ -1,6 +1,6 @@
 <?php
-require_once ' config.php'; // Incluir el archivo de configuración
-require_once 'Periferico.php'; // Incluir el archivo de la clase Periferico
+require_once ' .php'; // Incluir el archivo de configuración
+require_once 'Fallecidos.php'; // Incluir el archivo de la clase Periferico
 
 sleep(2);
 
@@ -15,9 +15,9 @@ try {
 
 $vec=[]; // Array en el que se almacenarán los objetos Periferico
 
-$consulta = $conexion->query("SELECT codigo,descripcion,precio,descuento FROM perifericos");
+$consulta = $conexion->query("SELECT anio, CONCAT('[', GROUP_CONCAT(CONCAT('{\"mes\": \"', mes, '\", \"cantidad\": ', cantidad, '}') SEPARATOR ','), ']') AS fallecidos FROM fallecidos_mensuales WHERE anio=2024");
 while ($reg = $consulta->fetchObject()) {
-  $vec[] = new Periferico($reg->codigo,$reg->descripcion,$reg->precio,$reg->descuento);
+  $vec[] = new Fallecidos($reg->anio,$reg->fallecidos,);
 }
 
 // $vec contiene un array de objetos Periferico
