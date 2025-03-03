@@ -1,0 +1,16 @@
+
+DROP TABLE IF EXISTS `empleado`;
+
+CREATE TABLE `empleado` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `edad` char(10) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `cedula` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `sexo` char(10) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `telefono` char(15) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `cargo` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `avatar` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
