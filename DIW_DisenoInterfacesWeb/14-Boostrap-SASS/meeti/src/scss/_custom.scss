@@ -1,0 +1,26 @@
+@use 'sass:color';
+
+//Describir colores
+$rojo: #f34f51;
+$turquesa: #0098ae;
+$oscuro: #212121;
+$gris: #b5b5b5;
+
+//Asignar paleta de colores a BS
+$primary: $rojo;
+$secondary: $turquesa;
+$dark: $oscuro;
+
+//Cards
+$card-border-color: transparent;
+
+//Tipografias
+$display-font-weight: 900;
+$display-font-weight: 700;
+
+//Nav links
+$nav-link-color: $gris;
+$nav-link-hover-color: color.scale($gris, $lightness: -40%);
+
+//Importamos Bootstrap de node_modules
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
