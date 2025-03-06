@@ -1,0 +1,242 @@
+html {
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+p {
+  color: #000000;
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin: 0 0 5rem 0;
+}
+
+h1 {
+  font-size: 4.4rem;
+}
+
+h2 {
+  font-size: 3.4rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0;
+}
+@media screen and (min-width: 1024px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.header__logo {
+  width: 30rem;
+  margin-bottom: 5rem;
+}
+@media screen and (min-width: 1024px) {
+  .header__logo {
+    margin-bottom: 0;
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .navigation {
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+  }
+}
+.navigation__link {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0;
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.footer__copyright {
+  margin-bottom: 5rem;
+}
+@media screen and (min-width: 1024px) {
+  .footer__copyright {
+    margin-bottom: 0;
+  }
+}
+
+.chef {
+  background-image: url("../../assets/img/chef_bg.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+.chef__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0;
+  color: #ffffff;
+}
+.chef__text {
+  text-align: center;
+  width: 75rem;
+}
+.chef__link {
+  color: #f46669;
+  background-color: #f46669;
+  color: #ffffff;
+  border: 0;
+  border-radius: 1rem;
+  display: block;
+  font-weight: 700;
+  padding: 1.2rem 3rem;
+  text-align: center;
+  width: auto;
+}
+.chef__link:hover {
+  background-color: rgb(249.131097561, 173.368902439, 174.9695121951);
+}
+
+.iconos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0;
+}
+.iconos__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .iconos__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+  }
+}
+
+.icono {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0;
+}
+.icono__text {
+  text-align: center;
+}
+.icono__figure {
+  transition: transform 0.3s;
+}
+.icono__figure:hover {
+  cursor: pointer;
+  transform: rotate(-5deg);
+}
+
+.clases {
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0;
+}
+.clases__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+@media screen and (min-width: 768px) {
+  .clases__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .clases__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+  }
+}
+
+.icono {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0;
+}
+.icono__text {
+  text-align: center;
+}
+
+.hero__block--main {
+  background-color: #f46669;
+}
+.hero__block--img1 {
+  background-color: #f46669;
+}
+.hero__block--secundary {
+  background-color: #c7c57d;
+}
+
+/*# sourceMappingURL=app.css.map */

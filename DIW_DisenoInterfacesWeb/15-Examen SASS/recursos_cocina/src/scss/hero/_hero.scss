@@ -1,0 +1,16 @@
+@use "../base/vars" as v;
+@use "../base/mixins" as m;
+
+.hero{
+
+
+    &__block--main{
+        background-color: v.$main-color;
+    }
+    &__block--img1{
+        background-color: v.$main-color;
+    }
+    &__block--secundary{
+        background-color: v.$secundary-color;
+    }
+}
