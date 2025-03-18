@@ -1,0 +1,8 @@
+<script>start("d:\\DAW2-pgm\\DEV\\htdocs\\EXAMEN\\PABLO GOMEZ MELENDEZ\\");</script>
+<script>onHasParentDirectory();</script>
+<script>addRow("Controller","Controller",1,0,"0 B",1741637511,"10/3/25, 21:11:51");</script>
+<script>addRow("Model","Model",1,0,"0 B",1741635900,"10/3/25, 20:45:00");</script>
+<script>addRow("services","services",1,0,"0 B",1741630895,"10/3/25, 19:21:35");</script>
+<script>addRow("sql","sql",1,0,"0 B",1741632319,"10/3/25, 19:45:19");</script>
+<script>addRow("View","View",1,0,"0 B",1741637690,"10/3/25, 21:14:50");</script>
+<script>addRow("index.php","index.php",0,50,"50 B",1741202306,"5/3/25, 20:18:26");</script>

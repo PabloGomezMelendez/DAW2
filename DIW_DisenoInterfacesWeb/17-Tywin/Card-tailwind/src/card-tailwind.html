@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card con Tailwind</title>
+    <link rel="stylesheet" href="../dist/css/sytle.css">
+</head>
+
+<body class="bg-blue-200">
+    <article class="w-72 bg-white mx-auto rounded-2xl p-4 mt-5 flex flex-col gap-8 md:flex-row md:w-2/3 max-w-lg">
+        <!-- Imagen -->
+        <figure class="md:w-1/3">
+            <img class="object-cover rounded-xl md:h-full" src="./asset/img/cara-padre.png" alt="Padre de f1">
+        </figure>
+        <!-- Bloque de texto y botones -->
+        <div class="flex-1">
+            <h2 class="text-2x1 font-bold">Fernando Alonso</h2>
+            <p class="text-zinc-600 text-lg">roki f1 pilot</p>
+
+            <!-- Información adicional -->
+            <article class="mt-4 bg-zinc-100 rounded-sm p-3 hidden md:flex justify-evenly">
+                <div>
+                    <h3 class="text-zinc-600 font-bold"> articles </h3>
+                    <p class="text-2x1 font-bold">34</p>
+                </div>
+                <div>
+                    <h3 class="text-zinc-600 font-bold"> Follower </h3>
+                    <p class="text-2x1 font-bold">1580</p>
+                </div>
+                <div>
+                    <h3 class="text-zinc-600 font-bold"> rating </h3>
+                    <p class="text-2x1 font-bold">9.99</p>
+                </div>
+            </article>
+
+            <!-- Botones de acción -->
+            <div class="grid gap-4 mt-6 md:grid-flow-col">
+                <a class="text-zinc-700 px-8 py-4 border-2 border-zinc-400 text-center rounded-lg" href="#"> chat</a>
+                <a class=" text-white bg-blue-600 px-8 py-4 border-2 border-zinc-400 text-center rounded-lg" href="#">
+                    Follow</a>
+            </div>
+        </div>
+    </article>
+    </article>
+</body>
+
+</html>

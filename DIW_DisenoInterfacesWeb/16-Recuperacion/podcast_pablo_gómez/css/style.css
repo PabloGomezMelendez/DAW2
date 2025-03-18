@@ -1,0 +1,134 @@
+/** CREAR */
+/* FIXME: VARIOS ERRORES EN EL DISEÑO:
+        * imagen del fondo
+        * sombreado de la imgane
+        * Boton incompleto
+        * Responsive texto incompleto
+    */
+/* TODO: FALTA CONTENIDO CSS */
+.header {
+    background-image: url('../img/header.webp'), linear-gradient(0deg, rgba(22, 48, 105, 0.781)),
+    ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    ;
+    height: 50rem;
+}
+
+.header__content {
+    color: #ffffff;
+    display: block;
+    width: 50rem;
+}
+
+.header__titel {
+    color: #ffffff;
+}
+
+/*FIN HEADER*/
+
+
+
+/** CREAR */
+/* FIXME: VARIOS ERRORES EN EL DISEÑO */
+/* TODO: FALTA CONTENIDO CSS */
+.crea {
+    display: grid;
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+    .crea {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.crear__img {
+    max-width: 100rem;
+}
+
+.crear__content {
+    max-width: 100rem;
+}
+
+/**FIN CREAR*/
+
+
+
+/** Planes */
+/* TODO: FALTA CONTENIDO CSS */
+.planes {
+    background-color: #313c4e;
+}
+
+.planes__content {
+    color: #ffffff;
+    display: block;
+    padding: 0 2rem 0 2rem;
+}
+
+/**Planes Card*/
+/* TODO: FALTA CONTENIDO CSS */
+
+.card--main{
+    background-color: #84d9bc;
+}
+.card{
+    background-color: #ffffff;
+    display: inline-flexbox;
+    /* align-items: center    ; */
+    justify-content: center;
+}
+/**FIN Planes Card*/
+/** FIN Planes */
+
+
+/** Opiniones */
+/*TODO: Todo*/
+
+
+/** FIN Opiniones */
+
+
+
+/** Footer */
+/* FIXME: VARIOS ERRORES EN EL DISEÑO */
+.footer {
+    background-color: #313c4e;
+    color: #ffffff;
+    display: line;
+}
+
+.footer__figure {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__img {
+    height: 10rem;
+    width: 10rem;
+    max-width: 20rem;
+    max-height: 20rem;
+}
+
+.footer__titel {
+    color: #84d9bc;
+}
+
+.footer__opciones {}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .logo__figure {
+        display: block;
+    }
+}
+
+/** FIN Footer */

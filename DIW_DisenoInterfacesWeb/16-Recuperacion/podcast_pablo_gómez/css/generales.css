@@ -1,0 +1,108 @@
+/* Valores generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* fuentes usadas en la página web */
+@font-face {
+    font-family: Poppins-Bold;
+    src: url("../fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Poppins-Regular, sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+h1,
+h2,
+h3,
+h4{
+    font-family: Poppins-Bold, serif;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+}
+
+
+p {
+    font-size: 2rem;
+    line-height: 1.8;
+}
+
+a {
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+li {
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+ul {
+    text-decoration: none;
+}
+
+/* */
+.container {
+    margin: 0 auto;
+    max-width: 120rem;
+
+}
+
+.logo__figure {
+    display: flex;
+    justify-content: center;
+}
+.logo__figure--footer {
+    display: flex;
+    justify-content: left;
+}
+
+.logo__img {
+    height: 10rem;
+    width: 10rem;
+    max-width: 20rem;
+    max-height: 20rem;
+}
+@media screen and (min-width: 768px){}
+
+
+.btn{
+    background-color:#84d9bc;
+    color:#313c4e;
+
+    padding: 0 1rem 0 1rem;
+
+}
