@@ -23,6 +23,12 @@ o
 yarn add tailwindcss
 ```
 
+o
+
+```bash
+ npm install tailwindcss @tailwindcss/cli
+```
+
 ## Configuración
 
 Después de instalar Tailwind CSS, crea un archivo de configuración ejecutando el siguiente comando:

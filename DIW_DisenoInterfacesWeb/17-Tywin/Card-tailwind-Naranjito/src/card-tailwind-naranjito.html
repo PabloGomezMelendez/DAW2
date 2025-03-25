@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card con Tailwind</title>
+    <link rel="stylesheet" href="../dist/css/sytle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-tertiary font-font-primary">
+    <!-- Contenedor principal -->
+    <section class="w-[90%] bg-white max-w-screen grid gap-8 auto-rows-max justify-items-center items-center md:grid-cols-2">
+        <!-- Fila 1: Imagen -->
+        <img class="object-cover rounded-full aspect-square w-4/5  max-w-sm   " src="./asset/img/Naranjito.jpg"
+            alt="mascotas de expo 92">
+
+
+        <!-- Fila 2: Bloque de texto y botones -->
+        <article class="px-8 py-4 grid gap-8">
+            <h1 class=" text-3xl font-bold text-center md:text-left md:text-5xl/normal ">Soy Naranjito</h1>
+            <p class="text-zinc-600 text-lg leading-8">Quiero tener una segunda oportunidad y ser la mascota del proximo mundial
+                de fútbol de España, Portugal y Maruecos 2030 </p>
+
+            <!-- Botones de acción -->
+            <a class="text-orange-500 bg-secondary px-8 py-4 border-2 border-zinc-400 text-center rounded-lg hover:scale-110 transition-transform duration-200" href="#">
+                Vótame</a>
+
+        </article>
+    </section>
+</body>
+
+</html>
