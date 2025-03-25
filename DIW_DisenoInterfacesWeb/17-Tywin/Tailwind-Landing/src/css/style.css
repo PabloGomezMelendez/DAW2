@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+/* ...existing code... */
+@theme colors {
+    --color-primary: #0081AF;
+    --color-secondary: #00ABE7;
+    --color-tertiary: #2DC7FF;
+    --color-quaternary: #EAD2AC;
+    --color-quinary: #EABA6B;
+
+    --font-primary: 'Roboto';
+}
+
+/* theme base componets utilities */
+@layer componets {
+    /* ...existing code... */
+    .wrapper{
+        @apply w-[90%] max-auto max-w-screen overflow-hidden;
+    }
+}

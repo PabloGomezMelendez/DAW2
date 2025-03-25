@@ -20,3 +20,8 @@ A continuación se presenta un diccionario con la explicación y funcionamiento 
 - **text-sm**: Define el tamaño del texto a 0.875rem (14px).
 - **text-blue-500**: Establece el color del texto a un tono azul.
 - **hover:underline**: Añade un subrayado al texto cuando el usuario pasa el cursor sobre él.
+- **transition**: Aplica una transición a las propiedades CSS del elemento.
+- **duration-300**: Establece la duración de la transición a 300ms.
+- **ease-in-out**: Aplica una curva de aceleración y desaceleración suave a la transición.
+- **transform**: Permite la transformación del elemento usando funciones como translate, rotate, scale, etc.
+- **hover:scale-105**: Escala el elemento al 105% de su tamaño original cuando el usuario pasa el cursor sobre él.

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animacion Tailwind 2</title>
+    <link rel="stylesheet" href="../dist/css/sytle2.css">
+</head>
+
+<body class="bg-gray-800 h-screen flex justify-center items-start ">
+    <section class="space-y-4 mt-10 max-auto">
+        <!-- en css tradicional: button:hover -img {...} -->
+         <!-- en tailwind se usa peer -->
+        <button class="bg-blue-500 text-white p-4 w-max peer/abajo">abajo</button>
+        <button class="bg-blue-500 text-white p-4 w-max peer/derecha">derecha</button>
+
+        <img src="asset/img/image.jpg" alt="skyline" class="w-40 transition peer-hover/abajo:translate-y-full  peer-hover/derecha:translate-x-full">
+    </section>
+
+</body>
+
+</html>
