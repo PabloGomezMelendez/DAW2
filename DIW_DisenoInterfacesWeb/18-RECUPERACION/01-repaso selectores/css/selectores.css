@@ -1,3 +1,13 @@
+/* Ejemplo fuentes */
+@font-face {
+    font-family:"Bungee Tint";
+    src: url(../font/Bungee_Tint/BungeeTint-Regular.ttf);
+}
+@font-face {
+    font-family:"Noto Sans Gunjala Gondi";
+    src: url(../font/Noto_Sans_Gunjala_Gondi/NotoSansGunjalaGondi-VariableFont_wght.ttf);
+}
+
 /** Selectores de tipo: */
 /* Aplica el color darkred a todos los elementos del documento. */
 * {
@@ -20,6 +30,14 @@ h1,
 h2,
 h3 {
     font-family: Georgia;
+}
+/* Aplica la fuente "Bungee Tint" a todos los elementos <h1> */
+h1 {
+    font-family: "Bungee Tint";
+}
+/* Aplica la fuente "Noto Sans Gunjala Gondi" a todos los elementos <h2> . */
+h2{
+    font-family: "Noto Sans Gunjala Gondi";
 }
 
 /** Selectores combinadores: */
