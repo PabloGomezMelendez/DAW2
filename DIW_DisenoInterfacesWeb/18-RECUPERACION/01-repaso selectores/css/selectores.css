@@ -1,0 +1,121 @@
+/** Selectores de tipo: */
+/* Aplica el color darkred a todos los elementos del documento. */
+* {
+    color: darkred;
+}
+
+/* Aplica el color darkblue a todos los elementos <h1>. */
+h1 {
+    color: darkblue;
+}
+
+/* Aplica el color darkslateblue a todos los elementos <h2> y <h3>. */
+h2,
+h3 {
+    color: darkslateblue;
+}
+
+/* Aplica la fuente Georgia a todos los elementos <h1>, <h2> y <h3>. */
+h1,
+h2,
+h3 {
+    font-family: Georgia;
+}
+
+/** Selectores combinadores: */
+/* Elimina el subrayado de los enlaces (<a>) que están dentro de un <nav>. */
+nav a {
+    text-decoration: none;
+}
+
+/* Establece el tamaño de fuente y el interlineado para los párrafos (<p>) dentro de un <main>. */
+main p {
+    font-size: 30px;
+    line-height: 1.5;
+}
+
+/* Establece un tamaño de fuente específico para los párrafos (<p>) dentro de un <section>. */
+section p {
+    font-size: 20px;
+}
+
+/* Establece un tamaño de fuente diferente para los párrafos (<p>) que son hijos directos de un <section>. */
+section>p {
+    font-size: 24px;
+}
+
+/* Centra el texto de los elementos <h1> que son hijos directos de <header> y de los elementos <h2> que son hijos directos de <main>. */
+header>h1,
+main>h2 {
+    text-align: center;
+}
+
+/* Aplica un borde con estilo punteado y esquinas redondeadas al primer <section> que sigue inmediatamente después de un <main>. */
+main+section {
+    border-radius: 2px;
+    border-style: dotted;
+    border-color: black;
+}
+
+/* Aplica un fondo gris claro a todos los elementos hermanos de <main>. */
+main~* {
+    background-color: lightgray;
+}
+
+/* Establece un ancho y un fondo específico para los elementos <article> que siguen inmediatamente después de un <h2> dentro de un <section>. */
+section h2+article {
+    width: 200px;
+    background-color: bisque;
+}
+
+/** Selectores de atributo: */
+/* Establece un ancho de 200px para todas las imágenes (<img>) que tienen un atributo "alt". */
+img[alt] {
+    width: 200px;
+}
+
+/* Aplica un borde redondeado al 50% a las imágenes (<img>) cuyo atributo "alt" comienza con "mon". */
+img[alt^="mon"] {
+    border-radius: 50%;
+}
+
+/* Establece un ancho de 300px para las imágenes (<img>) cuyo atributo "name" contiene la cadena "2". */
+img[name*="2"] {
+    width: 300px;
+}
+
+/* Aplica un borde sólido y redondeado de 5px a las imágenes (<img>) cuyo atributo "alt" termina con "o". */
+img[alt$="o"] {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: orangered;
+}
+
+/* Aplica un borde exterior de 10px y un color de borde azul a las imágenes (<img>) cuyo atributo "alt" contiene la palabra "mono" como una palabra completa. */
+img[alt~="mono"] {
+    outline-width: 10px;
+    outline-style: solid;
+    outline-color: blue;
+}
+
+/* Aplica un tachado al texto de los enlaces (<a>) cuyo atributo "href" contiene la palabra "contacto.html". */
+a[href="contacto.html"] {
+    text-decoration: line-through;
+}
+
+/** Pseudo-selectores */
+/* el segundo articulo tendra  fuente sans-serif */
+article:nth-of-type(2) {
+    font-family: sans-serif;
+}
+
+/** Pseudo-elemento */
+/* Aplica un color de fondo gris claro a la primera línea de todos los párrafos (<p>). */
+p::first-line {
+    background-color: lightgray;
+}
+/* Aplica un color de fondo gris claro a la primera letra de todos los párrafos (<p>). */
+p::first-letter {
+    background-color: lightgray;
+}
+
