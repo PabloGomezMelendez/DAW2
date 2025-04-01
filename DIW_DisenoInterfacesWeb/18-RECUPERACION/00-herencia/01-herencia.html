@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fundamentos de css: herencia</title>
+    <style>
+        section {
+            color: tomato;
+            border: 2px solid blue;
+
+        }
+
+        div {
+            border: inherit;
+        }
+        /* Selector de elemento: especificidad 0,0,0,1 */
+        h2 {
+            font-size: 2rem;
+        }
+        /* Selector de clase: especificidad 0,0,1,0 */
+        .title {
+            font-size: 4rem;
+        }
+        /* Selector de ID: especificidad 0,1,0,0 */
+        #title {
+            font-size: 6rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Herencia, especificiadad, ubicacion</h1>
+    <section>
+        <h2 class="title" id="title">Ejemplo de herencia en CSS:</h2>
+        <div>
+            <p>Este es un párrafo dentro de un div.</p>
+            <p>Este es otro párrafo dentro de un div.</p>
+        </div>
+    </section>
+</body>
+
+</html>
