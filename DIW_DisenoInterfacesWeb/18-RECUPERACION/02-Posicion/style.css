@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container{
+    border: 2px dashed black;
+    width: 750px;
+    height: 675px;
+    margin: 50px;
+
+    position: relative;
+}
+
+.box{
+    border: 2px solid black;
+    color: white;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    line-height: 130px;
+    text-align: center;
+
+}
+
+.div1{
+    background-color: blueviolet;
+
+    position: estatic;
+    left: 100px;
+}
+.div2{
+    background-color: chartreuse;
+
+    position: relative;
+    left: 300px;
+}
+.div3{
+    background-color: chocolate;
+
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.div4{
+    background-color: crimson;
+
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+}
