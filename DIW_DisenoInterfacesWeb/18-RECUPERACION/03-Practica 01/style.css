@@ -1,13 +1,154 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-.header__nav{
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+}
+
+/* Hero */
+.hero {
+    background-image: url('asset/img/img-1-header.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #33333367;
+}
+
+.hero__navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: right;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero__navbar-list {
+    list-style: none;
+}
+
+.hero__navbar-item {
+    display: inline;
+    margin: 0 20px;
+}
+
+.hero__navbar-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero__text {
+    text-align: center;
+}
+
+.hero__title {
+    background: black;
+    color: white;
+    padding: 20px 40px;
+    font-size: 2rem;
+}
+
+/* Cartelera */
+.cartelera {
+    background-image: url('asset/img/img-2-cartelera.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #000;
+    text-align: center;
+    padding: 100px 20px; /* Incrementamos el padding para hacerla más alta */
+}
+
+.cartelera__title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.cartelera__description {
+    margin-bottom: 40px;
+}
+
+.cartelera__label {
+    background: black;
+    color: white;
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 1.5rem;
+    margin-top: 40px;
+}
+
+.cartelera__intro,
+.cartelera__ubicacion {
+    background: white; /* Fondo blanco */
+    color: black; /* Texto negro */
+    padding: 20px;
+    border-radius: 10px; /* Opcional: bordes redondeados */
+    margin: 20px auto; /* Espaciado entre las secciones */
+    max-width: 800px; /* Ancho máximo para centrar el contenido */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Opcional: sombra para destacar */
+}
+
+.cartelera__ubicacion {
+    margin-top: 40px;
+}
+
+.cartelera__ubicacion-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.cartelera__ubicacion-description {
+    font-size: 1rem;
+}
+
+/* Contacto */
+.contacto {
+    background-image: url('asset/img/img-3-contactanos.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto__form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+}
+
+.contacto__title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contacto__input,
+.contacto__textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contacto__button {
+    background: linear-gradient(to right, #2b67f6, #153063);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
 }

@@ -5,34 +5,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>CinemaTK</title>
 </head>
 
 <body>
-    <!-- Contenodr 1 -->
-    <header class="header">
-        <!-- Nav -->
-        <nav class="header__nav">
-            <a class="nav__enlace" href="">>>Inicio</a>
-            <a class="nav__enlace" href="">>>Cartelera</a>
-            <a class="nav__enlace" href="">>>Contacto</a>
+
+    <!-- Sección 1: Encabezado -->
+    <header class="hero">
+        <nav class="hero__navbar">
+            <ul class="hero__navbar-list">
+                <li class="hero__navbar-item"><a class="hero__navbar-link" href="#inicio">Inicio</a></li>
+                <li class="hero__navbar-item"><a class="hero__navbar-link" href="#cartelera">Cartelera</a></li>
+                <li class="hero__navbar-item"><a class="hero__navbar-link" href="#contacto">Contacto</a></li>
+            </ul>
         </nav>
-
-        <!-- Texto centrado -->
-        <h1 class="header__titulo">CineMatk</h1>
+        <div class="hero__text">
+            <h1 class="hero__title">CINEMATK</h1>
+        </div>
     </header>
-    <!-- Contendor 2 -->
-    <!-- Titular 1 -->
-    <!-- Titulo -->
-    <!-- Contenido -->
 
-    <!-- Texto centrado -->
-    <!-- Titular 2 -->
-    <!-- Titulo -->
-    <!-- Contenido -->
+    <!-- Sección 2: Cartelera -->
+    <section class="cartelera" id="cartelera">
+        <div class="cartelera__intro">
+            <h2 class="cartelera__title">CinemaTK es un cine-club solo para amantes del cine clásico</h2>
+            <p class="cartelera__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit...</p>
+        </div>
+        <div class="cartelera__posters">
+            <h3 class="cartelera__label">Cartelera</h3>
+        </div>
+        <div class="cartelera__ubicacion">
+            <h3 class="cartelera__ubicacion-title">Nos podrás encontrar en...</h3>
+            <p class="cartelera__ubicacion-description">Lorem ipsum dolor sit amet consectetur...</p>
+        </div>
+    </section>
 
-    <!-- Contenedor 3 -->
-    <!-- Contactanos -->
+    <!-- Sección 3: Contacto -->
+    <section class="contacto" id="contacto">
+        <form class="contacto__form">
+            <h2 class="contacto__title">Contáctanos</h2>
+            <input class="contacto__input" type="text" placeholder="Nombre" required>
+            <input class="contacto__input" type="email" placeholder="Email" required>
+            <textarea class="contacto__textarea" placeholder="Mensaje" required></textarea>
+            <button class="contacto__button" type="submit">Enviar</button>
+        </form>
+    </section>
+
 </body>
 
 </html>
