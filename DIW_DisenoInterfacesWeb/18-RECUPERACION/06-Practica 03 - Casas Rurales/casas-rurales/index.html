@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casas Rurales</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="font/tu-fuente-personalizada.woff2" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__title">Bienvenidos a Casas Rurales</h1>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item"><a href="#inicio" class="header__nav-link">Inicio</a></li>
+        <li class="header__nav-item"><a href="#servicios" class="header__nav-link">Servicios</a></li>
+        <li class="header__nav-item"><a href="#contacto" class="header__nav-link">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section id="inicio" class="main__section">
+      <h2 class="main__section-title">Descubre la belleza de la naturaleza</h2>
+      <img src="img/imagen-principal.jpg" alt="Vista de casas rurales" class="main__image">
+    </section>
+
+    <section id="servicios" class="main__section">
+      <h2 class="main__section-title">Nuestros Servicios</h2>
+      <p class="main__section-description">Ofrecemos una variedad de servicios para disfrutar de una experiencia única en la naturaleza.</p>
+    </section>
+
+    <section id="contacto" class="main__section">
+      <h2 class="main__section-title">Contacto</h2>
+      <form class="main__form">
+        <label for="nombre" class="main__form-label">Nombre:</label>
+        <input type="text" id="nombre" class="main__form-input" required>
+        <label for="email" class="main__form-label">Email:</label>
+        <input type="email" id="email" class="main__form-input" required>
+        <button type="submit" class="main__form-button">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">© 2023 Casas Rurales. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
