@@ -22,18 +22,84 @@
     </header>
     <!-- hero  -->
     <section class="hero">
-        <h1 class="hero__title">Diseño y desarrollo web Freelance</h1>
-        <p class="hero__text"><i class="fas fa-map-marker-alt"></i>Utrera, Sevilla</p>
-        <a href="#" class="hero__btn">Contactanos</a>
+        <div class="hero__container container">
+            <h1 class="hero__title">Diseño y desarrollo web Freelance</h1>
+            <p class="hero__text"><i class="fas fa-map-marker-alt"></i>Utrera, Sevilla</p>
+            <a href="#" class="hero__btn">Contactanos</a>
+        </div>
     </section>
-    <div>
-        <!-- servicios -->
-        <main>
 
+    <div class="container-service-contact container">
+        <!-- servicios -->
+        <main class="sevices">
+            <h2 class="services__title text-center">Nuestros Servicios</h2>
+            <div class="services__container">
+                <!-- Articulo 1 -->
+                <article class="services__service">
+                    <h3 class="services__subtitle">Desarrollo Web</h3>
+                    <div class="services__icon">
+                        <i class="fas fa-pen-square"></i>
+                    </div>
+                    <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis rem
+                        recusandae mollitia. Fugit magnam laboriosam sed voluptatem facilis. Ad, impedit.</p>
+                </article>
+                <!-- Articulo 2 -->
+                <article class="services__service">
+                    <h3 class="services__subtitle">Aplicaciones Moviles</h3>
+                    <div class="services__icon">
+                        <i class="fab fa-android"></i>
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis rem
+                        recusandae mollitia. Fugit magnam laboriosam sed voluptatem facilis. Ad, impedit.</p>
+                </article>
+                <!-- Articulo 3 -->
+                <article class="services__service">
+                    <h3 class="services__subtitle">redes sociales</h3>
+                    <div class="services__icon">
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis rem
+                        recusandae mollitia. Fugit magnam laboriosam sed voluptatem facilis. Ad, impedit.</p>
+                </article>
+            </div>
         </main>
         <!-- contactos     -->
-        <section>
+        <section class="contact">
+            <h2 class="contact__title text-center">Contacto</h2>
+            <form action="" class="contact__form">
+                <legend class="contact__legend">Contactanos (Completa todos los campos)</legend>
+                <div class="contact__container">
+                    <!--* campos de formulario -->
+                    <!-- Campo para el nombre -->
+                    <div class="contact__field">
+                        <label for="">nombre</label>
+                        <input type="text" class="contact__input" placeholder="Nombre" required>
+                    </div>
+                    <!-- Campo para el teléfono -->
+                    <div class="contact__field">
+                        <label for="">telefono</label>
+                        <input type="tel" class="contact__input" placeholder="Telefono" required>
+                    </div>
+                    <!-- Campo para el email -->
+                    <div class=" contact__field contact__field--100">
+                        <label for="">email</label>
+                        <input type="email" class="contact__input" placeholder="Email" required>
+                    </div>
+                    <!-- Campo para el mensaje -->
+                    <div class="contact__field contact__field--100">
+                        <label for="">mensaje</label>
+                        <textarea name="" id="" cols="30" rows="10" class="contact__input"
+                            placeholder="Mensaje"></textarea>
+                    </div>
 
+                </div>
+                <!--* boton de enviar -->
+                <div class="contact__submit">
+                    <input type="submit" value="Enviar" class="contact__btn">
+                </div>
+            </form>
         </section>
     </div>
 
