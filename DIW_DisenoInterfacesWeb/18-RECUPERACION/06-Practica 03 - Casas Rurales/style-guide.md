@@ -12,14 +12,14 @@
 
 - Dimensiones (si se define un font-size de 62.5% en el elemento html):
   - Textos
-    - h1: 4.8rem, font-weight: 900
-    - h2: 5.8rem, font-weight: 900
-    - h3: 5rem, font-weight: 900
+    - h1: 5.2rem, font-weight: 900
+    - h2: 4.2rem, font-weight: 900
+    - h3: 3.4rem, font-weight: 900
     - p: 1.6rem
     - enlaces header y footer: 1.8rem
   - Altura de línea: 1.8 para los párrafos y 1.2 para los titulares
 
-### Colores s
+### Colores
   - Gris: #343A40;
   - Negro: #000000
   - Blanco: #ffffff
