@@ -1,15 +1,13 @@
 /* Valores generales */
 :root {
-    --white: #fff;
-    --primary: #ffc107;
-    --secundary-light: #4dd0e1;
-    --secundary: #0097a7;
-    --secundary-dark: #033038;
-    --gray: #757575;
-    --dark: #212121;
+    --gray: #343A40;
+    --black: #000000;
+    --white: #ffffff;
 
-    --mainFont: 'raleway-regular';
-    --mainFontBold: 'raleway-bold';
+
+    --mainFont: 'raleway-regular', sans-serif;
+    --mainFontBold: 'raleway-bold', sans-serif;
+    --mainFontExtraBold: 'raleway-extraBold', sans-serif;
 }
 
 @font-face {
@@ -22,6 +20,13 @@
     src: url('../fonts/Raleway-Bold.ttf');
     font-weight: bold;
 }
+
+@font-face {
+    font-family: 'raleway-extraBold';
+    src: url('../fonts/Raleway-ExtraBold.ttf');
+    font-weight: bold;
+}
+
 
 /* Estilos generales*/
 *,
@@ -87,4 +92,227 @@ img {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/* Header */
+.hero {
+    background-image: url('../img/hero.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 60rem;
+}
+
+/* terminamos el header  con flexbox */
+
+/*Sobre Nosotros*/
+.about-us {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+
+    /* Añadimos la imgen*/
+    background-image: url('../img/nosotros.jpg');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+
+.about-us__content {
+    background-color: var(--white);
+    padding: 5rem;
+}
+
+
+.about-us__title {
+    font-family: var(--mainFontExtraBold);
+    margin-bottom: 2rem;
+}
+
+.about-us__text {
+    margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+    .about-us {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about-us__content {
+        grid-column: 1 / 2;
+        grid-column: 2 / 4;
+    }
+
+}
+
+/* Nuestras casas */
+.house {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+
+    background-position: bottom center;
+    background-repeat: no-repeat;
+
+}
+
+.houses--grazalema {
+    background-image: url('../img/casa1.jpg');
+    background-position: center center;
+}
+
+.houses--bosque {
+    background-image: url('../img/casa2.jpg');
+    background-position: center center;
+}
+
+.houses--zahara {
+    background-image: url('../img/casa3.jpg');
+    background-position: center center;
+}
+
+.house__content {
+    background-color: var(--white);
+    padding: 5rem 0;
+}
+
+.houses--grazalema .house__content {
+    padding: 2rem 0 5rem 0;
+}
+
+
+.houses__title {
+    font-family: var(--mainFontExtraBold);
+    margin-bottom: 2rem;
+}
+
+.house__text {
+    margin-bottom: 2rem;
+}
+
+.house__btn {
+    background-color: var(--white);
+    border: 1px solid var(--gray);
+    color: var(--gray);
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    width: 100%;
+    text-align: center;
+
+    transition: all 0.5s
+}
+
+.house__btn:hover {
+    background-color: var(--gray);
+    color: var(--white);
+}
+
+/* Nuestras casas - Media Queries */
+@media screen and (min-width: 768px) {
+    .house {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .houses--grazalema {
+        margin-top: 3rem;
+        background-position: top right;
+    }
+
+    .houses--grazalema .house__content {
+        grid-row: 2/3;
+        grid-column: 1/2;
+
+        padding: 2rem 2rem 2rem 0;
+    }
+
+    .houses--bosque {
+        background-position: bottom left;
+        margin: 7rem 0;
+
+    }
+
+    .houses--bosque .house__content {
+        grid-row: 1/2;
+        grid-column: 2/3;
+
+        padding: 2rem 2rem 2rem 0;
+    }
+
+    .houses--zahara {
+        background-position: bottom right;
+        margin: 7rem 0;
+    }
+
+    .houses--zahara .house__content {
+        padding: 2rem 2rem 2rem 0;
+    }
+
+    .house__btn {
+        width: auto;
+    }
+}
+
+/* Galeria */
+
+.gallery__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.gallery__container img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.gallery__container img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.gallery__img {
+    overflow: hidden;
+}
+
+.gallery__img:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+
+.gallery__img:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 5;
+}
+
+.gallery__img:nth-child(6) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+}
+
+@media screen and (min-width: 768px) {
+    .gallery__container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .gallery__img:nth-child(2) {
+        grid-column: 1 / 2;
+        grid-row: 2/ 5;
+    }
+
+    .gallery__img:nth-child(3) {
+        grid-column: 2 / 3;
+        grid-row: 1/ 2;
+    }
+
+    .gallery__img:nth-child(4) {
+        grid-column: 2 / 3;
+        grid-row: 2/ 4;
+    }
+
+    .gallery__img:nth-child(6) {
+        grid-column: 3 / 4;
+        grid-row: 1/ 4;
+    }
+
+
+
 }
