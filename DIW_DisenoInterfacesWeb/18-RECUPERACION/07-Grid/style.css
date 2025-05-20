@@ -28,8 +28,8 @@ body {
     align-items: center;    /* Alinecion vertical los elementos dentro de la celda */
 
     /* Alineacion del contenedor, la cuadricula debe ser ma */
-    justify-content: center;    /* Alineacion horizontal de la cuadrícula */
-    align-content: center;    /* Alineacion vertical de la cuadrícula */
+    /* justify-content: center;    /* Alineacion horizontal de la cuadrícula */
+    /* align-content: center;    Alineacion vertical de la cuadrícula */ 
 }
 
 .box {

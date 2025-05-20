@@ -1,0 +1,103 @@
+/* Valores generales */
+:root {
+    --verde: #84d9bc;
+    --gray: #313c4e;
+    --black: #000000;
+    --white: #ffffff;
+
+
+    --mainFont: 'poppins-regular', sans-serif;
+    --mainFontBold: 'poppin-bold', sans-serif;
+}
+
+@font-face {
+    font-family: 'poppins-regular';
+    src: url('fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'poppins-bold';
+    src: url('fonts/Poppins-Bold.ttf');
+    font-weight: bold;
+}
+
+
+/* Estilos generales*/
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--mainFont);
+    font-size: 1.6rem;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+}
+
+p {
+    line-height: 2;
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* hacer la imagen responsive*/
+img {
+    max-width: 20rem;
+    display: block;
+    height: auto;
+}
+
+/* utilidades */
+.text-center {
+    text-align: center;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+/* Container*/
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Header */
+.header {
+    background-image: linear-gradient(to top, #313c4e8c, #313c4e8c), url('img/header.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    color: var(--white);
+    height: 60rem;
+}
+/* Crea tu podcast */
+
+/* Planes */
+
+/* opinioes */
+
+/* Footer */

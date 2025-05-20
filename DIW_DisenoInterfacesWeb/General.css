@@ -1,0 +1,95 @@
+/* Valores generales */
+:root {
+    --gray: #343A40;
+    --black: #000000;
+    --white: #ffffff;
+
+
+    --mainFont: 'raleway-regular', sans-serif;
+    --mainFontBold: 'raleway-bold', sans-serif;
+    --mainFontExtraBold: 'raleway-extraBold', sans-serif;
+}
+
+@font-face {
+    font-family: 'raleway-regular';
+    src: url('../fonts/Raleway-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'raleway-bold';
+    src: url('../fonts/Raleway-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'raleway-extraBold';
+    src: url('../fonts/Raleway-ExtraBold.ttf');
+    font-weight: bold;
+}
+
+
+/* Estilos generales*/
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--mainFont);
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    font-family: 'raleway-bold';
+}
+
+h1 {
+    font-size: 5.2rem;
+}
+
+h2 {
+    font-size: 4.2rem;
+}
+
+h3 {
+    font-size: 3.4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* hacer la imagen responsive*/
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* utilidades */
+.text-center {
+    text-align: center;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+/* Container*/
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
