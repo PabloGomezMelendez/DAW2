@@ -78,12 +78,23 @@ img {
     margin-top: 5rem;
 }
 
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    width: 100%;
+    background-color: var(--verde);
+    color: var(--gray);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
 /* Container*/
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
+
 /* Header */
 .header {
     background-image: linear-gradient(to top, #313c4e8c, #313c4e8c), url('img/header.jpg');
@@ -94,6 +105,19 @@ img {
     color: var(--white);
     height: 60rem;
 }
+
+.header__content {}
+
+.header__figure {}
+
+.header__logo {}
+
+.header__text {}
+
+.header__titel {}
+
+.header__link {}
+
 /* Crea tu podcast */
 
 /* Planes */
