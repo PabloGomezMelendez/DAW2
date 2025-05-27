@@ -1,0 +1,328 @@
+/* Valores generales */
+:root {
+    --azul: #1073BA;
+    --verde: #00DA55;
+    --gris: #3B3B3B;
+    --gris-claro: #e1e1e1;
+    --white: #ffffff;
+    --black: #1F1E1E;
+
+
+    --mainFont: 'Roboto', sans-serif;
+    --secundaryFont: 'Lato', sans-serif;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Regular.ttf');
+}
+
+
+
+/* Estilos generales*/
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--mainFont);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    font-weight: 900;
+    font-family: var(--secundaryFont);
+}
+
+h1 {
+    font-size: 4.4rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--azul);
+    text-align: right;
+}
+
+/* hacer la imagen responsive*/
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+strong {
+    font-size: 4.4rem;
+}
+
+/* utilidades */
+.text-center {
+    text-align: center;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+.degradado-texto {
+    color: transparent;
+    background: linear-gradient(to right, var(--azul) 0%, var(--verde) 100%);
+    -webkit-background-clip: text;
+    /* Necesario para Chrome, Edge y Safari*/
+    background-clip: text;
+}
+
+/* Container*/
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/** Parte 1 -Estilo de la cabecera  */
+/* Movil */
+/*FIXME: EL titulo 'TeachPRO' sale en el msimo tamaño que el sobretitulo  */
+
+.header {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.header__container {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.header__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header__text {
+    text-align: center;
+}
+
+/* Desktop*/
+@media screen and (min-width: 768px) {
+
+    .header__container {
+        height: 50vh;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .header__content {
+        align-items: unset;
+    }
+
+    .header__text {
+        text-align: unset;
+    }
+}
+
+
+
+/** Parte 2 - estilo de las Card */
+/* Movil */
+/*FIXME: En ipad los titulos sequedan en dos lineas */
+.card {
+    margin-top: 5rem;
+}
+
+.card__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap: 2rem;
+
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    gap: 2rem;
+}
+
+.card__figure {
+    width: 5rem;
+    height: 5rem;
+}
+
+.card__text {
+    text-align: center;
+}
+
+.card__titel {
+    color: var(--azul);
+}
+
+/* Desktop*/
+@media screen and (min-width: 768px) {
+
+    .card__container {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+/** Parte 3 - Estilo de los productos */
+/* Movil */
+.product {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.product__titel {
+    padding: 2rem;
+    text-align: center;
+}
+
+.product__element {
+    background-color: var(--gris-claro);
+    color: var(--azul);
+    border-radius: 1rem;
+
+    padding: 1rem 2rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.product__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.product__element--blue {
+    background-color: var(--azul);
+    color: var(--white);
+}
+
+.product__img {
+    width: 20rem;
+    height: 20rem;
+}
+
+/* Desktop*/
+@media screen and (min-width: 768px) {
+
+    .product {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product__titel {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+    }
+
+    .product__element--blue {
+        grid-column: 2/3;
+        grid-row: 2/4;
+        align-self: stretch;
+        align-items: center;
+    }
+
+}
+
+/** Parte 4 - Estilo de los formulario */
+/* Movil */
+.info {
+    margin-top: 5rem;
+    display: grid;
+}
+
+.info__content {
+    margin-top: 5rem;
+
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.info__titel {
+    margin-bottom: 3rem;
+}
+
+.info__form {
+    margin-top: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.from__btn {
+    padding: 1rem 0;
+    background-color: var(--azul);
+    color: var(--white);
+}
+
+.from__email {
+    margin: 1rem 0;
+}
+
+
+
+/* Desktop*/
+@media screen and (min-width: 768px) {
+    .info {
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/** Parte 5 - Estilo del pie */
+/* Movil */
+.footer {
+    padding: 1rem;
+    padding-bottom: 2rem;
+}
