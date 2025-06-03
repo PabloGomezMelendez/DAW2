@@ -1,0 +1,40 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    font: sans-serif;
+
+}
+.picture{
+    /* overflow: hidden; */
+    height: 1000px;
+    width: 800px;
+    margin: 50px auto;
+    order: 1;
+}
+.picture__img{
+    display: block;
+    width: 600px;
+    height: 800px;
+}
+
+.picture__container{
+    background-color:  rgba(65, 132, 209, 0.534);
+
+    font-family: sans-serif;
+    font-size: 1rem;
+
+    line-height: 150px;
+    text-align: center;
+    height: 800px;
+    width: 600px;
+
+    transition-property: all;
+    transition-duration:3s;
+}
+
+.picture:hover .picture__container {
+    transform: translate(0,0) rotate(1turn);
+
+}
